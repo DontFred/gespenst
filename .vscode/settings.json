@@ -1,0 +1,18 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnType": false, // required
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always"
+  },
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "cSpell.words": ["gespenst", "tailwindcss", "tsup"],
+  "tailwindCSS.experimental.configFile": "packages/tailwind-config/tailwind.config.ts",
+  "eslint.workingDirectories": [{ "mode": "auto" }]
+}

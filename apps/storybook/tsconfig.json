@@ -1,0 +1,5 @@
+{
+  "extends": "@gespenst/typescript-config/react-app.json",
+  "include": ["stories"], // Add the path to the source files
+  "exclude": ["dist", "build", "node_modules"]
+}
