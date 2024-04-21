@@ -1,8 +1,9 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment, jsdoc/check-tag-names, @typescript-eslint/no-unsafe-member-access */
 import { useRouter } from "next/router";
 import { useConfig } from "nextra-theme-docs";
 
 import type { DocsThemeConfig } from "nextra-theme-docs";
+
+import type { UseConfigReturn } from "./theme";
 
 const logo = (
   <>
@@ -47,7 +48,7 @@ const theme: DocsThemeConfig = {
     ),
   },
   head: function useHead() {
-    const { frontMatter } = useConfig();
+    const { frontMatter } = useConfig() as UseConfigReturn;
     return (
       <>
         <link href="/favicon.ico" rel="shortcut icon" />
@@ -84,7 +85,8 @@ const theme: DocsThemeConfig = {
         <meta content="en" httpEquiv="Content-Language" />
         <meta content="#fff" name="msapplication-TileColor" />
         <meta content="Gespenst" name="apple-mobile-web-title" />
-        <meta content={"/og.png"} property="og:url" />
+        {/* TODO: Add env.ver */}
+        <meta content={`http://localhost:3000/og.png`} property="og:url" />
         <meta
           content={frontMatter.title || "Gespenst - Ge·spenst [/Gespénst/]"}
           property="og:title"
@@ -98,7 +100,7 @@ const theme: DocsThemeConfig = {
         />
         <meta
           content={
-            (frontMatter.description as string) ||
+            frontMatter.description ||
             "Scary UI Library for Next.js or any other React based framework."
           }
           name="description"
