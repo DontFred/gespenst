@@ -1,0 +1,11 @@
+import FontWrapper from "../components/font-wrapper";
+
+import "../styles/globals.css";
+
+export default function App({ Component, pageProps }) {
+  return (
+    <FontWrapper>
+      <Component {...pageProps} />
+    </FontWrapper>
+  );
+}

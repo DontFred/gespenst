@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "exports": {
+"./test": "./src/test.tsx",
     "./dist/style.css": {
       "import": "./dist/style.css",
       "require": "./dist/style.css"
@@ -28,7 +29,6 @@
   "devDependencies": {
     "@gespenst/eslint-config": "*",
     "@gespenst/typescript-config": "*",
-    "@turbo/gen": "^1.12.4",
     "@types/eslint": "^8.56.5",
     "@types/node": "^20.11.24",
     "@types/react": "^18.2.61",
