@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "exports": {
-"./test": "./src/test.tsx",
+    "./test": "./src/test.tsx",
     "./dist/style.css": {
       "import": "./dist/style.css",
       "require": "./dist/style.css"
@@ -24,6 +24,7 @@
     "dev": "tsup --watch",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+    "lint:fix:nowarnings": "eslint . --fix --max-warnings 0",
     "clean:all": "rm -rf dist"
   },
   "devDependencies": {

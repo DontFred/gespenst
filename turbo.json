@@ -10,6 +10,7 @@
       "dependsOn": ["^lint"]
     },
     "lint:fix": {},
+    "lint:fix:nowarnings": {},
     "clean:all": {},
     "clean:all:install": {},
     "dev": {

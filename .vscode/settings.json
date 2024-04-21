@@ -12,7 +12,7 @@
   "files.associations": {
     "*.css": "tailwindcss"
   },
-  "cSpell.words": ["gespenst", "tailwindcss", "tsup"],
+  "cSpell.words": ["gespenst", "nowarnings", "tailwindcss", "tsup"],
   "tailwindCSS.experimental.configFile": "packages/tailwind-config/tailwind.config.ts",
   "eslint.workingDirectories": [{ "mode": "auto" }]
 }

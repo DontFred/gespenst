@@ -8,7 +8,8 @@
     "build": "storybook build --storybook",
     "preview": "serve storybook-static",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "lint:fix:nowarnings": "eslint . --fix --max-warnings 0"
   },
   "dependencies": {
     "@gespenst/ui": "*",

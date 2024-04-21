@@ -1,7 +1,2 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
-
 bun run format
-bun run lint:fix
-
-exit 1
+bun run lint:fix:nowarnings
