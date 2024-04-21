@@ -7,10 +7,11 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 /**
- *
- * @param root0
- * @param root0.children
- * @param root0.className
+ * Button component
+ * @param Button - props
+ * @param Button.children - ReactNode
+ * @param Button.className - string
+ * @returns JSX.Element
  */
 export function Button({
   children,
