@@ -2,7 +2,14 @@ import { defineConfig } from "tsup";
 
 export default defineConfig((options) => ({
   dts: true,
-  entryPoints: ["src/button.tsx", "src/style.css", "src/lib/index.ts"],
+  entryPoints: [
+    "src/avatar/index.tsx",
+    "src/style.css",
+    "src/font-geist/index.ts",
+    "src/text/index.tsx",
+    "src/button/index.tsx",
+    "src/lib/index.ts",
+  ],
   external: ["react"],
   format: ["cjs", "esm"],
   sourcemap: true,

@@ -104,6 +104,8 @@ module.exports = {
   rules: {
     "@typescript-eslint/consistent-type-imports": "error",
     "@typescript-eslint/no-empty-interface": "off",
+    "@typescript-eslint/no-unsafe-assignment": "off",
+    "@typescript-eslint/no-unsafe-call": "off",
     "perfectionist/sort-imports": [
       "error",
       {
