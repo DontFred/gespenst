@@ -1,5 +1,5 @@
-import { GeistMono } from "geist/font/mono";
-import { GeistSans } from "geist/font/sans";
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+import { GeistMono, GeistSans } from "@gespenst/ui/font-geist";
 
 /**
  * FontWrapper

@@ -25,12 +25,6 @@ type Story = StoryObj<typeof Button>;
 export const Primary: Story = {
   args: {
     children: "Hello",
-    style: {
-      border: "1px solid gray",
-      borderRadius: 10,
-      color: "blue",
-      padding: 10,
-    },
     type: "button",
   },
   name: "Button",

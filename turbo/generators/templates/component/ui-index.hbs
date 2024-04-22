@@ -1,0 +1,12 @@
+import type { {{pascalCase name}}Props } from "./types";
+
+/**
+ * {{pascalCase name}} component
+ * @param {{pascalCase name}} - props of {{pascalCase name}}
+ * @returns JSX.Element
+ */
+export function {{pascalCase name}}({ ...rest }: {{pascalCase name}}Props) {
+    return <div {...rest} />;
+}
+
+{{pascalCase name}}.displayName = "{{pascalCase name}}";

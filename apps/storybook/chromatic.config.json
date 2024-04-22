@@ -1,0 +1,6 @@
+{
+  "projectId": "Project:66253e7beddc74451601ff88",
+  "zip": true,
+  "storybookBaseDir": "apps/storybook",
+  "buildScriptName": "build"
+}

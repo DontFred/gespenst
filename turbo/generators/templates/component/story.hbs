@@ -1,0 +1,17 @@
+import { {{pascalCase name}} } from "@gespenst/ui/{{kebabCase name}}";
+
+import type { Meta, StoryObj } from "@storybook/react";
+
+const meta: Meta<typeof {{pascalCase name}}> = {
+  argTypes: {},
+  component: {{pascalCase name}},
+  title: "UI/{{pascalCase name}}",
+};
+
+export default meta;
+
+type Story = StoryObj<typeof {{pascalCase name}}>;
+
+export const Default: Story = {
+  args: {},
+};
