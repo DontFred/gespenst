@@ -35,7 +35,7 @@
   },
   "scripts": {
     "build": "tsup",
-    "build:icons": "npx tsx ./src/icon/build.mts",
+    "build:icons": "npx tsx ./src/icon/builder.mts",
     "dev": "tsup --watch",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",

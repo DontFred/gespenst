@@ -1,8 +1,9 @@
 import { readdir } from "node:fs/promises";
+import * as path from "node:path";
 
 import fs from "fs-extra";
 import loading from "loading-cli";
-import parse from "node-html-parser";
+import { parse } from "node-html-parser";
 
 import type { Node } from "node-html-parser";
 
@@ -21,15 +22,21 @@ interface IconChildren {
   tag: string;
 }
 
+const cwd = process.cwd();
+const inputDir = path.join(cwd, "src", "icon", "svgs");
+const outputDir = path.join(cwd, "src", "icon", "icons");
+await fs.ensureDir(inputDir);
+await fs.ensureDir(outputDir);
+
 const loader = loading("Loading icons").start();
 
-const files = await readdir("./svgs", { recursive: true });
+const files = await readdir(inputDir, { recursive: true });
 
 const svgFiles = files.filter((file) => file.endsWith(".svg"));
 loader.info(`Found ${svgFiles.length} icons`);
 const svgArray = Promise.all(
   svgFiles.map(async (file) => {
-    const IconBuffer = await fs.readFile(`./svgs/${file}`, "utf-8");
+    const IconBuffer = await fs.readFile(path.join(inputDir, file), "utf-8");
     const IconName = file.split(".svg")[0];
     const ParsedIcon = parse(IconBuffer);
     ParsedIcon.removeAttribute("xmlns");
@@ -103,9 +110,9 @@ const types = `export type Icons = \n\t${Object.keys(svgObject)
 
 const icons = `export const icons = ${JSON.stringify(svgObject, null, 2)};`;
 
-await fs.outputFile("./icons/types.ts", types);
+await fs.outputFile(path.join(outputDir, "types.ts"), types);
 loader.info("Types file done");
-await fs.outputFile("./icons/index.ts", icons);
+await fs.outputFile(path.join(outputDir, "index.ts"), icons);
 loader.info("Icons file done");
 
 loader.succeed(
