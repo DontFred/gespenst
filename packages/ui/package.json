@@ -3,7 +3,11 @@
   "version": "0.0.0",
   "private": true,
   "exports": {
-    "./avatar": { "types": "./src/text/index.tsx", "import": "./dist/text/index.mjs", "require": "./dist/text/index.js" },
+    "./avatar": {
+      "types": "./src/avatar/index.tsx",
+      "import": "./dist/avatar/index.mjs",
+      "require": "./dist/avatar/index.js"
+    },
     "./dist/style.css": {
       "import": "./dist/style.css",
       "require": "./dist/style.css"

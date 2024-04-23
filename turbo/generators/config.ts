@@ -28,7 +28,7 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
         path: "packages/ui/package.json",
         pattern: /"exports": {(?<insertion>)/g,
         template:
-          '"./{{kebabCase name}}": {"types": "./src/text/index.tsx","import": "./dist/text/index.mjs", "require": "./dist/text/index.js"},',
+          '"./{{kebabCase name}}": {"types": "./src/{{kebabCase name}}/index.tsx","import": "./dist/{{kebabCase name}}/index.mjs", "require": "./dist/{{kebabCase name}}/index.js"},',
         type: "append",
       },
       {
