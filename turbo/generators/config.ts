@@ -1,11 +1,10 @@
 import type { PlopTypes } from "@turbo/gen";
 
 /**
- *
- * @param plop
+ * Generates a new React component in the internal UI library
+ * @param plop The Plop API
  */
 export default function generator(plop: PlopTypes.NodePlopAPI): void {
-  // A simple generator to add a new React component to the internal UI library
   plop.setGenerator("react-component", {
     actions: [
       {

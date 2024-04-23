@@ -1,0 +1,9 @@
+<svg width="100%" height="100%"  stroke-linejoin="round" style="color:currentColor" viewBox="0 0 16 16" ><g clip-path="url(#clip0_872_3186)">
+  <circle cx="8" cy="8" r="7.25" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M8 4.5L11.5 10.625H4.5L8 4.5Z" fill="var(--ds-gray-100)"/>
+  </g>
+  <defs>
+  <clippath id="clip0_872_3186">
+  <rect   fill="white"/>
+  </clippath>
+  </defs></svg>

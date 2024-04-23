@@ -3,6 +3,12 @@
   "compilerOptions": {
     "module": "ESNext"
   },
-  "include": ["**/*.ts", "**/*.tsx", "**/*.*.ts", "**/*.*.tsx"],
-  "exclude": ["node_modules", "dist", "build"]
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.*.ts",
+    "**/*.*.tsx",
+    "src/icon/builder.mts"
+  ],
+  "exclude": ["node_modules", "dist", "build", "**/*.mts"]
 }
