@@ -3,8 +3,8 @@ import { GeistSans } from "geist/font/sans";
 
 import type { Metadata } from "next";
 
-import "../styles/globals.css";
 import "@gespenst/ui/dist/style.css";
+import "../styles/globals.css";
 
 export const metadata: Metadata = {
   description:

@@ -65,7 +65,7 @@ module.exports = {
           "parent-type",
           "sibling-type",
           "side-effect",
-          "side-effect-style",
+          ["style", "side-effect-style"],
         ],
       },
     ],
