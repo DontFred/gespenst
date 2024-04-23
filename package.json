@@ -16,6 +16,7 @@
   "private": true,
   "scripts": {
     "build": "turbo build",
+    "build:icons": "turbo build:icons && npm run lint:fix",
     "dev": "turbo dev",
     "gen:comp": "turbo gen react-component",
     "lint": "turbo lint",

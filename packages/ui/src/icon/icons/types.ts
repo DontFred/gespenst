@@ -1,3 +1,5 @@
+import type { IconChildren } from "../types";
+
 export type Icons =
   | "accessibility"
   | "acronym-api"
@@ -235,6 +237,7 @@ export type Icons =
   | "logo-figma"
   | "logo-gatsby"
   | "logo-geist"
+  | "logo-gespenst"
   | "logo-github"
   | "logo-gitlab"
   | "logo-google"
@@ -422,3 +425,12 @@ export type Icons =
   | "window"
   | "wrench"
   | "zero-config";
+
+export type IconsTypeWithName = Record<
+  Icons,
+  {
+    children: IconChildren[];
+    style: string;
+    viewBox: string;
+  }
+>;

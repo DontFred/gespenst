@@ -6,6 +6,7 @@
       "dependsOn": ["^build"],
       "outputs": [".next/**", "!.next/cache/**"]
     },
+    "build:icons": {},
     "lint": {
       "dependsOn": ["^lint"]
     },

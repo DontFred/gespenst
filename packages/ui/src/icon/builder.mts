@@ -7,20 +7,7 @@ import { parse } from "node-html-parser";
 
 import type { Node } from "node-html-parser";
 
-type Icons = Record<
-  string,
-  {
-    children: IconChildren[];
-    style: string;
-    viewBox: string;
-  }
->;
-
-interface IconChildren {
-  attributes: Record<string, string>;
-  children: IconChildren[];
-  tag: string;
-}
+import type { IconChildren, IconsType } from "./types";
 
 const cwd = process.cwd();
 const inputDir = path.join(cwd, "src", "icon", "svgs");
@@ -59,7 +46,7 @@ const svgArray = Promise.all(
   })
 );
 
-const svgObject: Icons = Object.assign({}, ...(await svgArray));
+const svgObject: IconsType = Object.assign({}, ...(await svgArray));
 
 /**
  * Get children of a node and return them as an array
@@ -103,12 +90,24 @@ function getChildren(item: Node): IconChildren[] {
       .filter((item) => item.tag !== ""),
   ];
 }
+const types = `import type { IconChildren } from "../types";
 
-const types = `export type Icons = \n\t${Object.keys(svgObject)
+export type Icons = \n\t${Object.keys(svgObject)
   .map((iconName) => `| "${iconName}" \n\t`)
-  .join("")};`;
+  .join("")};
 
-const icons = `export const icons = ${JSON.stringify(svgObject, null, 2)};`;
+export type IconsTypeWithName = Record<
+  Icons,
+  {
+    children: IconChildren[];
+    style: string;
+    viewBox: string;
+  }
+>;`;
+
+const icons = `import type { IconsTypeWithName } from "./types";
+
+export const icons: IconsTypeWithName = ${JSON.stringify(svgObject, null, 2)};`;
 
 await fs.outputFile(path.join(outputDir, "types.ts"), types);
 loader.info("Types file done");

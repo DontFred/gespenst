@@ -4,10 +4,11 @@ export default defineConfig((options) => ({
   dts: true,
   entryPoints: [
     "src/avatar/index.tsx",
+    "src/button/index.tsx",
     "src/style.css",
     "src/font-geist/index.ts",
     "src/text/index.tsx",
-    "src/button/index.tsx",
+    "src/icon/index.tsx",
     "src/lib/index.ts",
   ],
   external: ["react"],
