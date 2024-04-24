@@ -8,7 +8,7 @@ export default function Page(): JSX.Element {
       <Icon
         className="h-10 w-10"
         containerClassName="text-lg"
-        name="logo-geist"
+        name="logo-turbopack"
       >
         Bitbucket
       </Icon>

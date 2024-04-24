@@ -39,9 +39,10 @@
     }
   },
   "scripts": {
-    "build": "tsup",
+    "build": "npm run build:icons && npm run lint:fix && tsup",
     "build:icons": "npx tsx ./src/icon/builder.mts",
-    "dev": "tsup --watch",
+    "build:icons:docs": "npm run build:icons && npx tsx ./src/icon/docs-story-builder.mts",
+    "dev": "npm run build:icons && npm run lint:fix && tsup --watch",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "lint:fix:nowarnings": "eslint . --fix --max-warnings 0",

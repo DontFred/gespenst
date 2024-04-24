@@ -20,7 +20,9 @@ const loader = loading("Loading icons").start();
 const files = await readdir(inputDir, { recursive: true });
 
 const svgFiles = files.filter((file) => file.endsWith(".svg"));
+
 loader.info(`Found ${svgFiles.length} icons`);
+
 const svgArray = Promise.all(
   svgFiles.map(async (file) => {
     const IconBuffer = await fs.readFile(path.join(inputDir, file), "utf-8");
@@ -29,8 +31,6 @@ const svgArray = Promise.all(
     ParsedIcon.removeAttribute("xmlns");
     ParsedIcon.removeAttribute("xmlns:xlink");
     ParsedIcon.removeAttribute("version");
-    ParsedIcon.removeAttribute("width");
-    ParsedIcon.removeAttribute("height");
     const viewBoxRegex =
       /<svg .*?viewBox=["'](-?[\d\.]+[, ]+-?[\d\.]+[, ][\d\.]+[, ][\d\.]+)["']/;
     const styleRegex = /(?<=style=").*?(?=")/;
@@ -62,13 +62,14 @@ function getChildren(item: Node): IconChildren[] {
         const rawAttributeRegex = new RegExp(
           `(?<=<${itemChildren.rawTagName}).*?(?=>)`
         );
-        const kebabRegex = new RegExp(/(\w+)-(\w)([\w-]*)/g);
+        const kebabRegex = new RegExp(/(\w+)-(\w)([\w-]*)(?=\=)/g);
         const attributeRegex = new RegExp(/\s(\w+?)="(.+?)"/g);
         let rawAttribute =
           itemChildren.toString().match(rawAttributeRegex)?.[0] ?? "";
 
         const attributes: IconChildren["attributes"] = {};
 
+        //TODO: Change att name not all
         [...rawAttribute.matchAll(kebabRegex)].map((item) => {
           rawAttribute = rawAttribute.replace(
             item[0],

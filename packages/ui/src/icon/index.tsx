@@ -16,7 +16,7 @@ function renderChildren(children: IconChildren[]): string {
         .map(
           ([key, value]) =>
             // Convert camelCase to kebab-case
-            `${key.replace(/[A-Z]+(?![a-z])|[A-Z]/g, (word, whitePlace) => (whitePlace ? "-" : "") + word.toLowerCase())}="${value}"`
+            `${key === "gradientUnits" || key === "maskUnits" ? key : key.replace(/[A-Z]+(?![a-z])|[A-Z]/g, (word, whitePlace) => (whitePlace ? "-" : "") + word.toLowerCase())}="${value}"`
         )
         .join(" ");
       return `<${child.tag} ${attributes}>${renderChildren(child.children)}</${child.tag}>`;

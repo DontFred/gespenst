@@ -14,5 +14,15 @@
   },
   "cSpell.words": ["gespenst", "nowarnings", "tailwindcss", "tsup"],
   "tailwindCSS.experimental.configFile": "packages/tailwind-config/tailwind.config.ts",
-  "eslint.workingDirectories": [{ "mode": "auto" }]
+  "eslint.workingDirectories": [
+    {
+      "mode": "auto"
+    }
+  ],
+  "tailwindCSS.classAttributes": [
+    "class",
+    "className",
+    "ngClass",
+    "containerClassName"
+  ]
 }
