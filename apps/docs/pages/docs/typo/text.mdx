@@ -1,0 +1,485 @@
+import { Tabs } from "nextra/components";
+import { Table, TBody, TD, Text, TH, THead, TR } from "@gespenst/ui/text";
+
+# Text
+
+The Text component is used to render text content in Gespenst. It is a wrapper
+around native HTML elements.
+
+## Import
+
+```tsx
+import { Text } from "gespenst/text";
+```
+
+## Usage
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Text heading size="h1">
+      {`Lorem ipsum`}
+    </Text>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import { Text } from "gespenst/text";
+
+export default function App() {
+  return (
+    <Text heading size="h1">Lorem ipsum</Text>
+  );
+}
+ ```
+  </Tabs.Tab>
+</Tabs>
+
+### TextProps.heading
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Text heading size="h1">
+      {`Lorem ipsum`}
+    </Text>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import { Text } from "gespenst/text";
+
+export default function App() {
+  return (
+    <Text heading size="h1">Lorem ipsum</Text>
+  );
+}
+ ```
+  </Tabs.Tab>
+</Tabs>
+
+### TextProps.size
+
+#### For heading
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Text heading size="h2">
+      {`Lorem ipsum`}
+    </Text>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import { Text } from "gespenst/text";
+
+export default function App() {
+  return (
+    <Text heading size="h2">Lorem ipsum</Text>
+  );
+}
+ ```
+  </Tabs.Tab>
+</Tabs>
+
+#### For description
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Text description size="h2">
+      {`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`}
+    </Text>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import { Text } from "gespenst/text";
+
+export default function App() {
+  return (
+    <Text description size="h2">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Sed do eiusmod tempor incididunt ut labore et dolore magna 
+        aliqua.
+    </Text>
+  );
+}
+ ```
+  </Tabs.Tab>
+</Tabs>
+
+### TextProps.paragraph
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Text paragraph>
+      {`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`}
+    </Text>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import { Text } from "gespenst/text";
+
+export default function App() {
+  return (
+    <Text paragraph>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Sed do eiusmod tempor incididunt ut labore et dolore magna 
+        aliqua.
+    </Text>
+  );
+}
+ ```
+  </Tabs.Tab>
+</Tabs>
+
+### TextProps.blockquote
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Text blockquote>
+      {`"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."`}
+    </Text>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import { Text } from "gespenst/text";
+
+export default function App() {
+  return (
+    <Text blockquote>
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Sed do eiusmod tempor incididunt ut labore et dolore magna 
+        aliqua."
+    </Text>
+  );
+}
+ ```
+  </Tabs.Tab>
+</Tabs>
+
+### TextProps.code
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Text code>
+      {`lorem@ipsum:~$ lorem --ipsum -d="sit" ./amet/consectetur`}
+    </Text>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import { Text } from "gespenst/text";
+
+export default function App() {
+  return (
+    <Text code>
+      lorem@ipsum:~$ lorem --ipsum -d="sit" ./amet/consectetur
+    </Text>
+  );
+}
+ ```
+  </Tabs.Tab>
+</Tabs>
+
+### TextProps.description
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Text description size="h1">
+      {`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`}
+    </Text>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import { Text } from "gespenst/text";
+
+export default function App() {
+  return (
+    <Text description size="h1">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Sed do eiusmod tempor incididunt ut labore et dolore magna 
+        aliqua.
+    </Text>
+  );
+}
+ ```
+  </Tabs.Tab>
+</Tabs>
+
+### TextProps.large
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Text large>
+      {`Lorem ipsum dolor sit amet, consectetur adipiscing elit.`}
+    </Text>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import { Text } from "gespenst/text";
+
+export default function App() {
+  return (
+    <Text large>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    </Text>
+  );
+}
+ ```
+  </Tabs.Tab>
+</Tabs>
+
+### TextProps.lead
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Text lead>
+      {`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`}
+    </Text>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import { Text } from "gespenst/text";
+
+export default function App() {
+  return (
+    <Text lead>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Sed do eiusmod tempor incididunt ut labore et dolore magna 
+        aliqua.
+    </Text>
+  );
+}
+ ```
+  </Tabs.Tab>
+</Tabs>
+
+### TextProps.list
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Text list>
+        <Text listItem>
+            {`Lorem ipsum`}
+        </Text>
+        <Text listItem>
+            {`Lorem ipsum`}
+        </Text>        
+        <Text listItem>
+            {`Lorem ipsum`}
+        </Text>
+    </Text>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import { Text } from "gespenst/text";
+
+export default function App() {
+  return (
+    <Text list>
+        <Text listItem>
+            Lorem ipsum
+        </Text>
+        <Text listItem>
+            Lorem ipsum
+        </Text>        
+        <Text listItem>
+            Lorem ipsum
+        </Text>
+    </Text>
+  );
+}
+ ```
+  </Tabs.Tab>
+</Tabs>
+
+### TextProps.listItem
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Text listItem>
+        {`Lorem ipsum`}
+    </Text>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import { Text } from "gespenst/text";
+
+export default function App() {
+  return (
+    <Text listItem>
+        Lorem ipsum
+    </Text>
+  );
+}
+ ```
+  </Tabs.Tab>
+</Tabs>
+
+### TextProps.mono
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Text paragraph mono>
+        {`"lOrEm IpSuM dOlOr SiT AmEt, CoNsEcTeTuR aDiPiScInG eLiT."`}
+    </Text>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import { Text } from "gespenst/text";
+
+export default function App() {
+  return (
+    <Text paragraph mono>
+        "lOrEm IpSuM dOlOr SiT AmEt, CoNsEcTeTuR aDiPiScInG eLiT."
+    </Text>
+  );
+}
+ ```
+  </Tabs.Tab>
+</Tabs>
+
+### TextProps.muted
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Text muted>
+      {`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`}
+    </Text>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import { Text } from "gespenst/text";
+
+export default function App() {
+  return (
+    <Text muted>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Sed do eiusmod tempor incididunt ut labore et dolore magna 
+        aliqua.
+    </Text>
+  );
+}
+ ```
+  </Tabs.Tab>
+</Tabs>
+
+### TextProps.small
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Text small>
+      {`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`}
+    </Text>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import { Text } from "gespenst/text";
+
+export default function App() {
+  return (
+    <Text small>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Sed do eiusmod tempor incididunt ut labore et dolore magna 
+        aliqua.
+    </Text>
+  );
+}
+ ```
+  </Tabs.Tab>
+</Tabs>
+
+## API
+
+<Text large className="mt-2">{`Text props`}</Text>
+
+**Special:** Only one format can be toggled at a time.
+
+<div className="mx-2">
+  <Table>
+    <THead>
+      <TR>
+        <TH className="border-transparent">{`Attribute`}</TH>
+        <TH className="border-transparent">{`Type`}</TH>
+        <TH className="border-transparent">{`Description`}</TH>
+        <TH className="border-transparent">{`Default`}</TH>
+      </TR>
+    </THead>
+    <TBody>
+      <TR>
+        <TD className="border-transparent">{`heading`}</TD>
+        <TD className="border-transparent">`true | undefined`</TD>
+        <TD className="border-transparent">{`Toggles heading format`}</TD>
+        <TD className="border-transparent">{`-`}</TD>
+      </TR>
+      <TR>
+        <TD className="border-transparent">{`size`}</TD>
+        <TD className="border-transparent">
+          `"h1" | "h2" | "h3" | "h4" | undefined`
+        </TD>
+        <TD className="border-transparent">{`Set the size for heading and description. Is required, if heading or description is toggled`}</TD>
+        <TD className="border-transparent">{`-`}</TD>
+      </TR>
+      <TR>
+        <TD className="border-transparent">{`paragraph`}</TD>
+        <TD className="border-transparent">`true | undefined`</TD>
+        <TD className="border-transparent">{`Toggles paragraph format`}</TD>
+        <TD className="border-transparent">{`-`}</TD>
+      </TR>
+      <TR>
+        <TD className="border-transparent">{`blockquote`}</TD>
+        <TD className="border-transparent">`true | undefined`</TD>
+        <TD className="border-transparent">{`Toggles blockquote format`}</TD>
+        <TD className="border-transparent">{`-`}</TD>
+      </TR>
+      <TR>
+        <TD className="border-transparent">{`code`}</TD>
+        <TD className="border-transparent">`true | undefined`</TD>
+        <TD className="border-transparent">{`Toggles code format`}</TD>
+        <TD className="border-transparent">{`-`}</TD>
+      </TR>
+      <TR>
+        <TD className="border-transparent">{`description`}</TD>
+        <TD className="border-transparent">`true | undefined`</TD>
+        <TD className="border-transparent">{`Toggles description format`}</TD>
+        <TD className="border-transparent">{`-`}</TD>
+      </TR>
+      <TR>
+        <TD className="border-transparent">{`large`}</TD>
+        <TD className="border-transparent">`true | undefined`</TD>
+        <TD className="border-transparent">{`Toggles large format`}</TD>
+        <TD className="border-transparent">{`-`}</TD>
+      </TR>
+      <TR>
+        <TD className="border-transparent">{`lead`}</TD>
+        <TD className="border-transparent">`true | undefined`</TD>
+        <TD className="border-transparent">{`Toggles lead format`}</TD>
+        <TD className="border-transparent">{`-`}</TD>
+      </TR>
+      <TR>
+        <TD className="border-transparent">{`list`}</TD>
+        <TD className="border-transparent">`true | undefined`</TD>
+        <TD className="border-transparent">{`Toggles list format`}</TD>
+        <TD className="border-transparent">{`-`}</TD>
+      </TR>
+      <TR>
+        <TD className="border-transparent">{`listItem`}</TD>
+        <TD className="border-transparent">`true | undefined`</TD>
+        <TD className="border-transparent">{`Toggles listItem format`}</TD>
+        <TD className="border-transparent">{`-`}</TD>
+      </TR>
+      <TR>
+        <TD className="border-transparent">{`mono`}</TD>
+        <TD className="border-transparent">`true | false`</TD>
+        <TD className="border-transparent">{`Change font to mono`}</TD>
+        <TD className="border-transparent">{`-`}</TD>
+      </TR>
+      <TR>
+        <TD className="border-transparent">{`muted`}</TD>
+        <TD className="border-transparent">`true | undefined`</TD>
+        <TD className="border-transparent">{`Toggles muted format`}</TD>
+        <TD className="border-transparent">{`-`}</TD>
+      </TR>
+      <TR>
+        <TD className="border-transparent">{`small`}</TD>
+        <TD className="border-transparent">`true | undefined`</TD>
+        <TD className="border-transparent">{`Toggles small format`}</TD>
+        <TD className="border-transparent">{`-`}</TD>
+      </TR>
+    </TBody>
+  </Table>
+</div>

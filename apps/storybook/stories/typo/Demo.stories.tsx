@@ -1,5 +1,4 @@
-import { Table, TBody, TD, TH, THead, TR } from "@gespenst/ui/text";
-import { Text } from "@gespenst/ui/text";
+import { Table, TBody, TD, Text, TH, THead, TR } from "@gespenst/ui/text";
 import React from "react";
 
 import type { Meta } from "@storybook/react";
