@@ -1,5 +1,4 @@
-import { GeistMono } from "@gespenst/ui/font-geist";
-import { GeistSans } from "geist/font/sans";
+import { GeistMono, GeistSans } from "@gespenst/ui/font-geist";
 
 import type { Metadata } from "next";
 

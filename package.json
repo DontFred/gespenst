@@ -23,7 +23,7 @@
     "lint": "turbo lint",
     "lint:fix": "turbo lint:fix",
     "lint:fix:nowarnings": "turbo lint:fix:nowarnings",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "format": "prettier --write \"**/*.{ts,tsx,md,mdx}\"",
     "clean": "rm -rf node_modules && rm -rf bun.lockb",
     "clean:install": "rm -rf node_modules && rm -rf bun.lockb && bun install",
     "clean:all": "turbo clean:all && npm run clean",

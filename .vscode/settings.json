@@ -24,5 +24,6 @@
     "className",
     "ngClass",
     "containerClassName"
-  ]
+  ],
+  "cSpell.enableFiletypes": ["mdx"]
 }

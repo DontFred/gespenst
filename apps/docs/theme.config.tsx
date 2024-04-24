@@ -85,8 +85,7 @@ const theme: DocsThemeConfig = {
         <meta content="en" httpEquiv="Content-Language" />
         <meta content="#fff" name="msapplication-TileColor" />
         <meta content="Gespenst" name="apple-mobile-web-title" />
-        {/* TODO: Add env.ver */}
-        <meta content={`http://localhost:3000/og.png`} property="og:url" />
+        <meta content={`/og.png`} property="og:url" />
         <meta
           content={frontMatter.title || "Gespenst - Ge·spenst [/Gespénst/]"}
           property="og:title"

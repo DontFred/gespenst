@@ -1,0 +1,143 @@
+import { Tabs } from "nextra/components";
+
+# Get Started
+
+## 1. Install
+
+Install _Gespenst_ via pm of your choice.
+
+```sh npm2yarn copy
+npm i gespenst@latest
+```
+
+## 2. Styling
+
+### 2. 1. Tailwind Styling
+
+Import the _Gespenst_ styles in your app. \
+**Attention**: _Gespenst_ uses [Tailwind](https://tailwindcss.com/) under the hood,
+but for DX purposes, we don't have a prefix for our classes. So it's necessary that
+you import the _Gespenst_ styles before your Tailwind styles.
+
+{/* prettier-ignore */}
+<Tabs items={["Layout file", "CSS file"]} defaultIndex="0">
+  <Tabs.Tab>
+```tsx filename="layout.tsx or _app.tsx" {1}
+import "gespenst/dist/style.css";
+import "../styles/globals.css";
+```
+    </Tabs.Tab>
+    <Tabs.Tab>
+```css filename="globals.css" {1}
+@import "gespenst/dist/style.css";
+@tailwind base; 
+@tailwind components; 
+@tailwind utilities;
+```
+    </Tabs.Tab>
+</Tabs>
+
+### 2. 2. Font
+
+If you want to use the Geist font, you have to import it in your layout file.
+_Gespenst_ just reexport the Geist font package.
+
+{/* prettier-ignore */}
+<Tabs items={["App Router", "Pages"]} defaultIndex="0">
+  <Tabs.Tab>
+```tsx filename="layout.tsx" {1,12,14}
+import { GeistMono, GeistSans } from "gespenst/font-geist";
+
+...
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}): JSX.Element {
+  return (
+    <html className="dark" lang="en">
+      <body className={`${GeistSans.variable} ${GeistMono.variable} font-sans`}>
+        {children}
+      </body>
+    </html>
+  );
+}
+````
+
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx filename="_app.tsx" {1,5,7}
+import { GeistMono, GeistSans } from "gespenst/font-geist";
+
+...
+
+export default function App({ Component, pageProps }) {
+  return (
+    <main className={`${GeistSans.variable} ${GeistMono.variable} font-sans`}>
+      <Component {...pageProps} />
+    </main>
+  )
+}
+```
+  </Tabs.Tab>
+</Tabs>
+
+## 3. Provider
+
+To use Dark Mode and the Toast component, you have to wrap your app with the
+_Gespenst_ provider.
+
+{/* prettier-ignore */}
+<Tabs items={["App Router", "Pages"]} defaultIndex="0">
+  <Tabs.Tab>
+```tsx filename="layout.tsx" {1,13,15}
+import { Provider } from "gespenst/provider";
+
+...
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}): JSX.Element {
+  return (
+    <html className="dark" lang="en">
+      <body className={`${GeistSans.variable} ${GeistMono.variable} font-sans`}>
+        <Provider>
+          {children}
+        </Provider>
+      </body>
+    </html>
+  );
+}
+```
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx filename="_app.tsx" {1,5,7}
+import { Provider } from "gespenst/provider";
+
+...
+
+export default function App({ Component, pageProps }) {
+  return (
+    <main className={`${GeistSans.variable} ${GeistMono.variable} font-sans`}>
+      <Component {...pageProps} />
+    </main>
+  )
+}
+```
+  </Tabs.Tab>
+</Tabs>
+
+## 4. Use
+
+Now you can use _Gespenst_ components in your app.
+
+```tsx filename="Page" {1,4}
+import { Button } from "gespenst/button";
+
+export default function Home() {
+  return <Button>Click me</Button>;
+}
+```

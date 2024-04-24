@@ -69,7 +69,6 @@ function getChildren(item: Node): IconChildren[] {
 
         const attributes: IconChildren["attributes"] = {};
 
-        //TODO: Change att name not all
         [...rawAttribute.matchAll(kebabRegex)].map((item) => {
           rawAttribute = rawAttribute.replace(
             item[0],

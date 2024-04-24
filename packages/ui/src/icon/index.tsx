@@ -4,6 +4,8 @@ import { icons } from "./icons";
 
 import type { IconChildren, IconProps } from "./types";
 
+export type { Icons as IconName } from "./icons/types";
+export type { IconProps };
 /**
  * renderChildren - Turns IconChildren into a html string
  * @param children IconChildren[]
