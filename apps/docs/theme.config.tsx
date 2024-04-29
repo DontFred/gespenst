@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { useConfig } from "nextra-theme-docs";
+import { ThemeSwitch, useConfig } from "nextra-theme-docs";
 
 import type { DocsThemeConfig } from "nextra-theme-docs";
 
@@ -108,6 +108,11 @@ const theme: DocsThemeConfig = {
     );
   },
   logo,
+  themeSwitch: {
+    component: ({ className, lite }) => (
+      <ThemeSwitch className={`${className} font-arial`} lite={lite} />
+    ),
+  },
   useNextSeoProps() {
     const { asPath } = useRouter();
     if (asPath !== "/docs") {

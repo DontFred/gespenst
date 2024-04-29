@@ -12,7 +12,7 @@ npm i gespenst@latest
 
 ## 2. Styling
 
-### 2. 1. Tailwind Styling
+### 2. 1. Tailwind
 
 Import the _Gespenst_ styles in your app. \
 **Attention**: _Gespenst_ uses [Tailwind](https://tailwindcss.com/) under the hood,
@@ -36,6 +36,21 @@ import "../styles/globals.css";
 ```
     </Tabs.Tab>
 </Tabs>
+
+To get the initial styles for tables and typography, you have to apply
+`border-border` to root and `bg-background` and `text-foreground` to body, in
+your Tailwind styles.
+
+```css filename="globals.css" {3,6}
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+```
 
 ### 2. 2. Font
 

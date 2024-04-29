@@ -231,7 +231,10 @@ export function Table({ children, className, container, ...rest }: TableProps) {
   const { className: containerClassName, ...containerRest } = container ?? {};
   return (
     <div
-      className={cn("my-6 w-full overflow-y-auto", containerClassName)}
+      className={cn(
+        "border-border my-6 w-full overflow-y-auto",
+        containerClassName
+      )}
       {...containerRest}
     >
       <table className={cn("w-full", className)} {...rest}>

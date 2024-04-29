@@ -133,6 +133,9 @@ export default function App() {
   <Tabs.Tab>
     <Text blockquote>
       {`"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."`}
+      <br/>
+      {`- `}
+      <em>{`Lorem Ipsum, Lorem ipsum dolor`}</em>
     </Text>
   </Tabs.Tab>
   <Tabs.Tab>
@@ -145,6 +148,8 @@ export default function App() {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
         Sed do eiusmod tempor incididunt ut labore et dolore magna 
         aliqua."
+        <br/> 
+        - <em>Lorem Ipsum, Lorem ipsum dolor</em>
     </Text>
   );
 }
@@ -385,9 +390,13 @@ export default function App() {
 
 ## API
 
-<Text large className="mt-2">{`Text props`}</Text>
+<Text large className="mt-2">{`TextProps.*`}</Text>
 
 **Special:** Only one format can be toggled at a time.
+
+**Special:** Formats manage the rendered element and therefor the HTML props. \
+e.g. If TextProps.**heading** is `true`, the text renders as a heading element. So
+it has additionally every prop from the `HTMLHeadingElement`.
 
 <div className="mx-2">
   <Table>
