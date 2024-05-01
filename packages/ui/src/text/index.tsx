@@ -29,6 +29,8 @@ import type {
  * @param HeadingProps.className - The additional class name of the heading. (additional class will get merged by cn()).
  * @param HeadingProps.children - The text content of the heading. Default is "Heading 1 Placeholder".
  * @param HeadingProps.mono - To change the font to monospace.
+ * @param HeadingProps.size - To set the size
+ * @param HeadingProps.heading - To set that the Text is a heading text.
  * @returns The heading element.
  * @example
  *  <TypographyH1>
@@ -38,9 +40,19 @@ import type {
 export function TypographyH1({
   children = "Heading 1 Placeholder",
   className,
+  heading,
   mono,
+  size,
   ...rest
 }: HeadingProps) {
+  if (!heading) {
+    return;
+  }
+
+  if (size !== "h2") {
+    return;
+  }
+
   return (
     <h1
       className={cn(
@@ -61,6 +73,8 @@ export function TypographyH1({
  * @param HeadingProps.className - The additional class name of the heading. (additional class will get merged by cn()).
  * @param HeadingProps.children - The text content of the heading. Default is "Heading 2 Placeholder".
  * @param HeadingProps.mono - To change the font to monospace.
+ * @param HeadingProps.size - To set the size
+ * @param HeadingProps.heading - To set that the Text is a heading text.
  * @returns The heading element.
  * @example
  *  <TypographyH2>
@@ -70,9 +84,19 @@ export function TypographyH1({
 export function TypographyH2({
   children = "Heading 2 Placeholder",
   className,
+  heading,
   mono,
+  size,
   ...rest
 }: HeadingProps) {
+  if (!heading) {
+    return;
+  }
+
+  if (size !== "h2") {
+    return;
+  }
+
   return (
     <h2
       className={cn(
@@ -93,6 +117,8 @@ export function TypographyH2({
  * @param HeadingProps.className - The additional class name of the heading. (additional class will get merged by cn()).
  * @param HeadingProps.children - The text content of the heading. Default is "Heading 3 Placeholder".
  * @param HeadingProps.mono - To change the font to monospace.
+ * @param HeadingProps.size - To set the size
+ * @param HeadingProps.heading - To set that the Text is a heading text.
  * @returns The heading element.
  * @example
  *  <TypographyH3>
@@ -102,9 +128,19 @@ export function TypographyH2({
 export function TypographyH3({
   children = "Heading 3 Placeholder",
   className,
+  heading,
   mono,
+  size,
   ...rest
 }: HeadingProps) {
+  if (!heading) {
+    return;
+  }
+
+  if (size !== "h3") {
+    return;
+  }
+
   return (
     <h3
       className={cn(
@@ -125,6 +161,8 @@ export function TypographyH3({
  * @param HeadingProps.className - The additional class name of the heading. (additional class will get merged by cn()).
  * @param HeadingProps.children - The text content of the heading. Default is "Heading 4 Placeholder".
  * @param HeadingProps.mono - To change the font to monospace.
+ * @param HeadingProps.size - To set the size
+ * @param HeadingProps.heading - To set that the Text is a heading text.
  * @returns The heading element.
  * @example
  *  <TypographyH4>
@@ -134,9 +172,19 @@ export function TypographyH3({
 export function TypographyH4({
   children = "Heading 4 Placeholder",
   className,
+  heading,
   mono,
+  size,
   ...rest
 }: HeadingProps) {
+  if (!heading) {
+    return;
+  }
+
+  if (size !== "h4") {
+    return;
+  }
+
   return (
     <h4
       className={cn(
@@ -157,6 +205,7 @@ export function TypographyH4({
  * @param ParagraphProps.className - The additional class name of the Paragraph. (additional class will get merged by cn()).
  * @param ParagraphProps.children - The text content of the Paragraph. Default is "Paragraph Placeholder".
  * @param ParagraphProps.mono - To change the font to monospace.
+ * @param ParagraphProps.paragraph - To set that the Text is a paragraph text.
  * @returns A JSX element.
  * @example
  *  <TypographyP>
@@ -167,8 +216,13 @@ export function TypographyP({
   children = "Paragraph Placeholder",
   className,
   mono,
+  paragraph,
   ...rest
 }: ParagraphProps) {
+  if (!paragraph) {
+    return;
+  }
+
   return (
     <p
       className={cn(
@@ -189,6 +243,7 @@ export function TypographyP({
  * @param BlockquoteProps.className - The additional class name of the Blockquote. (additional class will get merged by cn()).
  * @param BlockquoteProps.children - The text content of the Blockquote. Default is "Blockquote Placeholder".
  * @param BlockquoteProps.mono - To change the font to monospace.
+ * @param BlockquoteProps.blockquote - To set that the Text is a blockquote text.
  * @returns A JSX element.
  * @example
  *  <TypographyBlockquote>
@@ -196,11 +251,16 @@ export function TypographyP({
  *  </TypographyBlockquote>
  */
 export function TypographyBlockquote({
+  blockquote,
   children = "Blockquote Placeholder",
   className,
   mono,
   ...rest
 }: BlockquoteProps) {
+  if (!blockquote) {
+    return;
+  }
+
   return (
     <blockquote
       className={cn(
@@ -347,6 +407,7 @@ export function TD({ children, className, ...rest }: TableCellProps) {
  * @param ListProps.className - The additional class name of the List. (additional class will get merged by cn()).
  * @param ListProps.children - The children of the List.
  * @param ListProps.mono - To change the font to monospace.
+ * @param ListProps.list - To set that the Text is a large text.
  * @returns A JSX element.
  * @example
  *  <TypographyList>
@@ -356,9 +417,14 @@ export function TD({ children, className, ...rest }: TableCellProps) {
 export function TypographyList({
   children,
   className,
+  list,
   mono,
   ...rest
 }: ListProps) {
+  if (!list) {
+    return;
+  }
+
   return (
     <ul
       className={cn(
@@ -378,6 +444,7 @@ export function TypographyList({
  * @param ListItemProps - Has all HTML List Item attributes.
  * @param ListItemProps.className - The additional class name of the List Item. (additional class will get merged by cn()).
  * @param ListItemProps.children - The children of the List Item.
+ * @param ListItemProps.listItem - To set that the Text is a list item.
  * @returns A JSX element.
  * @example
  *  <TypographyListItem>
@@ -387,8 +454,13 @@ export function TypographyList({
 export function TypographyListItem({
   children,
   className,
+  listItem,
   ...rest
 }: ListItemProps) {
+  if (!listItem) {
+    return;
+  }
+
   return (
     <li className={className} {...rest}>
       {children}
@@ -402,6 +474,7 @@ export function TypographyListItem({
  * @param InlineCodeProps.className - The additional class name of the Inline Code. (additional class will get merged by cn()).
  * @param InlineCodeProps.children - The text content of the Inline Code. Default is "Inline Code Placeholder".
  * @param InlineCodeProps.mono - To change the font to monospace.
+ * @param InlineCodeProps.code - To set that the Text is a inline code.
  * @returns A JSX element.
  * @example
  *  <TypographyInlineCode>
@@ -411,9 +484,14 @@ export function TypographyListItem({
 export function TypographyInlineCode({
   children = "Inline Code Placeholder",
   className,
+  code,
   mono,
   ...rest
 }: InlineCodeProps) {
+  if (!code) {
+    return;
+  }
+
   return (
     <code
       className={cn(
@@ -434,6 +512,7 @@ export function TypographyInlineCode({
  * @param LeadProps.className - The additional class name of the Lead. (additional class will get merged by cn()).
  * @param LeadProps.children - The text content of the Lead. Default is "Lead Placeholder".
  * @param LeadProps.mono - To change the font to monospace.
+ * @param LeadProps.lead - To set that the Text is a lead text.
  * @returns A JSX element.
  * @example
  *  <TypographyLead>
@@ -443,9 +522,14 @@ export function TypographyInlineCode({
 export function TypographyLead({
   children = "Lead Placeholder",
   className,
+  lead,
   mono,
   ...rest
 }: LeadProps) {
+  if (!lead) {
+    return;
+  }
+
   return (
     <p
       className={cn(
@@ -466,6 +550,7 @@ export function TypographyLead({
  * @param LargeProps.className - The additional class name of the Large. (additional class will get merged by cn()).
  * @param LargeProps.children - The text content of the Large. Default is "Large Placeholder".
  * @param LargeProps.mono - To change the font to monospace.
+ * @param LargeProps.large - To set that the Text is a large text.
  * @returns A JSX element.
  * @example
  *  <TypographyLarge>
@@ -475,9 +560,14 @@ export function TypographyLead({
 export function TypographyLarge({
   children = "Large Placeholder",
   className,
+  large,
   mono,
   ...rest
 }: LargeProps) {
+  if (!large) {
+    return;
+  }
+
   return (
     <div
       className={cn("text-lg font-semibold", mono && "font-mono", className)}
@@ -494,6 +584,7 @@ export function TypographyLarge({
  * @param SmallProps.className - The additional class name of the Small. (additional class will get merged by cn()).
  * @param SmallProps.children - The text content of the Small. Default is "Small Placeholder".
  * @param SmallProps.mono - To change the font to monospace.
+ * @param SmallProps.small - To set that the Text is a small text.
  * @returns A JSX element.
  * @example
  *  <TypographySmall>
@@ -504,8 +595,13 @@ export function TypographySmall({
   children = "Small Placeholder",
   className,
   mono,
+  small,
   ...rest
 }: SmallProps) {
+  if (!small) {
+    return;
+  }
+
   return (
     <small
       className={cn(
@@ -526,6 +622,7 @@ export function TypographySmall({
  * @param MutedProps.className - The additional class name of the Muted. (additional class will get merged by cn()).
  * @param MutedProps.children - The text content of the Muted. Default is "Muted Placeholder".
  * @param MutedProps.mono - To change the font to monospace.
+ * @param MutedProps.muted - To set that the Text is a muted text.
  * @returns A JSX element.
  * @example
  *  <TypographyMuted>
@@ -536,8 +633,13 @@ export function TypographyMuted({
   children = "Muted Placeholder",
   className,
   mono,
+  muted,
   ...rest
 }: MutedProps) {
+  if (!muted) {
+    return;
+  }
+
   return (
     <p
       className={cn(
@@ -559,6 +661,7 @@ export function TypographyMuted({
  * @param DescriptionProps.children - The text content of the Description. Default is "Description Placeholder".
  * @param DescriptionProps.size - The size of the Description. The size is depending of the heading. Default is "h1".
  * @param DescriptionProps.mono - To change the font to monospace.
+ * @param DescriptionProps.description - To set that the Text is a description text.
  * @returns A JSX element.
  * @example
  *  <TypographyDescription>
@@ -568,10 +671,15 @@ export function TypographyMuted({
 export function TypographyDescription({
   children,
   className,
+  description,
   mono,
   size,
   ...rest
 }: DescriptionProps) {
+  if (!description) {
+    return;
+  }
+
   const descriptionVariants = cva(
     "font-semibold tracking-tight text-secondary-foreground",
     {

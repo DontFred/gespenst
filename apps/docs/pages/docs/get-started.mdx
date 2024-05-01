@@ -12,7 +12,7 @@ npm i gespenst@latest
 
 ## 2. Styling
 
-### 2. 1. Tailwind
+### 2. 1. Tailwind Styling
 
 Import the _Gespenst_ styles in your app. \
 **Attention**: _Gespenst_ uses [Tailwind](https://tailwindcss.com/) under the hood,
@@ -22,35 +22,22 @@ you import the _Gespenst_ styles before your Tailwind styles.
 {/* prettier-ignore */}
 <Tabs items={["Layout file", "CSS file"]} defaultIndex="0">
   <Tabs.Tab>
-```tsx filename="layout.tsx or _app.tsx" {1}
-import "gespenst/dist/style.css";
-import "../styles/globals.css";
-```
-    </Tabs.Tab>
-    <Tabs.Tab>
-```css filename="globals.css" {1}
-@import "gespenst/dist/style.css";
-@tailwind base; 
-@tailwind components; 
-@tailwind utilities;
-```
-    </Tabs.Tab>
+    ```tsx filename="layout.tsx or _app.tsx" {1}
+    import "gespenst/dist/style.css"; 
+    import "../styles/globals.css"; 
+    ```
+  </Tabs.Tab>
+  <Tabs.Tab>
+    ```css filename="globals.css" {1}
+    @import "gespenst/dist/style.css";
+
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+    ```
+
+  </Tabs.Tab>
 </Tabs>
-
-To get the initial styles for tables and typography, you have to apply
-`border-border` to root and `bg-background` and `text-foreground` to body, in
-your Tailwind styles.
-
-```css filename="globals.css" {3,6}
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-}
-```
 
 ### 2. 2. Font
 
@@ -71,18 +58,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }): JSX.Element {
   return (
-    <html className="dark" lang="en">
+    <html lang="en">
       <body className={`${GeistSans.variable} ${GeistMono.variable} font-sans`}>
         {children}
       </body>
     </html>
   );
 }
-````
+```
 
   </Tabs.Tab>
   <Tabs.Tab>
-```tsx filename="_app.tsx" {1,5,7}
+```tsx filename="_app.tsx" {1,7,9}
 import { GeistMono, GeistSans } from "gespenst/font-geist";
 
 ...
@@ -117,7 +104,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }): JSX.Element {
   return (
-    <html className="dark" lang="en">
+    <html lang="en">
       <body className={`${GeistSans.variable} ${GeistMono.variable} font-sans`}>
         <Provider>
           {children}
@@ -129,7 +116,7 @@ export default function RootLayout({
 ```
   </Tabs.Tab>
   <Tabs.Tab>
-```tsx filename="_app.tsx" {1,5,7}
+```tsx filename="_app.tsx" {1,8,10}
 import { Provider } from "gespenst/provider";
 
 ...
@@ -137,7 +124,9 @@ import { Provider } from "gespenst/provider";
 export default function App({ Component, pageProps }) {
   return (
     <main className={`${GeistSans.variable} ${GeistMono.variable} font-sans`}>
-      <Component {...pageProps} />
+      <Provider>
+        <Component {...pageProps} />
+      </Provider>
     </main>
   )
 }
@@ -153,6 +142,30 @@ Now you can use _Gespenst_ components in your app.
 import { Button } from "gespenst/button";
 
 export default function Home() {
-  return <Button>Click me</Button>;
+  return (
+    <main className="grid">
+      <Button
+        className="place-self-center"
+        onClick={() => {
+          alert("Boo!");
+        }}
+      >
+        Click me
+      </Button>
+    </main>
+  );
 }
 ```
+
+import { Button } from "@gespenst/ui/button";
+
+<main className="grid">
+  <Button
+    className="place-self-center"
+    onClick={() => {
+      alert("Boo!");
+    }}
+  >
+    Click me
+  </Button>
+</main>

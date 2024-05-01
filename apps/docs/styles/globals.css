@@ -11,14 +11,6 @@
   }
 }
 
-#headlessui-listbox-option-\:r1\: {
-  font-family: Arial, sans-serif;
-}
-
-#headlessui-listbox-option-\:r2\: {
-  font-family: Arial, sans-serif;
-}
-
-#headlessui-listbox-option-\:r3\: {
+li[data-headlessui-state] {
   font-family: Arial, sans-serif;
 }

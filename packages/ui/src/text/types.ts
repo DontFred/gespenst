@@ -12,6 +12,7 @@ export interface BlockquoteProps extends HTMLAttributes<HTMLQuoteElement> {
   mono?: boolean;
   muted?: false;
   paragraph?: false;
+  size?: false;
   small?: false;
 }
 
@@ -59,6 +60,7 @@ export interface InlineCodeProps extends HTMLAttributes<HTMLElement> {
   mono?: boolean;
   muted?: false;
   paragraph?: false;
+  size?: false;
   small?: false;
 }
 
@@ -74,6 +76,7 @@ export interface LargeProps extends HTMLAttributes<HTMLDivElement> {
   mono?: boolean;
   muted?: false;
   paragraph?: false;
+  size?: false;
   small?: false;
 }
 
@@ -89,6 +92,7 @@ export interface LeadProps extends HTMLAttributes<HTMLParagraphElement> {
   mono?: boolean;
   muted?: false;
   paragraph?: false;
+  size?: false;
   small?: false;
 }
 
@@ -104,6 +108,7 @@ export interface ListItemProps extends HTMLAttributes<HTMLLIElement> {
   mono?: boolean;
   muted?: false;
   paragraph?: false;
+  size?: false;
   small?: false;
 }
 
@@ -119,6 +124,7 @@ export interface ListProps extends HTMLAttributes<HTMLUListElement> {
   mono?: boolean;
   muted?: false;
   paragraph?: false;
+  size?: false;
   small?: false;
 }
 
@@ -134,6 +140,7 @@ export interface MutedProps extends HTMLAttributes<HTMLDivElement> {
   mono?: boolean;
   muted: true;
   paragraph?: false;
+  size?: false;
   small?: false;
 }
 
@@ -149,6 +156,7 @@ export interface ParagraphProps extends HTMLAttributes<HTMLParagraphElement> {
   mono?: boolean;
   muted?: false;
   paragraph: true;
+  size?: false;
   small?: false;
 }
 
@@ -164,6 +172,7 @@ export interface SmallProps extends HTMLAttributes<HTMLElement> {
   mono?: boolean;
   muted?: false;
   paragraph?: false;
+  size?: false;
   small: true;
 }
 

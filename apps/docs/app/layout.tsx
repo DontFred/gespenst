@@ -1,9 +1,10 @@
 import { GeistMono, GeistSans } from "@gespenst/ui/font-geist";
+import Provider from "@gespenst/ui/provider";
 
 import type { Metadata } from "next";
 
-import "@gespenst/ui/dist/style.css";
 import "../styles/globals.css";
+import "@gespenst/ui/dist/style.css";
 
 export const metadata: Metadata = {
   description:
@@ -17,9 +18,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }): JSX.Element {
   return (
-    <html className="dark" lang="en">
+    <html lang="en">
       <body className={`${GeistSans.variable} ${GeistMono.variable} font-sans`}>
-        {children}
+        <Provider>{children}</Provider>
       </body>
     </html>
   );
