@@ -2558,7 +2558,7 @@ export const icons: IconsTypeWithName = {
         attributes: {
           clipRule: "evenodd",
           d: "M4 9V16H5.5V9H4ZM12 9V16H10.5V9H12Z",
-          fill: "var(--gespenst-geist-icons-blue-700)",
+          fill: "hsl(var(--gespenst-blue-700)",
           fillRule: "evenodd",
         },
         children: [],
@@ -2594,7 +2594,7 @@ export const icons: IconsTypeWithName = {
         attributes: {
           clipRule: "evenodd",
           d: "M6.15295 4.92093L5.375 3.5L4.59705 4.92093L3 5.21885L4.11625 6.39495L3.90717 8L5.375 7.30593L6.84283 8L6.63375 6.39495L7.75 5.21885L6.15295 4.92093ZM11.403 4.92093L10.625 3.5L9.84705 4.92093L8.25 5.21885L9.36625 6.39495L9.15717 8L10.625 7.30593L12.0928 8L11.8837 6.39495L13 5.21885L11.403 4.92093Z",
-          fill: "var(--gespenst-geist-icons-amber-800)",
+          fill: "hsl(var(--gespenst-amber-800)",
           fillRule: "evenodd",
         },
         children: [],
@@ -3318,7 +3318,7 @@ export const icons: IconsTypeWithName = {
         attributes: {
           cx: "13.5",
           cy: "2.5",
-          fill: "var(--gespenst-geist-icons-blue-900)",
+          fill: "hsl(var(--gespenst-blue-900)",
           r: "2.5",
         },
         children: [],
@@ -4709,7 +4709,7 @@ export const icons: IconsTypeWithName = {
               cy: "8",
               fill: "black",
               r: "7.375",
-              stroke: "var(--gespenst-geist-icons-gray-1000)",
+              stroke: "var(--gespenst-gray-1000)",
               strokeLinecap: "round",
               strokeLinejoin: "round",
               strokewidth: "1.25",
@@ -6319,7 +6319,7 @@ export const icons: IconsTypeWithName = {
               height: "9",
               mask: "url(#path-2-inside-1_872_3187)",
               rx: "0.5",
-              stroke: "var(--gespenst-geist-icons-gray-1000)",
+              stroke: "var(--gespenst-gray-1000)",
               strokeWidth: "4",
               width: "9",
               x: "3.5",
@@ -6408,7 +6408,7 @@ export const icons: IconsTypeWithName = {
               fill: "transparent",
               height: "7",
               rx: "3.5",
-              stroke: "var(--gespenst-geist-icons-gray-1000)",
+              stroke: "var(--gespenst-gray-1000)",
               strokeWidth: "2",
               width: "7",
               x: "4.5",
@@ -6598,7 +6598,7 @@ export const icons: IconsTypeWithName = {
             attributes: {
               clipRule: "evenodd",
               d: "M8 4.5L11.5 10.625H4.5L8 4.5Z",
-              fill: "var(--gespenst-geist-icons-gray-100)",
+              fill: "hsl(var(--gespenst-gray-100)",
               fillRule: "evenodd",
             },
             children: [],
@@ -6976,7 +6976,7 @@ export const icons: IconsTypeWithName = {
         attributes: {
           cx: "13.5",
           cy: "2.5",
-          fill: "var(--gespenst-geist-icons-blue-900)",
+          fill: "hsl(var(--gespenst-blue-900)",
           r: "2.5",
         },
         children: [],
@@ -7689,7 +7689,7 @@ export const icons: IconsTypeWithName = {
       {
         attributes: {
           d: "M9 7L12.5 2.5",
-          stroke: "var(--gespenst-geist-icons-red-700)",
+          stroke: "var(--gespenst-red-700)",
           strokeWidth: "1.5",
         },
         children: [],
@@ -8799,7 +8799,7 @@ export const icons: IconsTypeWithName = {
             children: [
               {
                 attributes: {
-                  fill: "var(--gespenst-geist-icons-background-100)",
+                  fill: "hsl(var(--gespenst-background)",
                   height: "16",
                   width: "16",
                 },
@@ -9120,7 +9120,7 @@ export const icons: IconsTypeWithName = {
         attributes: {
           cx: "13.5",
           cy: "2.5",
-          fill: "var(--gespenst-geist-icons-blue-900)",
+          fill: "hsl(var(--gespenst-blue-900)",
           r: "2.5",
         },
         children: [],
@@ -9168,7 +9168,7 @@ export const icons: IconsTypeWithName = {
         attributes: {
           cx: "13.5",
           cy: "2.5",
-          fill: "var(--gespenst-geist-icons-blue-900)",
+          fill: "hsl(var(--gespenst-blue-900)",
           r: "2.5",
         },
         children: [],

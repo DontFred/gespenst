@@ -9,6 +9,7 @@ import type {
   InlineCodeProps,
   LargeProps,
   LeadProps,
+  LinkProps,
   ListItemProps,
   ListProps,
   MutedProps,
@@ -49,7 +50,7 @@ export function TypographyH1({
     return;
   }
 
-  if (size !== "h2") {
+  if (size !== "h1") {
     return;
   }
 
@@ -507,6 +508,44 @@ export function TypographyInlineCode({
 }
 
 /**
+ * Link
+ * @param LinkProps - Has all HTML Span attributes.
+ * @param LinkProps.className - The additional class name of the Link. (additional class will get merged by cn()).
+ * @param LinkProps.children - The text content of the Link. Default is "Link Placeholder".
+ * @param LinkProps.mono - To change the font to monospace.
+ * @param LinkProps.link - To set that the Text is a link.
+ * @returns A JSX element.
+ * @example
+ *  <TypographyLink>
+ *      This is a Link
+ *  </TypographyLink>
+ */
+export function TypographyLink({
+  children = "Link Placeholder",
+  className,
+  link,
+  mono,
+  ...rest
+}: LinkProps) {
+  if (!link) {
+    return;
+  }
+
+  return (
+    <span
+      className={cn(
+        "cursor-pointer text-blue-700 hover:underline",
+        mono && "font-mono",
+        className
+      )}
+      {...rest}
+    >
+      {children}
+    </span>
+  );
+}
+
+/**
  * Lead
  * @param LeadProps - Has all HTML Lead attributes.
  * @param LeadProps.className - The additional class name of the Lead. (additional class will get merged by cn()).
@@ -681,17 +720,17 @@ export function TypographyDescription({
   }
 
   const descriptionVariants = cva(
-    "font-semibold tracking-tight text-secondary-foreground",
+    "text-secondary-foreground font-semibold tracking-tight",
     {
       defaultVariants: {
         size: "h1",
       },
       variants: {
         size: {
-          h1: "text-xl mt-2",
-          h2: "text-lg mt-2",
-          h3: "text-base mt-2",
-          h4: "text-sm mt-1",
+          h1: "mt-2 text-xl",
+          h2: "mt-2 text-lg",
+          h3: "mt-2 text-base",
+          h4: "mt-1 text-sm",
         },
       },
     }
@@ -743,6 +782,8 @@ export function Text(props: TypoProps) {
     return <TypographyInlineCode {...props} />;
   } else if (props.paragraph) {
     return <TypographyP {...props} />;
+  } else if (props.link) {
+    return <TypographyLink {...props} />;
   } else if (props.list) {
     return <TypographyList {...props} />;
   } else if (props.listItem) {

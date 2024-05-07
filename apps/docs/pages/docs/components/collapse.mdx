@@ -1,0 +1,94 @@
+import { Tabs } from "nextra/components";
+import {
+  Collapse,
+  CollapseItem,
+  CollapseTrigger,
+  CollapseContent,
+} from "@gespenst/ui/collapse";
+import { Text } from "@gespenst/ui/text";
+
+# Collapse
+
+The Collapse component display a list of high-level options that can
+expand/collapse to reveal more information.
+
+## Import
+
+```tsx
+import {
+  Collapse,
+  CollapseItem,
+  CollapseTrigger,
+  CollapseContent,
+} from "@gespenst/ui/collapse";
+```
+
+## Usage
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Collapse type="single">
+      <CollapseItem value="question-a">
+        <CollapseTrigger>Question A</CollapseTrigger>
+        <CollapseContent>
+          <Text paragraph>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia,
+            laborum est placeat, animi explicabo corrupti voluptas modi possimus
+            eius dolor itaque, fugiat temporibus magnam repudiandae perspiciatis
+            adipisci exercitationem quod rem.
+          </Text>
+        </CollapseContent>
+      </CollapseItem>
+      <CollapseItem value="question-b">
+        <CollapseTrigger>Question B</CollapseTrigger>
+        <CollapseContent>
+          <Text paragraph>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia,
+            laborum est placeat, animi explicabo corrupti voluptas modi possimus
+            eius dolor itaque, fugiat temporibus magnam repudiandae perspiciatis
+            adipisci exercitationem quod rem.
+          </Text>
+        </CollapseContent>
+      </CollapseItem>
+    </Collapse>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import {
+  Collapse,
+  CollapseItem,
+  CollapseTrigger,
+  CollapseContent,
+} from "@gespenst/ui/collapse";
+
+export default function App() {
+  return (
+    <Collapse type="single">
+      <CollapseItem value="question-a">
+        <CollapseTrigger>Question A</CollapseTrigger>
+        <CollapseContent>
+          <Text paragraph>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia,
+            laborum est placeat, animi explicabo corrupti voluptas modi possimus
+            eius dolor itaque, fugiat temporibus magnam repudiandae perspiciatis
+            adipisci exercitationem quod rem.
+          </Text>
+        </CollapseContent>
+      </CollapseItem>
+      <CollapseItem value="question-b">
+        <CollapseTrigger>Question B</CollapseTrigger>
+        <CollapseContent>
+          <Text paragraph>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia,
+            laborum est placeat, animi explicabo corrupti voluptas modi possimus
+            eius dolor itaque, fugiat temporibus magnam repudiandae perspiciatis
+            adipisci exercitationem quod rem.
+          </Text>
+        </CollapseContent>
+      </CollapseItem>
+    </Collapse>
+  );
+}
+ ```
+  </Tabs.Tab>
+</Tabs>

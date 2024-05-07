@@ -3,6 +3,9 @@
   "get-started": {
     "title": "Get started"
   },
+  "colors": {
+    "title": "Colors"
+  },
   "typo": "",
   "components": ""
 }

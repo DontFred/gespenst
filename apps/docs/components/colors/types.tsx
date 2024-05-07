@@ -1,0 +1,26 @@
+export interface ColorsProps {
+  color:
+    | "accent"
+    | "amber"
+    | "background"
+    | "blue"
+    | "border"
+    | "card"
+    | "error"
+    | "foreground"
+    | "gray"
+    | "green"
+    | "info"
+    | "input"
+    | "muted"
+    | "pink"
+    | "popover"
+    | "primary"
+    | "purple"
+    | "red"
+    | "ring"
+    | "secondary"
+    | "success"
+    | "teal"
+    | "warning";
+}

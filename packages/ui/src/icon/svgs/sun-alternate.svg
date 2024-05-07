@@ -3,6 +3,6 @@
   </g>
   <defs>
   <clipPath id="clip0_174_19347">
-  <rect width="16" height="16" fill="var(--gespenst-geist-icons-background-100)"></rect>
+  <rect width="16" height="16" fill="hsl(var(--gespenst-background)"></rect>
   </clipPath>
   </defs></svg>

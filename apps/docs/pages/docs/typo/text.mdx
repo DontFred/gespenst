@@ -253,6 +253,29 @@ export default function App() {
   </Tabs.Tab>
 </Tabs>
 
+### TextProps.link
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Text link>
+      {`https://www.loremipsum.dor/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit/`}
+    </Text>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import { Text } from "gespenst/text";
+
+export default function App() {
+  return (
+    <Text link>
+      https://www.loremipsum.dor/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit/
+    </Text>
+  );
+}
+ ```
+  </Tabs.Tab>
+</Tabs>
+
 ### TextProps.list
 
 <Tabs items={["Preview", "Code"]}>
@@ -457,6 +480,12 @@ it has additionally every prop from the `HTMLHeadingElement`.
         <TD className="border-transparent">{`lead`}</TD>
         <TD className="border-transparent">`true | undefined`</TD>
         <TD className="border-transparent">{`Toggles lead format`}</TD>
+        <TD className="border-transparent">{`-`}</TD>
+      </TR>
+      <TR>
+        <TD className="border-transparent">{`link`}</TD>
+        <TD className="border-transparent">`true | undefined`</TD>
+        <TD className="border-transparent">{`Toggles link format`}</TD>
         <TD className="border-transparent">{`-`}</TD>
       </TR>
       <TR>

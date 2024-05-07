@@ -5,5 +5,6 @@
   "trailingComma": "es5",
   "singleQuote": false,
   "plugins": ["prettier-plugin-tailwindcss"],
-  "proseWrap": "always"
+  "proseWrap": "always",
+  "tailwindFunctions": ["cn", "cva"]
 }

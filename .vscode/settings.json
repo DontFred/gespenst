@@ -25,5 +25,8 @@
     "ngClass",
     "containerClassName"
   ],
+  "tailwindCSS.experimental.classRegex": [
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
+  ],
   "cSpell.enableFiletypes": ["mdx"]
 }

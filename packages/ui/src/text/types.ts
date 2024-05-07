@@ -7,6 +7,7 @@ export interface BlockquoteProps extends HTMLAttributes<HTMLQuoteElement> {
   heading?: false;
   large?: false;
   lead?: false;
+  link?: false;
   list?: false;
   listItem?: false;
   mono?: boolean;
@@ -23,6 +24,7 @@ export interface DescriptionProps extends HTMLAttributes<HTMLDivElement> {
   heading?: false;
   large?: false;
   lead?: false;
+  link?: false;
   list?: false;
   listItem?: false;
   mono?: boolean;
@@ -39,6 +41,7 @@ export interface HeadingProps extends HTMLAttributes<HTMLHeadingElement> {
   heading: true;
   large?: false;
   lead?: false;
+  link?: false;
   list?: false;
   listItem?: false;
   mono?: boolean;
@@ -55,6 +58,7 @@ export interface InlineCodeProps extends HTMLAttributes<HTMLElement> {
   heading?: false;
   large?: false;
   lead?: false;
+  link?: false;
   list?: false;
   listItem?: false;
   mono?: boolean;
@@ -71,6 +75,7 @@ export interface LargeProps extends HTMLAttributes<HTMLDivElement> {
   heading?: false;
   large: true;
   lead?: false;
+  link?: false;
   list?: false;
   listItem?: false;
   mono?: boolean;
@@ -87,6 +92,25 @@ export interface LeadProps extends HTMLAttributes<HTMLParagraphElement> {
   heading?: false;
   large?: false;
   lead: true;
+
+  link?: false;
+  list?: false;
+  listItem?: false;
+  mono?: boolean;
+  muted?: false;
+  paragraph?: false;
+  size?: false;
+  small?: false;
+}
+
+export interface LinkProps extends HTMLAttributes<HTMLSpanElement> {
+  blockquote?: false;
+  code?: false;
+  description?: false;
+  heading?: false;
+  large?: false;
+  lead?: false;
+  link: true;
   list?: false;
   listItem?: false;
   mono?: boolean;
@@ -103,6 +127,7 @@ export interface ListItemProps extends HTMLAttributes<HTMLLIElement> {
   heading?: false;
   large?: false;
   lead?: false;
+  link?: false;
   list?: false;
   listItem: true;
   mono?: boolean;
@@ -119,6 +144,7 @@ export interface ListProps extends HTMLAttributes<HTMLUListElement> {
   heading?: false;
   large?: false;
   lead?: false;
+  link?: false;
   list: true;
   listItem?: false;
   mono?: boolean;
@@ -135,6 +161,7 @@ export interface MutedProps extends HTMLAttributes<HTMLDivElement> {
   heading?: false;
   large?: false;
   lead?: false;
+  link?: false;
   list?: false;
   listItem?: false;
   mono?: boolean;
@@ -151,6 +178,7 @@ export interface ParagraphProps extends HTMLAttributes<HTMLParagraphElement> {
   heading?: false;
   large?: false;
   lead?: false;
+  link?: false;
   list?: false;
   listItem?: false;
   mono?: boolean;
@@ -167,6 +195,7 @@ export interface SmallProps extends HTMLAttributes<HTMLElement> {
   heading?: false;
   large?: false;
   lead?: false;
+  link?: false;
   list?: false;
   listItem?: false;
   mono?: boolean;
@@ -183,6 +212,7 @@ export type TypoProps =
   | InlineCodeProps
   | LargeProps
   | LeadProps
+  | LinkProps
   | ListItemProps
   | ListProps
   | MutedProps
