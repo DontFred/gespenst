@@ -40,7 +40,7 @@
   --gespenst-warning-hover: var(--gespenst-amber-200); /* Amber 200 */
   --gespenst-warning-active: var(--gespenst-amber-300); /* Amber 300 */
   --gespenst-warning-foreground: var(--gespenst-amber-900); /* Amber 900 */
-  --gespenst-radius: 0.4rem;
+  --gespenst-radius: 0.5rem;
   /* colors */
   --gespenst-gray-100: 0, 0%, 95%;
   --gespenst-gray-200: 0, 0%, 92%;

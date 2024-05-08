@@ -3,20 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "exports": {
-    "./collapse": {
-      "types": "./src/collapse/index.tsx",
-      "import": "./dist/collapse/index.mjs",
-      "require": "./dist/collapse/index.js"
-    },
     "./card": {
       "types": "./src/card/index.tsx",
       "import": "./dist/card/index.mjs",
       "require": "./dist/card/index.js"
-    },
-    "./avatar": {
-      "types": "./src/avatar/index.tsx",
-      "import": "./dist/avatar/index.mjs",
-      "require": "./dist/avatar/index.js"
     },
     "./button": {
       "types": "./src/button/index.tsx",
@@ -81,10 +71,10 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "@radix-ui/react-accordion": "^1.1.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "geist": "^1.3.0",
+    "react-aria-components": "^1.2.0",
     "tailwind-merge": "^2.3.0",
     "tsup": "^8.0.2"
   }

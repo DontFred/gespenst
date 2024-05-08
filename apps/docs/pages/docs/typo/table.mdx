@@ -1,5 +1,6 @@
 import { Tabs } from "nextra/components";
 import { Table, TBody, TD, Text, TH, THead, TR } from "@gespenst/ui/text";
+import { Card } from "@gespenst/ui/card";
 
 # Table
 
@@ -16,28 +17,30 @@ import { Table, TBody, TD, TH, THead, TR } from "gespenst/text";
 
 <Tabs items={["Preview", "Code"]}>
   <Tabs.Tab>
-   <Table>
-      <THead>
-        <TR>
-          <TH>{`Lorem`}</TH>
-          <TH>{`Ipsum`}</TH>
-        </TR>
-      </THead>
-      <TBody>
-        <TR>
-          <TD>{`Lorem Ipsum`}</TD>
-          <TD>{`Dolor Sit`}</TD>
-        </TR>
-        <TR>
-          <TD>{`Consectetur Adipiscing`}</TD>
-          <TD>{`Elit`}</TD>
-        </TR>
-        <TR>
-          <TD>{`Nullam`}</TD>
-          <TD>{`Nec Dui`}</TD>
-        </TR>
-      </TBody>
-    </Table>
+    <Card>
+    <Table>
+        <THead>
+          <TR>
+            <TH>{`Lorem`}</TH>
+            <TH>{`Ipsum`}</TH>
+          </TR>
+        </THead>
+        <TBody>
+          <TR>
+            <TD>{`Lorem Ipsum`}</TD>
+            <TD>{`Dolor Sit`}</TD>
+          </TR>
+          <TR>
+            <TD>{`Consectetur Adipiscing`}</TD>
+            <TD>{`Elit`}</TD>
+          </TR>
+          <TR>
+            <TD>{`Nullam`}</TD>
+            <TD>{`Nec Dui`}</TD>
+          </TR>
+        </TBody>
+      </Table>
+    </Card>
   </Tabs.Tab>
   <Tabs.Tab>
 ```tsx
@@ -96,13 +99,13 @@ export default function App() {
 
 ## API
 
-<Text large className="mt-2">{`TextProps.*`}</Text>
+**Special:** Every component is just a wrapper around the native HTML element.
+So all props are the same for each component to there counter part. e. g.
+`Table` has every attribute from `HTMLTableElement` \
 
-**Special:** Only one format can be toggled at a time.
+### TableProps
 
-**Special:** Formats manage the rendered element and therefor the HTML props. \
-e.g. If TextProps.**heading** is `true`, the text renders as a heading element. So
-it has additionally every prop from the `HTMLHeadingElement`.
+<Text large className="mt-2">{`TableProps.*`}</Text>
 
 <div className="mx-2">
   <Table>
@@ -116,84 +119,117 @@ it has additionally every prop from the `HTMLHeadingElement`.
     </THead>
     <TBody>
       <TR>
-        <TD className="border-transparent">{`heading`}</TD>
-        <TD className="border-transparent">`true | undefined`</TD>
-        <TD className="border-transparent">{`Toggles heading format`}</TD>
-        <TD className="border-transparent">{`-`}</TD>
+        <TD colSpan="4" className="border-transparent">{`No custom props`}</TD>
       </TR>
+    </TBody>
+  </Table>
+</div>
+
+### TableHeadProps
+
+<Text large className="mt-2">{`TableHeadProps.*`}</Text>
+
+<div className="mx-2">
+  <Table>
+    <THead>
       <TR>
-        <TD className="border-transparent">{`size`}</TD>
-        <TD className="border-transparent">
-          `"h1" | "h2" | "h3" | "h4" | undefined`
-        </TD>
-        <TD className="border-transparent">{`Set the size for heading and description. Is required, if heading or description is toggled`}</TD>
-        <TD className="border-transparent">{`-`}</TD>
+        <TH className="border-transparent">{`Attribute`}</TH>
+        <TH className="border-transparent">{`Type`}</TH>
+        <TH className="border-transparent">{`Description`}</TH>
+        <TH className="border-transparent">{`Default`}</TH>
       </TR>
+    </THead>
+    <TBody>
       <TR>
-        <TD className="border-transparent">{`paragraph`}</TD>
-        <TD className="border-transparent">`true | undefined`</TD>
-        <TD className="border-transparent">{`Toggles paragraph format`}</TD>
-        <TD className="border-transparent">{`-`}</TD>
+        <TD colSpan="4" className="border-transparent">{`No custom props`}</TD>
       </TR>
+    </TBody>
+  </Table>
+</div>
+
+### TableRowProps
+
+<Text large className="mt-2">{`TableRowProps.*`}</Text>
+
+<div className="mx-2">
+  <Table>
+    <THead>
       <TR>
-        <TD className="border-transparent">{`blockquote`}</TD>
-        <TD className="border-transparent">`true | undefined`</TD>
-        <TD className="border-transparent">{`Toggles blockquote format`}</TD>
-        <TD className="border-transparent">{`-`}</TD>
+        <TH className="border-transparent">{`Attribute`}</TH>
+        <TH className="border-transparent">{`Type`}</TH>
+        <TH className="border-transparent">{`Description`}</TH>
+        <TH className="border-transparent">{`Default`}</TH>
       </TR>
+    </THead>
+    <TBody>
       <TR>
-        <TD className="border-transparent">{`code`}</TD>
-        <TD className="border-transparent">`true | undefined`</TD>
-        <TD className="border-transparent">{`Toggles code format`}</TD>
-        <TD className="border-transparent">{`-`}</TD>
+        <TD colSpan="4" className="border-transparent">{`No custom props`}</TD>
       </TR>
+    </TBody>
+  </Table>
+</div>
+
+### TableHeaderProps
+
+<Text large className="mt-2">{`TableHeaderProps.*`}</Text>
+
+<div className="mx-2">
+  <Table>
+    <THead>
       <TR>
-        <TD className="border-transparent">{`description`}</TD>
-        <TD className="border-transparent">`true | undefined`</TD>
-        <TD className="border-transparent">{`Toggles description format`}</TD>
-        <TD className="border-transparent">{`-`}</TD>
+        <TH className="border-transparent">{`Attribute`}</TH>
+        <TH className="border-transparent">{`Type`}</TH>
+        <TH className="border-transparent">{`Description`}</TH>
+        <TH className="border-transparent">{`Default`}</TH>
       </TR>
+    </THead>
+    <TBody>
       <TR>
-        <TD className="border-transparent">{`large`}</TD>
-        <TD className="border-transparent">`true | undefined`</TD>
-        <TD className="border-transparent">{`Toggles large format`}</TD>
-        <TD className="border-transparent">{`-`}</TD>
+        <TD colSpan="4" className="border-transparent">{`No custom props`}</TD>
       </TR>
+    </TBody>
+  </Table>
+</div>
+
+### TableBodyProps
+
+<Text large className="mt-2">{`TableBodyProps.*`}</Text>
+
+<div className="mx-2">
+  <Table>
+    <THead>
       <TR>
-        <TD className="border-transparent">{`lead`}</TD>
-        <TD className="border-transparent">`true | undefined`</TD>
-        <TD className="border-transparent">{`Toggles lead format`}</TD>
-        <TD className="border-transparent">{`-`}</TD>
+        <TH className="border-transparent">{`Attribute`}</TH>
+        <TH className="border-transparent">{`Type`}</TH>
+        <TH className="border-transparent">{`Description`}</TH>
+        <TH className="border-transparent">{`Default`}</TH>
       </TR>
+    </THead>
+    <TBody>
       <TR>
-        <TD className="border-transparent">{`list`}</TD>
-        <TD className="border-transparent">`true | undefined`</TD>
-        <TD className="border-transparent">{`Toggles list format`}</TD>
-        <TD className="border-transparent">{`-`}</TD>
+        <TD colSpan="4" className="border-transparent">{`No custom props`}</TD>
       </TR>
+    </TBody>
+  </Table>
+</div>
+
+### TableCellProps
+
+<Text large className="mt-2">{`TableCellProps.*`}</Text>
+
+<div className="mx-2">
+  <Table>
+    <THead>
       <TR>
-        <TD className="border-transparent">{`listItem`}</TD>
-        <TD className="border-transparent">`true | undefined`</TD>
-        <TD className="border-transparent">{`Toggles listItem format`}</TD>
-        <TD className="border-transparent">{`-`}</TD>
+        <TH className="border-transparent">{`Attribute`}</TH>
+        <TH className="border-transparent">{`Type`}</TH>
+        <TH className="border-transparent">{`Description`}</TH>
+        <TH className="border-transparent">{`Default`}</TH>
       </TR>
+    </THead>
+    <TBody>
       <TR>
-        <TD className="border-transparent">{`mono`}</TD>
-        <TD className="border-transparent">`true | false`</TD>
-        <TD className="border-transparent">{`Change font to mono`}</TD>
-        <TD className="border-transparent">{`-`}</TD>
-      </TR>
-      <TR>
-        <TD className="border-transparent">{`muted`}</TD>
-        <TD className="border-transparent">`true | undefined`</TD>
-        <TD className="border-transparent">{`Toggles muted format`}</TD>
-        <TD className="border-transparent">{`-`}</TD>
-      </TR>
-      <TR>
-        <TD className="border-transparent">{`small`}</TD>
-        <TD className="border-transparent">`true | undefined`</TD>
-        <TD className="border-transparent">{`Toggles small format`}</TD>
-        <TD className="border-transparent">{`-`}</TD>
+        <TD colSpan="4" className="border-transparent">{`No custom props`}</TD>
       </TR>
     </TBody>
   </Table>

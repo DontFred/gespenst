@@ -3,6 +3,7 @@ import { ThemeProvider as NextThemesProvider } from "next-themes";
 import type { ThemeProviderProps } from "./types";
 
 export { useTheme } from "next-themes";
+
 /**
  * ThemeProvider
  * @param ThemeProviderProps - Has all the props from next-themes
@@ -17,6 +18,6 @@ export { useTheme } from "next-themes";
  *    ...
  *  </ThemeProvider>
  */
-export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
-  return <NextThemesProvider {...props}>{children}</NextThemesProvider>;
+export function ThemeProvider({ children, ...rest }: ThemeProviderProps) {
+  return <NextThemesProvider {...rest}>{children}</NextThemesProvider>;
 }

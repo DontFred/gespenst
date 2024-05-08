@@ -1,5 +1,11 @@
-import type { ButtonHTMLAttributes, ReactNode } from "react";
+import type { VariantProps } from "class-variance-authority";
+import type { ReactNode } from "react";
+import type { ButtonProps as AriaButtonProps } from "react-aria-components";
 
-export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+import type { buttonVariants } from ".";
+
+export interface ButtonProps
+  extends AriaButtonProps,
+    VariantProps<typeof buttonVariants> {
   children: ReactNode;
 }

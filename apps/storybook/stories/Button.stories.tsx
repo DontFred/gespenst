@@ -1,42 +1,94 @@
 import { Button } from "@gespenst/ui/button";
-import React from "react";
 
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Button> = {
   argTypes: {
-    type: {
-      control: { type: "radio" },
-      options: ["button", "submit", "reset"],
+    size: {
+      control: {
+        options: ["large", "normal", "small"],
+        type: "select",
+      },
+      table: {
+        defaultValue: { summary: "normal" },
+      },
+    },
+    variant: {
+      control: {
+        options: [
+          "primary",
+          "secondary",
+          "tertiary",
+          "info",
+          "warning",
+          "error",
+        ],
+        type: "select",
+      },
+      table: {
+        defaultValue: { summary: "primary" },
+      },
     },
   },
   component: Button,
+  title: "UI/Button",
 };
 
 export default meta;
 
 type Story = StoryObj<typeof Button>;
 
-/*
- *👇 Render functions are a framework specific feature to allow you control on how the component renders.
- * See https://storybook.js.org/docs/react/api/csf
- * to learn how to use render functions.
- */
 export const Primary: Story = {
   args: {
-    children: "Hello",
-    type: "button",
+    children: "Upload",
   },
-  name: "Button",
-  render: (props) => (
-    <Button
-      {...props}
-      onClick={(): void => {
-        // eslint-disable-next-line no-alert -- alert for demo
-        alert("Hello from Turborepo!");
-      }}
-    >
-      Hello
-    </Button>
-  ),
+};
+
+export const Secondary: Story = {
+  args: {
+    children: "Upload",
+    variant: "secondary",
+  },
+};
+
+export const Tertiary: Story = {
+  args: {
+    children: "Upload",
+    variant: "tertiary",
+  },
+};
+
+export const Info: Story = {
+  args: {
+    children: "Upload",
+    variant: "info",
+  },
+};
+
+export const Warning: Story = {
+  args: {
+    children: "Upload",
+    variant: "warning",
+  },
+};
+
+export const Error: Story = {
+  args: {
+    children: "Upload",
+    variant: "error",
+  },
+};
+
+export const Large: Story = {
+  args: {
+    children: "Upload",
+    size: "large",
+  },
+};
+
+export const Small: Story = {
+  args: {
+    children: "Upload",
+    size: "small",
+  },
 };

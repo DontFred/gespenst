@@ -1,5 +1,6 @@
 import { Tabs } from "nextra/components";
 import { Table, TBody, TD, Text, TH, THead, TR } from "@gespenst/ui/text";
+import { Card } from "@gespenst/ui/card";
 
 # Text
 
@@ -16,9 +17,11 @@ import { Text } from "gespenst/text";
 
 <Tabs items={["Preview", "Code"]}>
   <Tabs.Tab>
-    <Text heading size="h1">
-      {`Lorem ipsum`}
-    </Text>
+    <Card>
+      <Text heading size="h1">
+        {`Lorem ipsum`}
+      </Text>
+    </Card>
   </Tabs.Tab>
   <Tabs.Tab>
 ```tsx
@@ -37,9 +40,11 @@ export default function App() {
 
 <Tabs items={["Preview", "Code"]}>
   <Tabs.Tab>
-    <Text heading size="h1">
-      {`Lorem ipsum`}
-    </Text>
+    <Card>
+      <Text heading size="h1">
+        {`Lorem ipsum`}
+      </Text>
+    </Card>
   </Tabs.Tab>
   <Tabs.Tab>
 ```tsx
@@ -60,9 +65,11 @@ export default function App() {
 
 <Tabs items={["Preview", "Code"]}>
   <Tabs.Tab>
-    <Text heading size="h2">
-      {`Lorem ipsum`}
-    </Text>
+    <Card>
+      <Text heading size="h2">
+        {`Lorem ipsum`}
+      </Text>
+    </Card>
   </Tabs.Tab>
   <Tabs.Tab>
 ```tsx
@@ -81,9 +88,11 @@ export default function App() {
 
 <Tabs items={["Preview", "Code"]}>
   <Tabs.Tab>
-    <Text description size="h2">
-      {`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`}
-    </Text>
+    <Card>
+      <Text description size="h2">
+        {`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`}
+      </Text>
+    </Card>
   </Tabs.Tab>
   <Tabs.Tab>
 ```tsx
@@ -106,9 +115,11 @@ export default function App() {
 
 <Tabs items={["Preview", "Code"]}>
   <Tabs.Tab>
-    <Text paragraph>
-      {`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`}
-    </Text>
+    <Card>
+      <Text paragraph>
+        {`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`}
+      </Text>
+    </Card>
   </Tabs.Tab>
   <Tabs.Tab>
 ```tsx
@@ -131,12 +142,14 @@ export default function App() {
 
 <Tabs items={["Preview", "Code"]}>
   <Tabs.Tab>
-    <Text blockquote>
-      {`"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."`}
-      <br/>
-      {`- `}
-      <em>{`Lorem Ipsum, Lorem ipsum dolor`}</em>
-    </Text>
+    <Card>
+      <Text blockquote>
+        {`"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."`}
+        <br/>
+        {`- `}
+        <em>{`Lorem Ipsum, Lorem ipsum dolor`}</em>
+      </Text>
+    </Card>
   </Tabs.Tab>
   <Tabs.Tab>
 ```tsx
@@ -161,9 +174,11 @@ export default function App() {
 
 <Tabs items={["Preview", "Code"]}>
   <Tabs.Tab>
-    <Text code>
-      {`lorem@ipsum:~$ lorem --ipsum -d="sit" ./amet/consectetur`}
-    </Text>
+    <Card>
+      <Text code>
+        {`lorem@ipsum:~$ lorem --ipsum -d="sit" ./amet/consectetur`}
+      </Text>
+    </Card>
   </Tabs.Tab>
   <Tabs.Tab>
 ```tsx
@@ -184,9 +199,11 @@ export default function App() {
 
 <Tabs items={["Preview", "Code"]}>
   <Tabs.Tab>
-    <Text description size="h1">
-      {`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`}
-    </Text>
+    <Card>
+      <Text description size="h1">
+        {`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`}
+      </Text>
+    </Card>
   </Tabs.Tab>
   <Tabs.Tab>
 ```tsx
@@ -209,9 +226,11 @@ export default function App() {
 
 <Tabs items={["Preview", "Code"]}>
   <Tabs.Tab>
-    <Text large>
-      {`Lorem ipsum dolor sit amet, consectetur adipiscing elit.`}
-    </Text>
+    <Card>
+      <Text large>
+        {`Lorem ipsum dolor sit amet, consectetur adipiscing elit.`}
+      </Text>
+    </Card>
   </Tabs.Tab>
   <Tabs.Tab>
 ```tsx
@@ -232,9 +251,11 @@ export default function App() {
 
 <Tabs items={["Preview", "Code"]}>
   <Tabs.Tab>
-    <Text lead>
-      {`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`}
-    </Text>
+    <Card>
+      <Text lead>
+        {`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`}
+      </Text>
+    </Card>
   </Tabs.Tab>
   <Tabs.Tab>
 ```tsx
@@ -257,9 +278,11 @@ export default function App() {
 
 <Tabs items={["Preview", "Code"]}>
   <Tabs.Tab>
-    <Text link>
-      {`https://www.loremipsum.dor/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit/`}
-    </Text>
+    <Card>
+      <Text link>
+        {`https://www.loremipsum.dor/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit/`}
+      </Text>
+    </Card>
   </Tabs.Tab>
   <Tabs.Tab>
 ```tsx
@@ -280,17 +303,19 @@ export default function App() {
 
 <Tabs items={["Preview", "Code"]}>
   <Tabs.Tab>
-    <Text list>
-        <Text listItem>
-            {`Lorem ipsum`}
-        </Text>
-        <Text listItem>
-            {`Lorem ipsum`}
-        </Text>        
-        <Text listItem>
-            {`Lorem ipsum`}
-        </Text>
-    </Text>
+    <Card>
+      <Text list>
+          <Text listItem>
+              {`Lorem ipsum`}
+          </Text>
+          <Text listItem>
+              {`Lorem ipsum`}
+          </Text>        
+          <Text listItem>
+              {`Lorem ipsum`}
+          </Text>
+      </Text>
+    </Card>
   </Tabs.Tab>
   <Tabs.Tab>
 ```tsx
@@ -319,9 +344,11 @@ export default function App() {
 
 <Tabs items={["Preview", "Code"]}>
   <Tabs.Tab>
-    <Text listItem>
-        {`Lorem ipsum`}
-    </Text>
+    <Card>
+      <Text listItem>
+          {`Lorem ipsum`}
+      </Text>
+    </Card>
   </Tabs.Tab>
   <Tabs.Tab>
 ```tsx
@@ -342,9 +369,11 @@ export default function App() {
 
 <Tabs items={["Preview", "Code"]}>
   <Tabs.Tab>
-    <Text paragraph mono>
-        {`"lOrEm IpSuM dOlOr SiT AmEt, CoNsEcTeTuR aDiPiScInG eLiT."`}
-    </Text>
+    <Card>
+      <Text paragraph mono>
+          {`"lOrEm IpSuM dOlOr SiT AmEt, CoNsEcTeTuR aDiPiScInG eLiT."`}
+      </Text>
+    </Card>
   </Tabs.Tab>
   <Tabs.Tab>
 ```tsx
@@ -365,9 +394,11 @@ export default function App() {
 
 <Tabs items={["Preview", "Code"]}>
   <Tabs.Tab>
-    <Text muted>
-      {`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`}
-    </Text>
+    <Card>
+      <Text muted>
+        {`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`}
+      </Text>
+    </Card>
   </Tabs.Tab>
   <Tabs.Tab>
 ```tsx
@@ -390,9 +421,11 @@ export default function App() {
 
 <Tabs items={["Preview", "Code"]}>
   <Tabs.Tab>
-    <Text small>
-      {`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`}
-    </Text>
+    <Card>
+      <Text small>
+        {`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`}
+      </Text>
+    </Card>
   </Tabs.Tab>
   <Tabs.Tab>
 ```tsx
@@ -413,13 +446,15 @@ export default function App() {
 
 ## API
 
-<Text large className="mt-2">{`TextProps.*`}</Text>
-
 **Special:** Only one format can be toggled at a time.
 
 **Special:** Formats manage the rendered element and therefor the HTML props. \
 e.g. If TextProps.**heading** is `true`, the text renders as a heading element. So
 it has additionally every prop from the `HTMLHeadingElement`.
+
+### TextProps
+
+<Text large className="mt-2">{`TextProps.*`}</Text>
 
 <div className="mx-2">
   <Table>

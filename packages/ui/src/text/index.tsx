@@ -43,7 +43,7 @@ export function TypographyH1({
   className,
   heading,
   mono,
-  size,
+  size = "h1",
   ...rest
 }: HeadingProps) {
   if (!heading) {
@@ -57,7 +57,7 @@ export function TypographyH1({
   return (
     <h1
       className={cn(
-        "scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl [&:not(:first-child)]:mt-12",
+        "scroll-m-20 text-[1.75rem] font-extrabold tracking-tight lg:text-5xl [&:not(:first-child)]:mt-12",
         mono && "font-mono",
         className
       )}
@@ -101,7 +101,7 @@ export function TypographyH2({
   return (
     <h2
       className={cn(
-        "scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0 [&:not(:first-child)]:mt-10",
+        "scroll-m-20 border-b pb-2 text-[1.5rem] font-semibold tracking-tight first:mt-0 lg:text-[2rem] [&:not(:first-child)]:mt-10",
         mono && "font-mono",
         className
       )}
@@ -145,7 +145,7 @@ export function TypographyH3({
   return (
     <h3
       className={cn(
-        "scroll-m-20 text-2xl font-semibold tracking-tight [&:not(:first-child)]:mt-8",
+        "scroll-m-20 text-xl font-semibold tracking-tight lg:text-2xl [&:not(:first-child)]:mt-8",
         mono && "font-mono",
         className
       )}
@@ -189,7 +189,7 @@ export function TypographyH4({
   return (
     <h4
       className={cn(
-        "scroll-m-20 text-xl font-semibold tracking-tight [&:not(:first-child)]:mt-6",
+        "scroll-m-20 text-lg font-semibold tracking-tight lg:text-xl [&:not(:first-child)]:mt-6",
         mono && "font-mono",
         className
       )}
@@ -293,7 +293,7 @@ export function Table({ children, className, container, ...rest }: TableProps) {
   return (
     <div
       className={cn(
-        "border-border my-6 w-full overflow-y-auto",
+        "border-border my-6 w-full overflow-y-auto rounded-xl border",
         containerClassName
       )}
       {...containerRest}
@@ -309,14 +309,19 @@ export function Table({ children, className, container, ...rest }: TableProps) {
  * Table Head
  * @param TableHeadProps - Has all HTML Table Head attributes.
  * @param TableHeadProps.children - The children of the Table Head.
+ * @param TableHeadProps.className - The additional class name of the Table Head. (additional class will get merged by cn()).
  * @returns A JSX element.
  * @example
  *  <THead>
  *    ...
  *  </THead>
  */
-export function THead({ children, ...rest }: TableHeadProps) {
-  return <thead {...rest}>{children}</thead>;
+export function THead({ children, className, ...rest }: TableHeadProps) {
+  return (
+    <thead className={cn("bg-background border-b", className)} {...rest}>
+      {children}
+    </thead>
+  );
 }
 
 /**
@@ -332,7 +337,10 @@ export function THead({ children, ...rest }: TableHeadProps) {
  */
 export function TR({ children, className, ...rest }: TableRowProps) {
   return (
-    <tr className={cn("even:bg-muted m-0 border-t p-0", className)} {...rest}>
+    <tr
+      className={cn("m-0 p-0 [&:not(:last-child)]:border-b", className)}
+      {...rest}
+    >
       {children}
     </tr>
   );
@@ -353,7 +361,7 @@ export function TH({ children, className, ...rest }: TableHeaderProps) {
   return (
     <th
       className={cn(
-        "border px-4 py-2 text-left font-bold [&[align=center]]:text-center [&[align=right]]:text-right",
+        "px-4 py-2 text-left font-bold [&:not(:last-child)]:border-r [&[align=center]]:text-center [&[align=right]]:text-right",
         className
       )}
       {...rest}
@@ -367,14 +375,19 @@ export function TH({ children, className, ...rest }: TableHeaderProps) {
  * Table Body
  * @param TableBodyProps - Has all HTML Table Body attributes.
  * @param TableBodyProps.children - The children of the Table Body.
+ * @param TableBodyProps.className - The additional class name of the Table Body. (additional class will get merged by cn()).
  * @returns A JSX element.
  * @example
  *  <TBody>
  *    ...
  *  </TBody>
  */
-export function TBody({ children, ...rest }: TableBodyProps) {
-  return <tbody {...rest}>{children}</tbody>;
+export function TBody({ children, className, ...rest }: TableBodyProps) {
+  return (
+    <tbody className={cn("bg-card", className)} {...rest}>
+      {children}
+    </tbody>
+  );
 }
 
 /**
@@ -392,7 +405,7 @@ export function TD({ children, className, ...rest }: TableCellProps) {
   return (
     <td
       className={cn(
-        "border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right",
+        "px-4 py-2 text-left [&:not(:last-child)]:border-r [&[align=center]]:text-center [&[align=right]]:text-right",
         className
       )}
       {...rest}
@@ -719,22 +732,19 @@ export function TypographyDescription({
     return;
   }
 
-  const descriptionVariants = cva(
-    "text-secondary-foreground font-semibold tracking-tight",
-    {
-      defaultVariants: {
-        size: "h1",
+  const descriptionVariants = cva("text-muted-foreground tracking-tight", {
+    defaultVariants: {
+      size: "h1",
+    },
+    variants: {
+      size: {
+        h1: "mt-2 text-xl",
+        h2: "mt-2 text-lg",
+        h3: "mt-2 text-base",
+        h4: "mt-1 text-sm",
       },
-      variants: {
-        size: {
-          h1: "mt-2 text-xl",
-          h2: "mt-2 text-lg",
-          h3: "mt-2 text-base",
-          h4: "mt-1 text-sm",
-        },
-      },
-    }
-  );
+    },
+  });
 
   return (
     <div

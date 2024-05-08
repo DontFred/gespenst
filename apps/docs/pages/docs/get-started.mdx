@@ -1,3 +1,5 @@
+import { Card } from "@gespenst/ui/card";
+import { Button } from "@gespenst/ui/button";
 import { Tabs } from "nextra/components";
 
 # Get Started
@@ -157,15 +159,15 @@ export default function Home() {
 }
 ```
 
-import { Button } from "@gespenst/ui/button";
-
-<main className="grid">
-  <Button
-    className="place-self-center"
-    onClick={() => {
-      alert("Boo!");
-    }}
-  >
-    Click me
-  </Button>
-</main>
+<Card>
+  <main className="grid">
+    <Button
+      className="place-self-center"
+      onClick={() => {
+        alert("Boo!");
+      }}
+    >
+      Click me
+    </Button>
+  </main>
+</Card>
