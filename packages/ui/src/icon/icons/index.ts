@@ -4709,7 +4709,7 @@ export const icons: IconsTypeWithName = {
               cy: "8",
               fill: "black",
               r: "7.375",
-              stroke: "var(--gespenst-gray-1000)",
+              stroke: "hsl(var(--gespenst-gray-1000))",
               strokeLinecap: "round",
               strokeLinejoin: "round",
               strokewidth: "1.25",
@@ -6319,7 +6319,7 @@ export const icons: IconsTypeWithName = {
               height: "9",
               mask: "url(#path-2-inside-1_872_3187)",
               rx: "0.5",
-              stroke: "var(--gespenst-gray-1000)",
+              stroke: "hsl(var(--gespenst-gray-1000))",
               strokeWidth: "4",
               width: "9",
               x: "3.5",
@@ -6408,7 +6408,7 @@ export const icons: IconsTypeWithName = {
               fill: "transparent",
               height: "7",
               rx: "3.5",
-              stroke: "var(--gespenst-gray-1000)",
+              stroke: "hsl(var(--gespenst-gray-1000))",
               strokeWidth: "2",
               width: "7",
               x: "4.5",
@@ -7689,7 +7689,7 @@ export const icons: IconsTypeWithName = {
       {
         attributes: {
           d: "M9 7L12.5 2.5",
-          stroke: "var(--gespenst-red-700)",
+          stroke: "hsl(var(--gespenst-red-700))",
           strokeWidth: "1.5",
         },
         children: [],
@@ -7698,7 +7698,7 @@ export const icons: IconsTypeWithName = {
       {
         attributes: {
           d: "M10.5 9.5L15.75 10.5",
-          stroke: "var(--ds-blue-600)",
+          stroke: "hsl(var(--ds-blue-600))",
           strokeWidth: "1.5",
         },
         children: [],
@@ -7707,7 +7707,7 @@ export const icons: IconsTypeWithName = {
       {
         attributes: {
           d: "M10 8L15.75 6",
-          stroke: "var(--ds-teal-600)",
+          stroke: "hsl(var(--ds-teal-600))",
           strokeWidth: "1.5",
         },
         children: [],

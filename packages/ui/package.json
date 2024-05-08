@@ -3,7 +3,11 @@
   "version": "0.0.0",
   "private": true,
   "exports": {
-    "./collapse": { "types": "./src/collapse/index.tsx", "import": "./dist/collapse/index.mjs", "require": "./dist/collapse/index.js" },
+    "./collapse": {
+      "types": "./src/collapse/index.tsx",
+      "import": "./dist/collapse/index.mjs",
+      "require": "./dist/collapse/index.js"
+    },
     "./card": {
       "types": "./src/card/index.tsx",
       "import": "./dist/card/index.mjs",
