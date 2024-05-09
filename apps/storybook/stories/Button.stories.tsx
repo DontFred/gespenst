@@ -4,6 +4,22 @@ import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Button> = {
   argTypes: {
+    isDisabled: {
+      control: {
+        type: "boolean",
+      },
+      table: {
+        defaultValue: { summary: undefined },
+      },
+    },
+    loading: {
+      control: {
+        type: "boolean",
+      },
+      table: {
+        defaultValue: { summary: undefined },
+      },
+    },
     size: {
       control: {
         options: ["large", "normal", "small"],
@@ -90,5 +106,19 @@ export const Small: Story = {
   args: {
     children: "Upload",
     size: "small",
+  },
+};
+
+export const Disabled: Story = {
+  args: {
+    children: "Upload",
+    isDisabled: true,
+  },
+};
+
+export const Loading: Story = {
+  args: {
+    children: "Upload",
+    loading: true,
   },
 };

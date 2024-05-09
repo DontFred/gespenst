@@ -7,7 +7,7 @@ import { cn } from "../lib";
 import type { ButtonProps } from "./types";
 
 export const buttonVariants = cva(
-  "flex max-w-full items-center justify-center transition-colors",
+  "focus:ring-primary focus:ring-offset-background focus-visible:ring-offset-background flex max-w-full items-center justify-center transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-900 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:border disabled:border-gray-400 disabled:bg-gray-100 disabled:text-gray-700",
   {
     defaultVariants: {
       size: "normal",
@@ -41,9 +41,23 @@ export const buttonVariants = cva(
  * @returns JSX.Element
  */
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ children, className, size, variant, ...other }, ref) => {
+  (
+    { children, className, isDisabled, loading, size, variant, ...other },
+    ref
+  ) => {
     return (
       <ArialButton
+        children={(values) =>
+          typeof children === "function" ? (
+            <span className="inline-block overflow-hidden text-ellipsis whitespace-nowrap px-1.5">
+              {children(values)}
+            </span>
+          ) : (
+            <span className="inline-block overflow-hidden text-ellipsis whitespace-nowrap px-1.5">
+              {children}
+            </span>
+          )
+        }
         className={(values) =>
           cn(
             buttonVariants({
@@ -54,13 +68,10 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             })
           )
         }
+        isDisabled={isDisabled ?? loading}
         ref={ref}
         {...other}
-      >
-        <span className="inline-block overflow-hidden text-ellipsis whitespace-nowrap px-1.5">
-          {children}
-        </span>
-      </ArialButton>
+      />
     );
   }
 );

@@ -3,7 +3,10 @@ import type { Config } from "tailwindcss";
 const config = {
   content: ["./src/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}"],
   darkMode: ["class"],
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    require("tailwindcss-react-aria-components"),
+  ],
   prefix: "",
   theme: {
     colors: {

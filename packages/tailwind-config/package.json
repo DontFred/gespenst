@@ -7,9 +7,9 @@
   },
   "devDependencies": {
     "@gespenst/typescript-config": "*",
-    "tailwindcss": "^3.4.3"
-  },
-  "dependencies": {
+    "tailwindcss": "^3.4.3",
+    "tailwindcss-react-aria-components": "^1.1.2",
     "tailwindcss-animate": "^1.0.7"
-  }
+  },
+  "dependencies": {}
 }
