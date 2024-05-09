@@ -4,7 +4,7 @@ import { cn } from "../lib";
 
 import type { CardProps } from "./types";
 
-export const cardVariants = cva("bg-card overflow-hidden border", {
+export const cardVariants = cva("bg-card inner-border overflow-hidden", {
   defaultVariants: {
     padding: "normal",
     rounded: "normal",

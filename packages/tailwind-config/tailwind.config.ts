@@ -6,6 +6,7 @@ const config = {
   plugins: [
     require("tailwindcss-animate"),
     require("tailwindcss-react-aria-components"),
+    require("tailwindcss-inner-border"),
   ],
   prefix: "",
   theme: {

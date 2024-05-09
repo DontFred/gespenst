@@ -22,7 +22,7 @@ export const iconButtonVariants = cva("p-0", {
 });
 
 export const buttonVariants = cva(
-  "focus:ring-primary focus:ring-offset-background focus-visible:ring-offset-background flex max-w-full items-center justify-center font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-900 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:border disabled:border-gray-400 disabled:bg-gray-100 disabled:text-gray-700",
+  "focus:ring-primary focus:ring-offset-background focus-visible:ring-offset-background disabled:inner-border disabled:inner-border-gray-400 flex max-w-full items-center justify-center font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-900 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:bg-gray-100 disabled:text-gray-700",
   {
     defaultVariants: {
       shape: "angular",
@@ -35,22 +35,18 @@ export const buttonVariants = cva(
         rounded: "rounded-full",
       },
       size: {
-        large: "h-[50px] px-3.5 text-base",
-        normal: "h-[42px] px-2.5 text-sm",
-        small: "h-[34px] px-1.5 text-sm",
+        large: "h-12 px-3.5 text-base",
+        normal: "h-10 px-2.5 text-sm",
+        small: "h-8 px-1.5 text-sm",
       },
       variant: {
-        error:
-          "border bg-red-800 text-white shadow-red-800 hover:border-red-900 hover:bg-red-900",
-        info: "border border-blue-800 bg-blue-800 text-white hover:border-blue-900 hover:bg-blue-900",
-        primary:
-          "border-primary bg-primary hover:bg-primary-hover  hover:border-primary-hover text-primary-foreground border",
+        error: "bg-red-800 text-white shadow-red-800 hover:bg-red-900",
+        info: "bg-blue-800 text-white hover:bg-blue-900",
+        primary: "bg-primary hover:bg-primary-hover text-primary-foreground",
         secondary:
-          "bg-secondary hover:bg-secondary-hover text-secondary-foreground border",
-        tertiary:
-          "hover:border-secondary-hover hover:bg-secondary-hover text-secondary-foreground border border-transparent",
-        warning:
-          "border border-amber-800 bg-amber-800 text-black hover:border-[#d27504] hover:bg-[#d27504]",
+          "bg-secondary hover:bg-secondary-hover text-secondary-foreground inner-border",
+        tertiary: "hover:bg-secondary-hover text-secondary-foreground",
+        warning: "bg-amber-800 text-black hover:bg-[#d27504]",
       },
     },
   }
@@ -136,8 +132,7 @@ export const Button = forwardRef<
               <span
                 className={cn(
                   "inline-block overflow-hidden text-ellipsis whitespace-nowrap px-1.5",
-                  svgOnly &&
-                    "flex items-center justify-center overflow-hidden text-ellipsis whitespace-nowrap px-1.5"
+                  svgOnly && "flex items-center justify-center px-1.5"
                 )}
               >
                 {children}
