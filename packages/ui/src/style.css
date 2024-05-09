@@ -18,6 +18,7 @@
   --gespenst-secondary-foreground: var(--gespenst-gray-1000); /* Gray 1000 */
   --gespenst-muted: 0, 0%, 92%;
   --gespenst-muted-foreground: 0, 0%, 20%;
+
   --gespenst-accent: 0, 0%, 98.94%;
   --gespenst-accent-foreground: 0, 0%, 0%;
   --gespenst-border: var(--gespenst-gray-400); /* Gray 400 */
@@ -42,6 +43,14 @@
   --gespenst-warning-foreground: var(--gespenst-amber-900); /* Amber 900 */
   --gespenst-radius: 0.5rem;
   /* colors */
+  --accents-1: #fafafa;
+  --accents-2: #eaeaea;
+  --accents-3: #999;
+  --accents-4: #888;
+  --accents-5: #666;
+  --accents-6: #444;
+  --accents-7: #333;
+  --accents-8: #111;
   --gespenst-gray-100: 0, 0%, 95%;
   --gespenst-gray-200: 0, 0%, 92%;
   --gespenst-gray-300: 0, 0%, 90%;
@@ -146,6 +155,14 @@
   --gespenst-input: var(--gespenst-gray-400); /* Gray 400 */
   --gespenst-ring: 0, 0%, 83.1%;
   /* colors */
+  --gespenst-accents-8: #fafafa;
+  --gespenst-accents-7: #eaeaea;
+  --gespenst-accents-6: #999;
+  --gespenst-accents-5: #888;
+  --gespenst-accents-4: #666;
+  --gespenst-accents-3: #444;
+  --gespenst-accents-2: #333;
+  --gespenst-accents-1: #111;
   --gespenst-gray-100: 0, 0%, 10%;
   --gespenst-gray-200: 0, 0%, 12%;
   --gespenst-gray-300: 0, 0%, 16%;

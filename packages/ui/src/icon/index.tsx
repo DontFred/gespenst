@@ -64,7 +64,7 @@ export function Icon({
   }
   return (
     <span
-      className={cn("inline h-4 w-4 self-center", className)}
+      className={cn("h-4 w-4 self-center", className)}
       {...rest}
       dangerouslySetInnerHTML={{
         __html: `<svg viewBox="${IconProperties.viewBox}" width="100%" height="100%"  stroke-linejoin="round">${renderChildren(IconProperties.children)}</svg>`,

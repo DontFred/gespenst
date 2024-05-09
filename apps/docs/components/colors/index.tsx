@@ -7,6 +7,48 @@ import type { ColorsProps } from "./types";
 /**
  * @returns JSX.Element
  */
+function AccentsColor() {
+  const accentsVariants = cva("h-full w-full rounded border", {
+    defaultVariants: {
+      type: 1,
+    },
+    variants: {
+      type: {
+        1: "bg-accents-1",
+        2: "bg-accents-2",
+        3: "bg-accents-3",
+        4: "bg-accents-4",
+        5: "bg-accents-5",
+        6: "bg-accents-6",
+        7: "bg-accents-7",
+        8: "bg-accents-8",
+      },
+    },
+  });
+
+  return (
+    <Fragment>
+      <div className="col-span-2 grid h-10 place-items-center">
+        <Text className="w-full capitalize" paragraph>
+          accents
+        </Text>
+      </div>
+      <div className={accentsVariants({ type: 1 })} />
+      <div className={accentsVariants({ type: 2 })} />
+      <div className={accentsVariants({ type: 3 })} />
+      <div className={accentsVariants({ type: 4 })} />
+      <div className={accentsVariants({ type: 5 })} />
+      <div className={accentsVariants({ type: 6 })} />
+      <div className={accentsVariants({ type: 7 })} />
+      <div className={accentsVariants({ type: 8 })} />
+      <div />
+    </Fragment>
+  );
+}
+
+/**
+ * @returns JSX.Element
+ */
 function GrayColor() {
   const grayVariants = cva("h-full w-full rounded border", {
     defaultVariants: {
@@ -917,6 +959,8 @@ function WarningColor() {
  */
 export function Colors({ color }: ColorsProps) {
   switch (color) {
+    case "accents":
+      return <AccentsColor />;
     case "gray":
       return <GrayColor />;
     case "blue":

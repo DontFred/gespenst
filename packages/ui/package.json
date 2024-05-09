@@ -3,6 +3,11 @@
   "version": "0.0.0",
   "private": true,
   "exports": {
+    "./load-spinner": {
+      "types": "./src/load-spinner/index.tsx",
+      "import": "./dist/load-spinner/index.mjs",
+      "require": "./dist/load-spinner/index.js"
+    },
     "./card": {
       "types": "./src/card/index.tsx",
       "import": "./dist/card/index.mjs",

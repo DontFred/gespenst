@@ -10,6 +10,20 @@ const config = {
   prefix: "",
   theme: {
     colors: {
+      transparent: "transparent",
+      current: "currentColor",
+      white: "#ffffff",
+      black: "#000000",
+      accents: {
+        1: "var(--gespenst-accents-1)",
+        2: "var(--gespenst-accents-2)",
+        3: "var(--gespenst-accents-3)",
+        4: "var(--gespenst-accents-4)",
+        5: "var(--gespenst-accents-5)",
+        6: "var(--gespenst-accents-6)",
+        7: "var(--gespenst-accents-7)",
+        8: "var(--gespenst-accents-8)",
+      },
       gray: {
         100: "hsl(var(--gespenst-gray-100))",
         200: "hsl(var(--gespenst-gray-200))",

@@ -1,6 +1,7 @@
 export interface ColorsProps {
   color:
     | "accent"
+    | "accents"
     | "amber"
     | "background"
     | "blue"
