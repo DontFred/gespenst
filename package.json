@@ -3,7 +3,7 @@
   "devDependencies": {
     "@gespenst/eslint-config": "*",
     "@gespenst/typescript-config": "*",
-    "@turbo/gen": "^1.12.4",
+    "@turbo/gen": "^1.13.3",
     "husky": "^9.0.11",
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.14",
@@ -28,6 +28,7 @@
     "clean:install": "rm -rf node_modules && rm -rf bun.lockb && bun install",
     "clean:all": "turbo clean:all && npm run clean",
     "clean:all:install": "turbo clean:all && npm run clean:install",
+    "turbo": "turbo",
     "prepare": "husky"
   },
   "workspaces": [
