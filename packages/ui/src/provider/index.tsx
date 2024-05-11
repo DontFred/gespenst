@@ -6,6 +6,8 @@ import { ThemeProvider } from "./theme-provider";
 
 import type { ProviderProps } from "./types";
 
+// import "../style.css";
+
 export { useTheme as useProviderThemeUseTheme } from "./theme-provider";
 
 /**

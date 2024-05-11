@@ -5,8 +5,10 @@ import type { {{pascalCase name}}Props } from "./types";
  * @param {{pascalCase name}} - props of {{pascalCase name}}
  * @returns JSX.Element
  */
-export function {{pascalCase name}}({ ...rest }: {{pascalCase name}}Props) {
-  return <div {...rest} />;
-}
-
+const {{pascalCase name}} = forwardRef<HTMLDivElement, {{pascalCase name}}Props>(({ ...rest }, ref) => {
+  return <div ref={ref} {...rest} />;
+});
 {{pascalCase name}}.displayName = "{{pascalCase name}}";
+
+export { {{pascalCase name}} };
+

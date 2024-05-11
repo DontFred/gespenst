@@ -3,6 +3,11 @@
   "version": "0.0.0",
   "private": true,
   "exports": {
+    "./avatar": {
+      "types": "./src/avatar/index.tsx",
+      "import": "./dist/avatar/index.mjs",
+      "require": "./dist/avatar/index.js"
+    },
     "./load-spinner": {
       "types": "./src/load-spinner/index.tsx",
       "import": "./dist/load-spinner/index.mjs",
@@ -17,10 +22,6 @@
       "types": "./src/button/index.tsx",
       "import": "./dist/button/index.mjs",
       "require": "./dist/button/index.js"
-    },
-    "./dist/style.css": {
-      "import": "./dist/style.css",
-      "require": "./dist/style.css"
     },
     "./font-geist": {
       "types": "./src/font-geist/index.tsx",
@@ -46,6 +47,14 @@
       "types": "./src/lib/index.ts",
       "import": "./dist/lib/index.mjs",
       "require": "./dist/lib/index.js"
+    },
+    "./dist/": {
+      "import": "./dist/",
+      "require": "./dist/"
+    },
+    "./dist/style.css": {
+      "import": "./dist/style.css",
+      "require": "./dist/style.css"
     }
   },
   "scripts": {

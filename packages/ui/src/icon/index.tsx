@@ -1,3 +1,5 @@
+import { forwardRef } from "react";
+
 import { cn } from "../lib";
 
 import { icons } from "./icons";
@@ -41,34 +43,36 @@ function renderChildren(children: IconChildren[]): string {
  *    <div>Accessibility</div>
  *  </Icon>
  */
-export function Icon({
-  children,
-  className,
-  containerClassName,
-  name,
-  ...rest
-}: IconProps) {
-  const IconProperties = icons[name];
-  if (children) {
+const Icon = forwardRef<HTMLSpanElement, IconProps>(
+  ({ children, className, containerClassName, name, ...rest }, ref) => {
+    const IconProperties = icons[name];
+    if (children) {
+      return (
+        <span
+          className={cn(
+            "font inline-flex items-center gap-1.5",
+            containerClassName
+          )}
+          ref={ref}
+        >
+          <Icon className={className} name={name} {...rest} />
+          {children}
+        </span>
+      );
+    }
     return (
       <span
-        className={cn(
-          "font inline-flex items-center gap-1.5",
-          containerClassName
-        )}
-      >
-        <Icon className={className} name={name} {...rest} />
-        {children}
-      </span>
+        className={cn("h-4 w-4 self-center", className)}
+        ref={ref}
+        {...rest}
+        dangerouslySetInnerHTML={{
+          __html: `<svg viewBox="${IconProperties.viewBox}" width="100%" height="100%"  stroke-linejoin="round">${renderChildren(IconProperties.children)}</svg>`,
+        }}
+      />
     );
   }
-  return (
-    <span
-      className={cn("h-4 w-4 self-center", className)}
-      {...rest}
-      dangerouslySetInnerHTML={{
-        __html: `<svg viewBox="${IconProperties.viewBox}" width="100%" height="100%"  stroke-linejoin="round">${renderChildren(IconProperties.children)}</svg>`,
-      }}
-    ></span>
-  );
-}
+);
+
+Icon.displayName = "Icon";
+
+export { Icon };

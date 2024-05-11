@@ -1,3 +1,5 @@
+"use client";
+
 import { cva } from "class-variance-authority";
 import { forwardRef, Fragment } from "react";
 import { Button as ArialButton } from "react-aria-components";
@@ -60,10 +62,7 @@ export const buttonVariants = cva(
  * @param Button.size
  * @returns JSX.Element
  */
-export const Button = forwardRef<
-  HTMLButtonElement,
-  ButtonProps | SvgButtonProps
->(
+const Button = forwardRef<HTMLButtonElement, ButtonProps | SvgButtonProps>(
   (
     {
       children,
@@ -188,3 +187,5 @@ export const Button = forwardRef<
 );
 
 Button.displayName = "Button";
+
+export { Button };

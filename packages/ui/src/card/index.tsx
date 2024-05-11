@@ -1,4 +1,5 @@
 import { cva } from "class-variance-authority";
+import { forwardRef } from "react";
 
 import { cn } from "../lib";
 
@@ -34,21 +35,20 @@ export const cardVariants = cva("bg-card inner-border overflow-hidden", {
  * @param Card.padding - The padding variant of the Card. (default: normal) (options: large, none, normal)
  * @returns JSX.Element
  */
-export function Card({
-  children,
-  className,
-  padding,
-  rounded,
-  ...rest
-}: CardProps) {
-  return (
-    <div
-      className={cn(cardVariants({ padding, rounded }), className)}
-      {...rest}
-    >
-      {children}
-    </div>
-  );
-}
+const Card = forwardRef<HTMLDivElement, CardProps>(
+  ({ children, className, padding, rounded, ...rest }, ref) => {
+    return (
+      <div
+        className={cn(cardVariants({ padding, rounded }), className)}
+        ref={ref}
+        {...rest}
+      >
+        {children}
+      </div>
+    );
+  }
+);
 
 Card.displayName = "Card";
+
+export { Card };

@@ -6,6 +6,8 @@ const withNextra = require("nextra")({
 });
 
 module.exports = withNextra({
-  output: "export",
+  images: {
+    domains: ["images.unsplash.com"],
+  },
   transpilePackages: ["@gespenst/ui", "geist"],
 });
