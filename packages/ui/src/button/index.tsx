@@ -85,7 +85,7 @@ export const Button = forwardRef<
         children={(values) =>
           typeof children === "function" ? (
             <Fragment>
-              {(prefix ?? loading) && (
+              {(prefix ?? loading) && !svgOnly && (
                 <span className="mr-0.5 flex min-w-5 flex-shrink-0 items-center justify-center">
                   {loading ? (
                     <LoadSpinner
@@ -105,9 +105,18 @@ export const Button = forwardRef<
                   svgOnly && "flex w-full items-center justify-center"
                 )}
               >
-                {children(values)}
+                {loading && svgOnly ? (
+                  <LoadSpinner
+                    className={cn(
+                      "text-accents-5 h-4 w-4",
+                      size === "large" && "h-6 w-6"
+                    )}
+                  />
+                ) : (
+                  children(values)
+                )}
               </span>
-              {!loading && suffix && (
+              {!loading && suffix && !svgOnly && (
                 <span className="ml-0.5 flex min-w-5 flex-shrink-0 items-center justify-center">
                   {suffix}
                 </span>
@@ -115,7 +124,7 @@ export const Button = forwardRef<
             </Fragment>
           ) : (
             <Fragment>
-              {(prefix ?? loading) && (
+              {(prefix ?? loading) && !svgOnly && (
                 <span className="mr-0.5 flex min-w-5 flex-shrink-0 items-center justify-center">
                   {loading ? (
                     <LoadSpinner
@@ -135,9 +144,18 @@ export const Button = forwardRef<
                   svgOnly && "flex items-center justify-center px-1.5"
                 )}
               >
-                {children}
+                {loading && svgOnly ? (
+                  <LoadSpinner
+                    className={cn(
+                      "text-accents-5 h-4 w-4",
+                      size === "large" && "h-6 w-6"
+                    )}
+                  />
+                ) : (
+                  children
+                )}
               </span>
-              {!loading && suffix && (
+              {!loading && suffix && !svgOnly && (
                 <span className="ml-0.5 flex min-w-5 flex-shrink-0 items-center justify-center">
                   {suffix}
                 </span>
@@ -154,7 +172,11 @@ export const Button = forwardRef<
               size: !svgOnly ? size : undefined,
               variant,
             }),
-            svgOnly && iconButtonVariants({ size })
+            svgOnly &&
+              iconButtonVariants({
+                className: shape === "rounded" && "rounded-full",
+                size,
+              })
           )
         }
         isDisabled={isDisabled ?? loading}

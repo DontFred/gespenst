@@ -1,0 +1,392 @@
+import { Tabs } from "nextra/components";
+import { Table, TBody, TD, Text, TH, THead, TR } from "@gespenst/ui/text";
+import { Card } from "@gespenst/ui/card";
+import { Button } from "@gespenst/ui/button";
+import { Icon } from "@gespenst/ui/icon";
+
+# Button
+
+The Button component is used to render fully accessible button. It is wrapper
+around the react-aria-component
+[Button](https://react-spectrum.adobe.com/react-aria/Button.html).
+
+## Import
+
+```tsx
+import { Button } from "gespenst/button";
+```
+
+## Usage
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Card className="grid">
+      <Button className="place-self-center">Click me</Button>
+    </Card>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import { Button } from "gespenst/button";
+
+export default function App() {
+  return (
+    <Button>Click me</Button>
+  );
+}
+ ```
+  </Tabs.Tab>
+</Tabs>
+
+### ButtonProps.size
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Card className="flex justify-between items-center gap-4">
+      <Button size={"small"}>Click me</Button>
+      <Button>Click me</Button>
+      <Button size={"large"}>Click me</Button>
+    </Card>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import { Button } from "gespenst/button";
+
+export default function App() {
+  return (
+    <div className="flex justify-between items-center gap-4">
+      <Button size={"small"}>Click me</Button>
+      <Button>Click me</Button>
+      <Button size={"large"}>Click me</Button>
+    </div>
+  );
+}
+ ```
+  </Tabs.Tab>
+</Tabs>
+
+### ButtonProps.variant
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Card className="flex justify-between items-center gap-4">
+      <Button variant={"primary"}>Click me</Button>
+      <Button variant={"secondary"}>Click me</Button>
+      <Button variant={"tertiary"}>Click me</Button>
+      <Button variant={"info"}>Click me</Button>
+      <Button variant={"warning"}>Click me</Button>
+      <Button variant={"error"}>Click me</Button>
+    </Card>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import { Button } from "gespenst/button";
+
+export default function App() {
+  return (
+    <div className="flex justify-between items-center gap-4">
+     <Button variant={"primary"}>Click me</Button>
+      <Button variant={"secondary"}>Click me</Button>
+      <Button variant={"tertiary"}>Click me</Button>
+      <Button variant={"info"}>Click me</Button>
+      <Button variant={"warning"}>Click me</Button>
+      <Button variant={"error"}>Click me</Button>
+    </div>
+  );
+}
+ ```
+  </Tabs.Tab>
+</Tabs>
+
+### ButtonProps.prefix
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Card className="flex justify-between items-center gap-4">
+      <Button prefix={<Icon name="arrow-left"/>} size={"small"}>Click me</Button>
+      <Button prefix={<Icon name="arrow-left"/>}>Click me</Button>
+      <Button prefix={<Icon name="arrow-left"/>} size={"large"}>Click me</Button>
+    </Card>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import { Button } from "gespenst/button";
+
+export default function App() {
+  return (
+    <div className="flex justify-between items-center gap-4">
+      <Button prefix={<Icon name="arrow-left"/>} size={"small"}>Click me</Button>
+      <Button prefix={<Icon name="arrow-left"/>}>Click me</Button>
+      <Button prefix={<Icon name="arrow-left"/>} size={"large"}>Click me</Button>
+    </div>
+  );
+}
+ ```
+  </Tabs.Tab>
+</Tabs>
+
+### ButtonProps.suffix
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Card className="flex justify-between items-center gap-4">
+      <Button suffix={<Icon name="arrow-right"/>} size={"small"}>Click me</Button>
+      <Button suffix={<Icon name="arrow-right"/>}>Click me</Button>
+      <Button suffix={<Icon name="arrow-right"/>} size={"large"}>Click me</Button>
+    </Card>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import { Button } from "gespenst/button";
+
+export default function App() {
+  return (
+    <div className="flex justify-between items-center gap-4">
+      <Button suffix={<Icon name="arrow-right"/>} size={"small"}>Click me</Button>
+      <Button suffix={<Icon name="arrow-right"/>}>Click me</Button>
+      <Button suffix={<Icon name="arrow-right"/>} size={"large"}>Click me</Button>
+    </div>
+  );
+}
+ ```
+  </Tabs.Tab>
+</Tabs>
+
+### ButtonProps.loading
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Card className="flex justify-between items-center gap-4">
+      <Button loading size={"small"}>Click me</Button>
+      <Button loading>Click me</Button>
+      <Button loading size={"large"}>Click me</Button>
+    </Card>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import { Button } from "gespenst/button";
+
+export default function App() {
+  return (
+    <div className="flex justify-between items-center gap-4">
+      <Button loading size={"small"}>Click me</Button>
+      <Button loading>Click me</Button>
+      <Button loading size={"large"}>Click me</Button>
+    </div>
+  );
+}
+ ```
+  </Tabs.Tab>
+</Tabs>
+
+### ButtonProps.isDisabled
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Card className="flex justify-between items-center gap-4">
+      <Button isDisabled size={"small"}>Click me</Button>
+      <Button isDisabled>Click me</Button>
+      <Button isDisabled size={"large"}>Click me</Button>
+    </Card>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import { Button } from "gespenst/button";
+
+export default function App() {
+  return (
+    <div className="flex justify-between items-center gap-4">
+      <Button isDisabled size={"small"}>Click me</Button>
+      <Button isDisabled>Click me</Button>
+      <Button isDisabled size={"large"}>Click me</Button>
+    </div>
+  );
+}
+ ```
+  </Tabs.Tab>
+</Tabs>
+
+### ButtonProps.shape
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Card className="flex justify-between items-center gap-4">
+      <Button shape={"rounded"} size={"small"}>Click me</Button>
+      <Button shape={"rounded"}>Click me</Button>
+      <Button shape={"rounded"} size={"large"}>Click me</Button>
+    </Card>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import { Button } from "gespenst/button";
+
+export default function App() {
+  return (
+    <div className="flex justify-between items-center gap-4">
+      <Button shape={"rounded"} size={"small"}>Click me</Button>
+      <Button shape={"rounded"}>Click me</Button>
+      <Button shape={"rounded"} size={"large"}>Click me</Button>
+    </div>
+  );
+}
+ ```
+  </Tabs.Tab>
+</Tabs>
+
+### ButtonProps.svgOnly
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Card className="grid gap-10">
+      <div className="flex justify-between items-center gap-4">
+        <Button svgOnly size={"xsmall"}><Icon name="cursor-click"/></Button>
+        <Button svgOnly size={"small"}><Icon name="cursor-click"/></Button>
+        <Button svgOnly><Icon name="cursor-click"/></Button>
+        <Button svgOnly size={"large"}><Icon name="cursor-click"/></Button>
+      </div>
+      <div className="flex justify-between items-center gap-4">
+        <Button variant={"secondary"} svgOnly><Icon name="cursor-click"/></Button>
+        <Button variant={"tertiary"} svgOnly><Icon name="cursor-click"/></Button>
+        <Button variant={"info"} svgOnly><Icon name="cursor-click"/></Button>
+        <Button variant={"warning"} svgOnly><Icon name="cursor-click"/></Button>
+        <Button variant={"error"} svgOnly><Icon name="cursor-click"/></Button>
+      </div>
+      <div className="flex justify-between items-center gap-4">
+        <Button loading svgOnly size={"xsmall"}><Icon name="cursor-click"/></Button>
+        <Button loading svgOnly size={"small"}><Icon name="cursor-click"/></Button>
+        <Button loading svgOnly><Icon name="cursor-click"/></Button>
+        <Button loading svgOnly size={"large"}><Icon name="cursor-click"/></Button>
+      </div>
+      <div className="flex justify-between items-center gap-4">
+        <Button isDisabled svgOnly size={"xsmall"}><Icon name="cursor-click"/></Button>
+        <Button isDisabled svgOnly size={"small"}><Icon name="cursor-click"/></Button>
+        <Button isDisabled svgOnly><Icon name="cursor-click"/></Button>
+        <Button isDisabled svgOnly size={"large"}><Icon name="cursor-click"/></Button>
+      </div>
+      <div className="flex justify-between items-center gap-4">
+        <Button shape={"rounded"} svgOnly size={"xsmall"}><Icon name="cursor-click"/></Button>
+        <Button shape={"rounded"} svgOnly size={"small"}><Icon name="cursor-click"/></Button>
+        <Button shape={"rounded"} svgOnly><Icon name="cursor-click"/></Button>
+        <Button shape={"rounded"} svgOnly size={"large"}><Icon name="cursor-click"/></Button>
+      </div>
+    </Card>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import { Button } from "gespenst/button";
+
+export default function App() {
+  return (
+    <div className="grid gap-10">
+      <div className="flex justify-between items-center gap-4">
+        <Button svgOnly size={"xsmall"}><Icon name="cursor-click"/></Button>
+        <Button svgOnly size={"small"}><Icon name="cursor-click"/></Button>
+        <Button svgOnly><Icon name="cursor-click"/></Button>
+        <Button svgOnly size={"large"}><Icon name="cursor-click"/></Button>
+      </div>
+      <div className="flex justify-between items-center gap-4">
+        <Button variant={"secondary"} svgOnly><Icon name="cursor-click"/></Button>
+        <Button variant={"tertiary"} svgOnly><Icon name="cursor-click"/></Button>
+        <Button variant={"info"} svgOnly><Icon name="cursor-click"/></Button>
+        <Button variant={"warning"} svgOnly><Icon name="cursor-click"/></Button>
+        <Button variant={"error"} svgOnly><Icon name="cursor-click"/></Button>
+      </div>
+      <div className="flex justify-between items-center gap-4">
+        <Button loading svgOnly size={"xsmall"}><Icon name="cursor-click"/></Button>
+        <Button loading svgOnly size={"small"}><Icon name="cursor-click"/></Button>
+        <Button loading svgOnly><Icon name="cursor-click"/></Button>
+        <Button loading svgOnly size={"large"}><Icon name="cursor-click"/></Button>
+      </div>
+      <div className="flex justify-between items-center gap-4">
+        <Button isDisabled svgOnly size={"xsmall"}><Icon name="cursor-click"/></Button>
+        <Button isDisabled svgOnly size={"small"}><Icon name="cursor-click"/></Button>
+        <Button isDisabled svgOnly><Icon name="cursor-click"/></Button>
+        <Button isDisabled svgOnly size={"large"}><Icon name="cursor-click"/></Button>
+      </div>
+      <div className="flex justify-between items-center gap-4">
+        <Button shape={"rounded"} svgOnly size={"xsmall"}><Icon name="cursor-click"/></Button>
+        <Button shape={"rounded"} svgOnly size={"small"}><Icon name="cursor-click"/></Button>
+        <Button shape={"rounded"} svgOnly><Icon name="cursor-click"/></Button>
+        <Button shape={"rounded"} svgOnly size={"large"}><Icon name="cursor-click"/></Button>
+      </div>
+    </div>
+  );
+}
+ ```
+  </Tabs.Tab>
+</Tabs>
+
+## API
+
+**Special:** Button is just a wrapper around the react-aria-components button.
+So all props are the same as in the
+[Button](https://react-spectrum.adobe.com/react-aria/Button.html#props) without
+considering the additional props.
+
+**Special:** Only `size="xsmall"` can be used with `svgOnly={true}`.
+
+**Special:** When`svgOnly={true}` is used `prefix` and `suffix` are not allowed.
+
+### ButtonProps
+
+<Text large className="mt-2">{`ButtonProps.*`}</Text>
+
+<div className="mx-2">
+  <Table>
+    <THead>
+      <TR>
+        <TH className="border-transparent">{`Attribute`}</TH>
+        <TH className="border-transparent">{`Type`}</TH>
+        <TH className="border-transparent">{`Description`}</TH>
+        <TH className="border-transparent">{`Default`}</TH>
+      </TR>
+    </THead>
+    <TBody>
+      <TR>
+        <TD className="border-transparent">{`size`}</TD>
+        <TD className="border-transparent">
+          `xsmall* | small | normal | large | undefined`
+        </TD>
+        <TD className="border-transparent">{`Change the size`}</TD>
+        <TD className="border-transparent">`normal`</TD>
+      </TR>
+      <TR>
+        <TD className="border-transparent">{`variant`}</TD>
+        <TD className="border-transparent">
+          `primary | secondary | tertiary | info | warning | error | undefined`
+        </TD>
+        <TD className="border-transparent">{`Change the style`}</TD>
+        <TD className="border-transparent">`primary`</TD>
+      </TR>
+      <TR>
+        <TD className="border-transparent">{`prefix*`}</TD>
+        <TD className="border-transparent">`ReactNode | undefined`</TD>
+        <TD className="border-transparent">{`Add a prefix `}</TD>
+        <TD className="border-transparent">{`-`}</TD>
+      </TR>
+      <TR>
+        <TD className="border-transparent">{`suffix*`}</TD>
+        <TD className="border-transparent">`ReactNode | undefined`</TD>
+        <TD className="border-transparent">{`Add a suffix `}</TD>
+        <TD className="border-transparent">{`-`}</TD>
+      </TR>
+      <TR>
+        <TD className="border-transparent">{`loading`}</TD>
+        <TD className="border-transparent">`boolean | undefined`</TD>
+        <TD className="border-transparent">{`Change state to disabled and indicates loading`}</TD>
+        <TD className="border-transparent">{`-`}</TD>
+      </TR>
+      <TR>
+        <TD className="border-transparent">{`shape`}</TD>
+        <TD className="border-transparent">`angular | rounded | undefined`</TD>
+        <TD className="border-transparent">{`Change radius`}</TD>
+        <TD className="border-transparent">`angular`</TD>
+      </TR>
+      <TR>
+        <TD className="border-transparent">{`svgOnly`}</TD>
+        <TD className="border-transparent">`boolean | undefined`</TD>
+        <TD className="border-transparent">{`Change aspect ratio to fit an icon`}</TD>
+        <TD className="border-transparent">{`-`}</TD>
+      </TR>
+    </TBody>
+  </Table>
+</div>

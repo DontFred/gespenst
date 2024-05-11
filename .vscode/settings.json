@@ -13,7 +13,7 @@
     "*.css": "tailwindcss"
   },
   "cSpell.words": ["gespenst", "nowarnings", "tailwindcss", "tsup"],
-  "tailwindCSS.experimental.configFile": "packages/tailwind-config/tailwind.config.ts",
+  "cSpell.enableFiletypes": ["mdx"],
   "eslint.workingDirectories": [
     {
       "mode": "auto"
@@ -25,8 +25,11 @@
     "ngClass",
     "containerClassName"
   ],
+  "tailwindCSS.includeLanguages": {
+    "plaintext": "mdx"
+  },
+  "tailwindCSS.experimental.configFile": "packages/tailwind-config/tailwind.config.ts",
   "tailwindCSS.experimental.classRegex": [
     ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
-  ],
-  "cSpell.enableFiletypes": ["mdx"]
+  ]
 }
