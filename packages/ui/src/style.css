@@ -507,3 +507,13 @@ body {
   background-color: hsl(var(--gespenst-background));
   color: hsl(var(--gespenst-foreground));
 }
+
+@layer components {
+  .font-feature-settings-tnum {
+    font-feature-settings: "tnum";
+  }
+}
+
+.font-feature-settings-tnum {
+  font-feature-settings: "tnum";
+}

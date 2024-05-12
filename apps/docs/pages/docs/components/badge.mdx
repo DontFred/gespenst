@@ -1,0 +1,214 @@
+import { Tabs } from "nextra/components";
+import { Table, TBody, TD, Text, TH, THead, TR } from "@gespenst/ui/text";
+import { Card } from "@gespenst/ui/card";
+import { Button } from "@gespenst/ui/button";
+import { Badge } from "@gespenst/ui/badge";
+import { Icon } from "@gespenst/ui/icon";
+
+# Badge
+
+The Badge component is used to render a simple badge with a text. It is a
+wrapper around native `HTMLSpanElement`.
+
+## Import
+
+```tsx
+import { Badge } from "gespenst/badge";
+```
+
+## Usage
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Card className="grid">
+      <Badge className="place-self-center" content="Badge"/>
+    </Card>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import { Badge } from "gespenst/badge";
+
+export default function App() {
+  return (
+    <Badge content="Badge"/>
+  );
+}
+ ```
+  </Tabs.Tab>
+</Tabs>
+
+### BadgeProps.size
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Card className="flex justify-between items-center gap-4">
+      <Badge content="Badge" size={"small"}/>
+      <Badge content="Badge" />
+      <Badge content="Badge" size={"large"}/>
+    </Card>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import { Badge } from "gespenst/badge";
+
+export default function App() {
+  return (
+    <div className="flex justify-between items-center gap-4">
+      <Badge content="Badge" size={"small"}/>
+      <Badge content="Badge" />
+      <Badge content="Badge" size={"large"}/>
+    </div>
+  );
+}
+ ```
+  </Tabs.Tab>
+</Tabs>
+
+### BadgeProps.variant
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Card className="flex flex-wrap gap-4">
+      <Badge content="gray" variant="gray"/>
+      <Badge content="gray-subtle" variant="gray-subtle"/>
+      <Badge content="blue" variant="blue"/>
+      <Badge content="blue-subtle" variant="blue-subtle"/>
+      <Badge content="purple" variant="purple"/>
+      <Badge content="purple-subtle" variant="purple-subtle"/>
+      <Badge content="amber" variant="amber"/>
+      <Badge content="amber-subtle" variant="amber-subtle"/>
+      <Badge content="red" variant="red"/>
+      <Badge content="red-subtle" variant="red-subtle"/>
+      <Badge content="pink" variant="pink"/>
+      <Badge content="pink-subtle" variant="pink-subtle"/>
+      <Badge content="green" variant="green"/>
+      <Badge content="green-subtle" variant="green-subtle"/>
+      <Badge content="teal" variant="teal"/>
+      <Badge content="teal-subtle" variant="teal-subtle"/>
+      <Badge content="inverted" variant="inverted"/>
+    </Card>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import { Badge } from "gespenst/badge";
+
+export default function App() {
+  return (
+    <div className="flex flex-warp gap-4">
+      <Badge content="gray" variant="gray"/>
+      <Badge content="gray-subtle" variant="gray-subtle"/>
+      <Badge content="blue" variant="blue"/>
+      <Badge content="blue-subtle" variant="blue-subtle"/>
+      <Badge content="purple" variant="purple"/>
+      <Badge content="purple-subtle" variant="purple-subtle"/>
+      <Badge content="amber" variant="amber"/>
+      <Badge content="amber-subtle" variant="amber-subtle"/>
+      <Badge content="red" variant="red"/>
+      <Badge content="red-subtle" variant="red-subtle"/>
+      <Badge content="pink" variant="pink"/>
+      <Badge content="pink-subtle" variant="pink-subtle"/>
+      <Badge content="green" variant="green"/>
+      <Badge content="green-subtle" variant="green-subtle"/>
+      <Badge content="teal" variant="teal"/>
+      <Badge content="teal-subtle" variant="teal-subtle"/>
+      <Badge content="inverted" variant="inverted"/>
+    </div>
+  );
+}
+ ```
+  </Tabs.Tab>
+</Tabs>
+
+### BadgeProps.icon
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Card>
+      <Badge icon="tag" content="Badge" />
+    </Card>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import { Badge } from "gespenst/badge";
+
+export default function App() {
+  return (
+    <Badge icon="tag" content="Badge" />
+  );
+}
+ ```
+  </Tabs.Tab>
+</Tabs>
+
+### BadgeProps.children
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Card>
+      <Badge size="small" icon="tag" content="Badge">
+        <Button>Click me</Button>
+      </Badge>
+    </Card>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import { Badge } from "gespenst/badge";
+
+export default function App() {
+  return (
+    <Badge icon="tag" content="Badge" />
+  );
+}
+ ```
+  </Tabs.Tab>
+</Tabs>
+
+## API
+
+**Special:** If using the `BadgeProps.children` attribute, the Badge will be
+fixed to the right corner of the child.
+
+### BadgeProps
+
+<Text large className="mt-2">{`BadgeProps.*`}</Text>
+
+<div className="mx-2">
+  <Table>
+    <THead>
+      <TR>
+        <TH className="border-transparent">{`Attribute`}</TH>
+        <TH className="border-transparent">{`Type`}</TH>
+        <TH className="border-transparent">{`Description`}</TH>
+        <TH className="border-transparent">{`Default`}</TH>
+      </TR>
+    </THead>
+    <TBody>
+      <TR>
+        <TD className="border-transparent">{`size`}</TD>
+        <TD className="border-transparent">
+          `small | normal | large | undefined`
+        </TD>
+        <TD className="border-transparent">{`Change the size`}</TD>
+        <TD className="border-transparent">`normal`</TD>
+      </TR>
+      <TR>
+        <TD className="border-transparent">{`variant`}</TD>
+        <TD className="border-transparent">`BadgeVariant | undefined`</TD>
+        <TD className="border-transparent">{`Change the style`}</TD>
+        <TD className="border-transparent">`gray`</TD>
+      </TR>
+      <TR>
+        <TD className="border-transparent">{`icon`}</TD>
+        <TD className="border-transparent">`IconName | undefined`</TD>
+        <TD className="border-transparent">{`To prefix an icon`}</TD>
+        <TD className="border-transparent">{`-`}</TD>
+      </TR>
+      <TR>
+        <TD className="border-transparent">{`children`}</TD>
+        <TD className="border-transparent">`ReactNode | undefined`</TD>
+        <TD className="border-transparent">{`If children is used badge changes from standalone to indicator`}</TD>
+        <TD className="border-transparent">{`-`}</TD>
+      </TR>
+    </TBody>
+  </Table>
+</div>

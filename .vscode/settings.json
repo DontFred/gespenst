@@ -19,12 +19,7 @@
       "mode": "auto"
     }
   ],
-  "tailwindCSS.classAttributes": [
-    "class",
-    "className",
-    "ngClass",
-    "containerClassName"
-  ],
+  "tailwindCSS.classAttributes": ["class", "className", "containerClassName"],
   "tailwindCSS.includeLanguages": {
     "plaintext": "mdx"
   },

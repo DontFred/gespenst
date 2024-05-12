@@ -3,6 +3,11 @@
   "version": "0.0.0",
   "private": true,
   "exports": {
+    "./badge": {
+      "types": "./src/badge/index.tsx",
+      "import": "./dist/badge/index.mjs",
+      "require": "./dist/badge/index.js"
+    },
     "./avatar": {
       "types": "./src/avatar/index.tsx",
       "import": "./dist/avatar/index.mjs",

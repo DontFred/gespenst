@@ -30,17 +30,17 @@ function renderChildren(children: IconChildren[]): string {
 
 /**
  * Icon
- * @param Icon - Has all SVGProps<SVGSVGElement>
- * @param Icon.children - Normally a string to give the icon a label
- * @param Icon.className - To style the SVG element
- * @param Icon.name - IconName from icon-types.ts e. g. "accessibility"
- * @param Icon.containerClassName - To style the container of the icon and children. Only used when children are present
+ * @param IconProps - Has all SVGProps<SVGSVGElement>
+ * @param IconProps.children - Normally a string to give the icon a label
+ * @param IconProps.className - To style the SVG element
+ * @param IconProps.name - IconName from icon-types.ts e. g. "accessibility"
+ * @param IconProps.containerClassName - To style the container of the icon and children. Only used when children are present
  * @returns JSX.Element
  * @example
  *  <Icon className="h-6 w-6" name="accessibility"/>
  *  ...
  *  <Icon className="h-6 w-6" name="accessibility">
- *    <div>Accessibility</div>
+ *    <Text className="font-semibold" paragraph>Accessibility</Text>
  *  </Icon>
  */
 const Icon = forwardRef<HTMLSpanElement, IconProps>(

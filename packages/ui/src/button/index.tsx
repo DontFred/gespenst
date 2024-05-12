@@ -55,12 +55,20 @@ export const buttonVariants = cva(
 );
 /**
  * Button component
- * @param Button - props
- * @param Button.children - ReactNode
- * @param Button.className - string
- * @param Button.variant
- * @param Button.size
+ * @param ButtonProps - All react-aria-components Button props and some additional props.
+ * @param ButtonProps.children - The children of the Button. (can be a function)
+ * @param ButtonProps.className - To style the Button. (additional class will get merged by cn())
+ * @param ButtonProps.isDisabled - To disable the Button. (default: false)
+ * @param ButtonProps.loading - To show a loading spinner. (default: false)
+ * @param ButtonProps.prefix - To add a prefix to the Button. (default: undefined)
+ * @param ButtonProps.shape - The shape of the Button. (default: angular) (options: angular, rounded)
+ * @param ButtonProps.size - The size of the Button. (default: normal) (options: large, normal, small, xsmall*)
+ * @param ButtonProps.suffix - To add a suffix to the Button. (default: undefined)
+ * @param ButtonProps.svgOnly - To make the Button an SVG only Button. (default: false)
+ * @param ButtonProps.variant - The variant of the Button. (default: primary) (options: primary, secondary, tertiary, info, warning, error)
  * @returns JSX.Element
+ * @example
+ *   <Button>Click me</Button>
  */
 const Button = forwardRef<HTMLButtonElement, ButtonProps | SvgButtonProps>(
   (

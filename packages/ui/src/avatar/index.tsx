@@ -12,8 +12,19 @@ import type {
 
 /**
  * Avatar component
- * @param Avatar - props of Avatar
+ * @param AvatarProps - Uses all HTMLSpanElement attributes
+ * @param AvatarProps.children - No children allowed
+ * @param AvatarProps.className - The additional class name of the Avatar. (additional class will get merged by cn())
+ * @param AvatarProps.fallback - The fallback character for the Avatar. (default: first character of the name)
+ * @param AvatarProps.fallbackClassName - The additional class name of the fallback character. (additional class will get merged by cn())
+ * @param AvatarProps.imageClassName - The additional class name of the image. (additional class will get merged by cn())
+ * @param AvatarProps.name - The name of the Avatar for accessibility. Used for the fallback character, label and alt.
+ * @param AvatarProps.NextImage - If you are want to use the next/image component, you pass it thou the NextImage. (default: undefined [use img instead of NextImage])
+ * @param AvatarProps.placeholder - If true, the Avatar will be a placeholder. (default: false)
+ * @param AvatarProps.src - The source of the Avatar. (default: undefined)
  * @returns JSX.Element
+ * @example
+ *   <Avatar name="John Doe" src="https://example.com/john-doe.jpg"/>
  */
 const Avatar = forwardRef<
   HTMLSpanElement,
@@ -71,7 +82,10 @@ const Avatar = forwardRef<
         ) : NextImage ? (
           <NextImage
             alt={name}
-            className={cn("aspect-square h-full w-full", imageClassName)}
+            className={cn(
+              "aspect-square h-full w-full object-cover",
+              imageClassName
+            )}
             fill
             onError={() => {
               setAvatarHasFailedToLoad(true);
@@ -79,12 +93,16 @@ const Avatar = forwardRef<
             onLoad={() => {
               setAvatarHasFailedToLoad(false);
             }}
+            sizes="100px"
             src={src}
           />
         ) : (
           <img
             alt={name}
-            className={cn("aspect-square h-full w-full", imageClassName)}
+            className={cn(
+              "aspect-square h-full w-full object-cover",
+              imageClassName
+            )}
             onError={() => {
               setAvatarHasFailedToLoad(true);
             }}
@@ -100,6 +118,27 @@ const Avatar = forwardRef<
 );
 Avatar.displayName = "Avatar";
 
+/**
+ * AvatarGroup component
+ * @param AvatarGroupProps - Uses all HTMLDivElement attributes
+ * @param AvatarGroupProps.children - No children allowed
+ * @param AvatarGroupProps.className - The additional class name of the AvatarGroup. (additional class will get merged by cn())
+ * @param AvatarGroupProps.fallbackClassName - The additional class name of the fallback character. (additional class will get merged by cn())
+ * @param AvatarGroupProps.groupClassName - The additional class name of the group. (additional class will get merged by cn())
+ * @param AvatarGroupProps.groupItemClassName - The additional class name of the group item. (additional class will get merged by cn())
+ * @param AvatarGroupProps.imageClassName - The additional class name of the image. (additional class will get merged by cn())
+ * @param AvatarGroupProps.limit - The limit of the members. (default: undefined)
+ * @param AvatarGroupProps.members - The members of the group. (default: [])
+ * @param AvatarGroupProps.NextImage - If you are want to use the next/image component, you pass it thou the NextImage. (default: undefined [use img instead of NextImage])
+ * @returns JSX.Element
+ * @example
+ *   <AvatarGroup
+ *     members={[
+ *       { name: "John Doe", src: "https://example.com/john-doe.jpg" },
+ *       { name: "Jane Doe", src: "https://example.com/jane-doe.jpg" },
+ *     ]}
+ *   />
+ */
 const AvatarGroup = forwardRef<HTMLDivElement, AvatarGroupProps>(
   (
     {
@@ -160,6 +199,7 @@ const AvatarGroup = forwardRef<HTMLDivElement, AvatarGroupProps>(
                 "inline-flex items-center [&:nth-child(n+2)]:-ml-2.5",
                 groupItemClassName
               )}
+              key={member.name}
             >
               <Avatar
                 className={className}

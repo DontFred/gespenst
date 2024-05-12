@@ -6,8 +6,8 @@ import type { LoadSpinnerProps } from "./types";
 
 /**
  * LoadSpinner
- * @param LoadSpinner - Has all HTMLAttributes<HTMLDivElement>
- * @param LoadSpinner.className - To style the spinner, mainly for size and color (additional class will get merged by cn()).
+ * @param LoadSpinnerProps - Has all HTMLDivElement Props
+ * @param LoadSpinnerProps.className - To style the spinner, mainly for size and color (additional class will get merged by cn()).
  * @returns JSX.Element
  * @example
  *  <Spinner className="h-6 w-6"/>

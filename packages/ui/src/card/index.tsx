@@ -28,12 +28,17 @@ export const cardVariants = cva("bg-card inner-border overflow-hidden", {
 
 /**
  * Card component
- * @param Card - Uses all HTMLDivElement attributes
- * @param Card.children - to set the children of the card
- * @param Card.className - The additional class name of the Card. (additional class will get merged by cn())
- * @param Card.rounded - The rounded variant of the Card. (default: normal) (options: large, none, normal, small, xsmall)
- * @param Card.padding - The padding variant of the Card. (default: normal) (options: large, none, normal)
+ * @param CardProps - Uses all HTMLDivElement attributes
+ * @param CardProps.children - to set the children of the card
+ * @param CardProps.className - The additional class name of the Card. (additional class will get merged by cn())
+ * @param CardProps.rounded - The rounded variant of the Card. (default: normal) (options: large, none, normal, small, xsmall)
+ * @param CardProps.padding - The padding variant of the Card. (default: normal) (options: large, none, normal)
  * @returns JSX.Element
+ * @example
+ *  <Card>
+ *    <Text heading size="h3">Card Heading</Text>
+ *    <Text paragraph>Card Description</Text>
+ *  </Card>
  */
 const Card = forwardRef<HTMLDivElement, CardProps>(
   ({ children, className, padding, rounded, ...rest }, ref) => {
