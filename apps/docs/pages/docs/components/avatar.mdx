@@ -1,0 +1,364 @@
+import { Tabs } from "nextra/components";
+import { Table, TBody, TD, Text, TH, THead, TR } from "@gespenst/ui/text";
+import { Card } from "@gespenst/ui/card";
+import { Button } from "@gespenst/ui/button";
+import { Avatar, AvatarGroup } from "@gespenst/ui/avatar";
+import { Icon } from "@gespenst/ui/icon";
+import Image from "next/image";
+
+# Avatar
+
+The Avatar components are used to render an fully error handled avatar and
+avatar group. They are custom made with useState for error handling and can be
+used with the
+[next/image](https://nextjs.org/docs/pages/api-reference/components/image)
+component, if NextJs is used.
+
+## Import
+
+```tsx
+import { Avatar, AvatarGroup } from "gespenst/button";
+```
+
+## Usage
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Card className="grid">
+      <Avatar name="dontfred" src="https://github.com/1.png" className="place-self-center" NextImage={Image}/>
+    </Card>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import { Avatar } from "gespenst/avatar";
+// Only if NextJs is used
+import Image from "next/image";
+
+export default function App() {
+  return (
+    <Avatar name="dontfred" src="https://github.com/1.png" NextImage={Image}/>
+    // Or
+    // <Avatar name="dontfred" src="https://github.com/1.png"/>
+  );
+}
+ ```
+  </Tabs.Tab>
+</Tabs>
+
+### AvatarProps.fallback
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Card className="flex justify-between items-center gap-4">
+      <Avatar fallback="DF" name="dontfred" src="https://github.com/Invalid_URL" NextImage={Image}/>
+    </Card>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import { Avatar } from "gespenst/avatar"
+// Only if NextJs is used
+import Image from "next/image";
+
+export default function App() {
+  return (
+    <Avatar
+      fallback="DF"
+      name="dontfred"
+      src="https://github.com/Invalid_URL"
+      NextImage={Image}
+    />
+    // Or
+    // <Avatar
+    //   fallback="DF"
+    //   name="dontfred"
+    //   src="https://github.com/Invalid_URL"
+    // />
+  );
+}
+```
+ </Tabs.Tab>
+</Tabs>
+
+### AvatarProps.placeholder
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Card className="flex justify-between items-center gap-4">
+      <Avatar placeholder/>
+    </Card>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import { Avatar } from "gespenst/avatar"
+
+export default function App() {
+  return (
+    <Avatar placeholder />
+  );
+}
+```
+ </Tabs.Tab>
+</Tabs>
+
+### AvatarGroup
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Card className="flex justify-between items-center gap-4">
+      <AvatarGroup 
+        members={[
+            { name: "dontfred", src: "https://github.com/1.png", fallback: "FG" },
+            { name: "dontfred", src: "https://github.com/3.png", fallback: "FG" },
+            { name: "dontfred", src: "https://github.com/4.png", fallback: "FG" },
+            { name: "dontfred", src: "https://github.com/5.png", fallback: "FG" },
+            { name: "dontfred", src: "https://github.com/6.png", fallback: "FG" },
+            { name: "dontfred", src: "https://github.com/7.png", fallback: "FG" },
+        ]} 
+        NextImage={Image}
+      />
+    </Card>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import { AvatarGroup } from "gespenst/avatar"
+// Only if NextJs is used
+import Image from "next/image";
+
+export default function App() {
+  return (
+    <AvatarGroup 
+      members={[
+        { name: "dontfred", src: "https://github.com/1.png", fallback: "FG" },
+        { name: "dontfred", src: "https://github.com/3.png", fallback: "FG" },
+        { name: "dontfred", src: "https://github.com/4.png", fallback: "FG" },
+        { name: "dontfred", src: "https://github.com/5.png", fallback: "FG" },
+        { name: "dontfred", src: "https://github.com/6.png", fallback: "FG" },
+        { name: "dontfred", src: "https://github.com/7.png", fallback: "FG" },
+      ]} 
+      NextImage={Image}
+    />
+    // Or
+    // <AvatarGroup 
+    //   members={[
+    //     { name: "dontfred", src: "https://github.com/1.png", fallback: "FG" },
+    //     { name: "dontfred", src: "https://github.com/3.png", fallback: "FG" },
+    //     { name: "dontfred", src: "https://github.com/4.png", fallback: "FG" },
+    //     { name: "dontfred", src: "https://github.com/5.png", fallback: "FG" },
+    //     { name: "dontfred", src: "https://github.com/6.png", fallback: "FG" },
+    //     { name: "dontfred", src: "https://github.com/7.png", fallback: "FG" },
+    //   ]} 
+    // />
+  );
+}
+```
+ </Tabs.Tab>
+</Tabs>
+
+### AvatarGroupProps.limit
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Card className="flex justify-between items-center gap-4">
+      <AvatarGroup 
+        members={[
+            { name: "dontfred", src: "https://github.com/1.png", fallback: "FG" },
+            { name: "dontfred", src: "https://github.com/3.png", fallback: "FG" },
+            { name: "dontfred", src: "https://github.com/4.png", fallback: "FG" },
+            { name: "dontfred", src: "https://github.com/5.png", fallback: "FG" },
+            { name: "dontfred", src: "https://github.com/6.png", fallback: "FG" },
+            { name: "dontfred", src: "https://github.com/7.png", fallback: "FG" },
+        ]} 
+        limit={3}
+        NextImage={Image}
+      />
+    </Card>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import { AvatarGroup } from "gespenst/avatar"
+// Only if NextJs is used
+import Image from "next/image";
+
+export default function App() {
+  return (
+    <AvatarGroup 
+      members={[
+        { name: "dontfred", src: "https://github.com/1.png", fallback: "FG" },
+        { name: "dontfred", src: "https://github.com/3.png", fallback: "FG" },
+        { name: "dontfred", src: "https://github.com/4.png", fallback: "FG" },
+        { name: "dontfred", src: "https://github.com/5.png", fallback: "FG" },
+        { name: "dontfred", src: "https://github.com/6.png", fallback: "FG" },
+        { name: "dontfred", src: "https://github.com/7.png", fallback: "FG" },
+      ]} 
+      limit={3}
+      NextImage={Image}
+    />
+    // Or
+    // <AvatarGroup 
+    //   members={[
+    //     { name: "dontfred", src: "https://github.com/1.png", fallback: "FG" },
+    //     { name: "dontfred", src: "https://github.com/3.png", fallback: "FG" },
+    //     { name: "dontfred", src: "https://github.com/4.png", fallback: "FG" },
+    //     { name: "dontfred", src: "https://github.com/5.png", fallback: "FG" },
+    //     { name: "dontfred", src: "https://github.com/6.png", fallback: "FG" },
+    //     { name: "dontfred", src: "https://github.com/7.png", fallback: "FG" },
+    //   ]} 
+    // />
+  );
+}
+```
+ </Tabs.Tab>
+</Tabs>
+
+## API
+
+**Special:** The Avatar component is using the HTMLSpanElement. So you can use
+the native attributes of it.
+
+**Special:** If you are using NextJS you can use the NextImage attribute to add
+the Image component.
+
+**Special:** The AvatarGroup component is using the HTMLDivElement. So you can
+use the native attributes of it.
+
+### AvatarProps
+
+<Text large className="mt-2">{`AvatarProps.*`}</Text>
+
+<div className="mx-2">
+  <Table>
+    <THead>
+      <TR>
+        <TH className="border-transparent">{`Attribute`}</TH>
+        <TH className="border-transparent">{`Type`}</TH>
+        <TH className="border-transparent">{`Description`}</TH>
+        <TH className="border-transparent">{`Default`}</TH>
+      </TR>
+    </THead>
+    <TBody>
+      <TR>
+        <TD className="border-transparent">{`children`}</TD>
+        <TD className="border-transparent">`never`</TD>
+        <TD className="border-transparent">{`children are not allowed`}</TD>
+        <TD className="border-transparent">-</TD>
+      </TR>
+      <TR>
+        <TD className="border-transparent">{`name`}</TD>
+        <TD className="border-transparent">`string`</TD>
+        <TD className="border-transparent">{`It's get used for labels, alts and as a fallback`}</TD>
+        <TD className="border-transparent">-</TD>
+      </TR>
+      <TR>
+        <TD className="border-transparent">{`src`}</TD>
+        <TD className="border-transparent">
+          `string | NextImageStaticImport*`
+        </TD>
+        <TD className="border-transparent">{`NextImageStaticImport can only be used, when NextImage is provided`}</TD>
+        <TD className="border-transparent">-</TD>
+      </TR>
+      <TR>
+        <TD className="border-transparent">{`fallback`}</TD>
+        <TD className="border-transparent">
+          `string | undefined`
+        </TD>
+        <TD className="border-transparent">{`fallback is used. if the img component can't render. e. g. URL is invalid`}</TD>
+        <TD className="border-transparent">-</TD>
+      </TR>
+      <TR>
+        <TD className="border-transparent">{`placeholder`}</TD>
+        <TD className="border-transparent">
+          `boolean | undefined`
+        </TD>
+        <TD className="border-transparent">{`If placeholder is true you can't use other custom attributes`}</TD>
+        <TD className="border-transparent">-</TD>
+      </TR>
+      <TR>
+        <TD className="border-transparent">{`NextImage`}</TD>
+        <TD className="border-transparent">
+          `ComponentType<NextImageProps> | undefined`
+        </TD>
+        <TD className="border-transparent">{`Avatar can use the next/image component as img`}</TD>
+        <TD className="border-transparent">-</TD>
+      </TR>
+      <TR>
+        <TD className="border-transparent">{`fallbackClassName`}</TD>
+        <TD className="border-transparent">
+          `string | undefined`
+        </TD>
+        <TD className="border-transparent">{`To style the fallback component`}</TD>
+        <TD className="border-transparent">-</TD>
+      </TR>
+      <TR>
+        <TD className="border-transparent">{`imageClassName`}</TD>
+        <TD className="border-transparent">
+          `string | undefined`
+        </TD>
+        <TD className="border-transparent">{`To style the image component`}</TD>
+        <TD className="border-transparent">-</TD>
+      </TR>
+    </TBody>
+  </Table>
+</div>
+
+### AvatarGroupProps
+
+<Text large className="mt-2">{`AvatarGroupProps.*`}</Text>
+
+<div className="mx-2">
+  <Table>
+    <THead>
+      <TR>
+        <TH className="border-transparent">{`Attribute`}</TH>
+        <TH className="border-transparent">{`Type`}</TH>
+        <TH className="border-transparent">{`Description`}</TH>
+        <TH className="border-transparent">{`Default`}</TH>
+      </TR>
+    </THead>
+    <TBody>
+      <TR>
+        <TD className="border-transparent">{`members`}</TD>
+        <TD className="border-transparent">`{ name: string, src: string | NextImageStaticImport*, fallback?: string }[]`</TD>
+        <TD className="border-transparent">{`All the Avatar that renders`}</TD>
+        <TD className="border-transparent">-</TD>
+      </TR>
+      <TR>
+        <TD className="border-transparent">{`limit`}</TD>
+        <TD className="border-transparent">`Number | undefined`</TD>
+        <TD className="border-transparent">{`The max amount of Avatar that should render`}</TD>
+        <TD className="border-transparent">-</TD>
+      </TR>
+      <TR>
+        <TD className="border-transparent">{`NextImage`}</TD>
+        <TD className="border-transparent">
+          `ComponentType<NextImageProps> | undefined`
+        </TD>
+        <TD className="border-transparent">{`Avatar can use the next/image component as img`}</TD>
+        <TD className="border-transparent">-</TD>
+      </TR>
+      <TR>
+        <TD className="border-transparent">{`groupClassName`}</TD>
+        <TD className="border-transparent">`string | undefined`</TD>
+        <TD className="border-transparent">{`To style the group wrapper`}</TD>
+        <TD className="border-transparent">-</TD>
+      </TR>
+      <TR>
+        <TD className="border-transparent">{`groupItemClassName`}</TD>
+        <TD className="border-transparent">`string | undefined`</TD>
+        <TD className="border-transparent">{`To style the group item wrapper`}</TD>
+        <TD className="border-transparent">-</TD>
+      </TR>
+      <TR>
+        <TD className="border-transparent">{`fallbackClassName`}</TD>
+        <TD className="border-transparent">`string | undefined`</TD>
+        <TD className="border-transparent">{`To style the fallback component`}</TD>
+        <TD className="border-transparent">-</TD>
+      </TR>
+      <TR>
+        <TD className="border-transparent">{`imageClassName`}</TD>
+        <TD className="border-transparent">`string | undefined`</TD>
+        <TD className="border-transparent">{`To style the image component`}</TD>
+        <TD className="border-transparent">-</TD>
+      </TR>
+    </TBody>
+  </Table>
+</div>

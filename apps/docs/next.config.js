@@ -7,7 +7,7 @@ const withNextra = require("nextra")({
 
 module.exports = withNextra({
   images: {
-    domains: ["images.unsplash.com"],
+    domains: ["images.unsplash.com", "github.com"],
   },
   transpilePackages: ["@gespenst/ui", "geist"],
 });

@@ -125,6 +125,7 @@ module.exports = {
       },
     ],
     "prefer-template": "error",
+    "react/hook-use-state": "error",
     "react/react-in-jsx-scope": "off",
     "sort-destructure-keys/sort-destructure-keys": [
       "error",
