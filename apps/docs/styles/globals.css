@@ -13,6 +13,6 @@
   }
 }
 
-li[data-headlessui-state] {
+html {
   font-family: Arial, sans-serif;
 }

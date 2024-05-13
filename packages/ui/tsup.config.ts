@@ -3,9 +3,10 @@ import { defineConfig } from "tsup";
 export default defineConfig((options) => ({
   dts: true,
   entryPoints: [
+    "src/popover/index.tsx",
     "src/badge/index.tsx",
     "src/avatar/index.tsx",
-    "src/load-spinner/index.tsx",
+    "src/spinner/index.tsx",
     "src/card/index.tsx",
     "src/button/index.tsx",
     "src/style.css",

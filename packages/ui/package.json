@@ -3,6 +3,11 @@
   "version": "0.0.0",
   "private": true,
   "exports": {
+    "./popover": {
+      "types": "./src/popover/index.tsx",
+      "import": "./dist/popover/index.mjs",
+      "require": "./dist/popover/index.js"
+    },
     "./badge": {
       "types": "./src/badge/index.tsx",
       "import": "./dist/badge/index.mjs",
@@ -13,10 +18,10 @@
       "import": "./dist/avatar/index.mjs",
       "require": "./dist/avatar/index.js"
     },
-    "./load-spinner": {
-      "types": "./src/load-spinner/index.tsx",
-      "import": "./dist/load-spinner/index.mjs",
-      "require": "./dist/load-spinner/index.js"
+    "./spinner": {
+      "types": "./src/spinner/index.tsx",
+      "import": "./dist/spinner/index.mjs",
+      "require": "./dist/spinner/index.js"
     },
     "./card": {
       "types": "./src/card/index.tsx",

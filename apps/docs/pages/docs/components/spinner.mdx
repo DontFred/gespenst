@@ -1,0 +1,63 @@
+import { Tabs } from "nextra/components";
+import { Table, TBody, TD, Text, TH, THead, TR } from "@gespenst/ui/text";
+import { Card } from "@gespenst/ui/card";
+import { Spinner } from "@gespenst/ui/spinner";
+
+# Loading Spinner
+
+The Spinner component is used to render a spinner that indicates a loading
+state. It is a wrapper around native `HTMLDivElement`.
+
+## Import
+
+```tsx
+import { Spinner } from "gespenst/loading-spinner";
+```
+
+## Usage
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Card className="grid">
+      <Spinner className="place-self-center"/>
+    </Card>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import { Spinner } from "gespenst/loading-spinner";
+
+export default function App() {
+  return (
+    <Spinner className="place-self-center"/>
+  );
+}
+ ```
+  </Tabs.Tab>
+</Tabs>
+
+## API
+
+**Special:** The Spinner component does not have any custom props. It only uses
+the default `HTMLDivElement` props.
+
+### SpinnerProps
+
+<Text large className="mt-2">{`SpinnerProps.*`}</Text>
+
+<div className="mx-2">
+  <Table>
+    <THead>
+      <TR>
+        <TH className="border-transparent">{`Attribute`}</TH>
+        <TH className="border-transparent">{`Type`}</TH>
+        <TH className="border-transparent">{`Description`}</TH>
+        <TH className="border-transparent">{`Default`}</TH>
+      </TR>
+    </THead>
+    <TBody>
+      <TR>
+        <TD colSpan="4" className="border-transparent">{`No custom props`}</TD>
+      </TR>
+    </TBody>
+  </Table>
+</div>

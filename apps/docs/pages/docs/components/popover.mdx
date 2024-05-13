@@ -1,0 +1,95 @@
+import { Tabs } from "nextra/components";
+import { Button } from "@gespenst/ui/button";
+import { Card } from "@gespenst/ui/card";
+import { Popover, PopoverTrigger } from "@gespenst/ui/popover";
+import { Table, TBody, TD, Text, TH, THead, TR } from "@gespenst/ui/text";
+
+# Loading Spinner
+
+The Popover components are used to render fully accessible popover. It is
+wrapper around the react-aria-component
+[Popover](https://react-spectrum.adobe.com/react-aria/Popover.html).
+
+## Import
+
+```tsx
+import { Popover, PopoverTrigger } from "gespenst/loading-spinner";
+```
+
+## Usage
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Card className="grid">
+    <PopoverTrigger>
+      <Button className="place-self-center">Click me!</Button>
+      <Popover className="p-4">
+        <div>This is a popover!</div>
+      </Popover>
+    </PopoverTrigger>
+    </Card>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import { Spinner } from "gespenst/loading-spinner";
+
+export default function App() {
+  return (
+    <Spinner className="place-self-center"/>
+  );
+}
+ ```
+  </Tabs.Tab>
+</Tabs>
+
+## API
+
+**Special:** Popover components is just a styled form of the
+react-aria-components Popovers. So all props are the same as in the
+[Popover](https://react-spectrum.adobe.com/react-aria/Popover.html#props) and
+[DialogTrigger](https://react-spectrum.adobe.com/react-aria/Dialog.html#dialogtrigger)
+(as PopoverTrigger).
+
+### PopoverProps
+
+<Text large className="mt-2">{`PopoverProps.*`}</Text>
+
+<div className="mx-2">
+  <Table>
+    <THead>
+      <TR>
+        <TH className="border-transparent">{`Attribute`}</TH>
+        <TH className="border-transparent">{`Type`}</TH>
+        <TH className="border-transparent">{`Description`}</TH>
+        <TH className="border-transparent">{`Default`}</TH>
+      </TR>
+    </THead>
+    <TBody>
+      <TR>
+        <TD colSpan="4" className="border-transparent">{`No custom props`}</TD>
+      </TR>
+    </TBody>
+  </Table>
+</div>
+
+### PopoverTriggerProps
+
+<Text large className="mt-2">{`PopoverTriggerProps.*`}</Text>
+
+<div className="mx-2">
+  <Table>
+    <THead>
+      <TR>
+        <TH className="border-transparent">{`Attribute`}</TH>
+        <TH className="border-transparent">{`Type`}</TH>
+        <TH className="border-transparent">{`Description`}</TH>
+        <TH className="border-transparent">{`Default`}</TH>
+      </TR>
+    </THead>
+    <TBody>
+      <TR>
+        <TD colSpan="4" className="border-transparent">{`No custom props`}</TD>
+      </TR>
+    </TBody>
+  </Table>
+</div>

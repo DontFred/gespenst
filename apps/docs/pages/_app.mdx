@@ -1,4 +1,5 @@
 import FontWrapper from "../components/font-wrapper";
+import Head from "next/head";
 
 import "@gespenst/ui/dist/style.css";
 import "../styles/globals.css";
@@ -6,6 +7,15 @@ import "../styles/globals.css";
 export default function App({ Component, pageProps }) {
   return (
     <FontWrapper>
+      <Head>
+        <style globals jsx>
+          {`
+            body {
+              font-family: "Inter", sans-serif;
+            }
+          `}
+        </style>
+      </Head>
       <Component {...pageProps} />
     </FontWrapper>
   );

@@ -2,17 +2,17 @@ import { forwardRef } from "react";
 
 import { cn } from "../lib";
 
-import type { LoadSpinnerProps } from "./types";
+import type { SpinnerProps } from "./types";
 
 /**
- * LoadSpinner
- * @param LoadSpinnerProps - Has all HTMLDivElement Props
- * @param LoadSpinnerProps.className - To style the spinner, mainly for size and color (additional class will get merged by cn()).
+ * Spinner
+ * @param SpinnerProps - Has all HTMLDivElement Props
+ * @param SpinnerProps.className - To style the spinner, mainly for size and color (additional class will get merged by cn()).
  * @returns JSX.Element
  * @example
  *  <Spinner className="h-6 w-6"/>
  */
-const LoadSpinner = forwardRef<HTMLDivElement, LoadSpinnerProps>(
+const Spinner = forwardRef<HTMLDivElement, SpinnerProps>(
   ({ className, ...rest }, ref) => {
     return (
       <div className={cn("h-5 w-5", className)} ref={ref} {...rest}>
@@ -35,6 +35,6 @@ const LoadSpinner = forwardRef<HTMLDivElement, LoadSpinnerProps>(
   }
 );
 
-LoadSpinner.displayName = "LoadSpinner";
+Spinner.displayName = "Spinner";
 
-export { LoadSpinner };
+export { Spinner };

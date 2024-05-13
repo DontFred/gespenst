@@ -5,7 +5,7 @@ import { forwardRef, Fragment } from "react";
 import { Button as ArialButton } from "react-aria-components";
 
 import { cn } from "../lib";
-import { LoadSpinner } from "../load-spinner";
+import { Spinner } from "../spinner";
 
 import type { ButtonProps, SvgButtonProps } from "./types";
 
@@ -95,7 +95,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps | SvgButtonProps>(
               {(prefix ?? loading) && !svgOnly && (
                 <span className="mr-0.5 flex min-w-5 flex-shrink-0 items-center justify-center">
                   {loading ? (
-                    <LoadSpinner
+                    <Spinner
                       className={cn(
                         "text-accents-5 h-4 w-4",
                         size === "large" && "h-6 w-6"
@@ -113,7 +113,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps | SvgButtonProps>(
                 )}
               >
                 {loading && svgOnly ? (
-                  <LoadSpinner
+                  <Spinner
                     className={cn(
                       "text-accents-5 h-4 w-4",
                       size === "large" && "h-6 w-6"
@@ -134,7 +134,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps | SvgButtonProps>(
               {(prefix ?? loading) && !svgOnly && (
                 <span className="mr-0.5 flex min-w-5 flex-shrink-0 items-center justify-center">
                   {loading ? (
-                    <LoadSpinner
+                    <Spinner
                       className={cn(
                         "text-accents-5 h-4 w-4",
                         size === "large" && "h-6 w-6"
@@ -152,7 +152,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps | SvgButtonProps>(
                 )}
               >
                 {loading && svgOnly ? (
-                  <LoadSpinner
+                  <Spinner
                     className={cn(
                       "text-accents-5 h-4 w-4",
                       size === "large" && "h-6 w-6"
