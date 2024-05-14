@@ -20,14 +20,17 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
       {
         path: "packages/ui/tsup.config.ts",
         pattern: /entryPoints: \[(?<insertion>)/g,
-        template: '"src/{{kebabCase name}}/index.tsx",',
+        template: '    "src/{{kebabCase name}}/index.tsx",',
         type: "append",
       },
       {
         path: "packages/ui/package.json",
         pattern: /"exports": {(?<insertion>)/g,
-        template:
-          '"./{{kebabCase name}}": {"types": "./src/{{kebabCase name}}/index.tsx","import": "./dist/{{kebabCase name}}/index.mjs", "require": "./dist/{{kebabCase name}}/index.js"},',
+        template: `    "./{{kebabCase name}}": {
+      "types": "./src/{{kebabCase name}}/index.tsx",
+      "import": "./dist/{{kebabCase name}}/index.mjs", 
+      "require": "./dist/{{kebabCase name}}/index.js"
+    },`,
         type: "append",
       },
       {

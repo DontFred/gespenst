@@ -1,0 +1,49 @@
+import { Card } from "@gespenst/ui/card";
+import { cn } from "@gespenst/ui/lib";
+import { Example } from "../../../components/examples/window-size";
+
+# Utils
+
+In this section, you will find a collection of hooks that can be used in your
+application.
+
+## Window Size
+
+The `useWindowSize()` hook is used to get the current window size. It returns an
+object with the `width` and `height` properties.
+
+### Import
+
+```tsx
+import { useWindowSize } from "gespenst/lib";
+```
+
+### Usage
+
+```tsx
+"use client";
+
+import { useWindowSize } from "gespenst/lib";
+
+export default function App() {
+  const { width, height } = useWindowSize();
+
+  return (
+    <div>
+      Window width: {width}
+      <br />
+      Window height: {height}
+    </div>
+  );
+}
+```
+
+<Card className="grid">
+  <Example />
+</Card>
+
+### API
+
+```ts
+useWindowSize(): { height?: number, width?: number }
+```

@@ -3,6 +3,11 @@
   "version": "0.0.0",
   "private": true,
   "exports": {
+    "./modal": {
+      "types": "./src/modal/index.tsx",
+      "import": "./dist/modal/index.mjs",
+      "require": "./dist/modal/index.js"
+    },
     "./popover": {
       "types": "./src/popover/index.tsx",
       "import": "./dist/popover/index.mjs",

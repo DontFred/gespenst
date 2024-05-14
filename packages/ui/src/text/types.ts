@@ -1,4 +1,4 @@
-import type { HTMLAttributes } from "react";
+import type { ComponentType, HTMLAttributes, LegacyRef } from "react";
 
 export interface BlockquoteProps extends HTMLAttributes<HTMLQuoteElement> {
   blockquote: true;
@@ -13,6 +13,7 @@ export interface BlockquoteProps extends HTMLAttributes<HTMLQuoteElement> {
   mono?: boolean;
   muted?: false;
   paragraph?: false;
+  ref?: LegacyRef<HTMLQuoteElement>;
   size?: false;
   small?: false;
 }
@@ -30,6 +31,7 @@ export interface DescriptionProps extends HTMLAttributes<HTMLDivElement> {
   mono?: boolean;
   muted?: false;
   paragraph?: false;
+  ref?: LegacyRef<HTMLDivElement>;
   size?: "h1" | "h2" | "h3" | "h4";
   small?: false;
 }
@@ -47,6 +49,7 @@ export interface HeadingProps extends HTMLAttributes<HTMLHeadingElement> {
   mono?: boolean;
   muted?: false;
   paragraph?: false;
+  ref?: LegacyRef<HTMLHeadingElement>;
   size?: "h1" | "h2" | "h3" | "h4";
   small?: false;
 }
@@ -64,6 +67,7 @@ export interface InlineCodeProps extends HTMLAttributes<HTMLElement> {
   mono?: boolean;
   muted?: false;
   paragraph?: false;
+  ref?: LegacyRef<HTMLElement>;
   size?: false;
   small?: false;
 }
@@ -81,6 +85,7 @@ export interface LargeProps extends HTMLAttributes<HTMLDivElement> {
   mono?: boolean;
   muted?: false;
   paragraph?: false;
+  ref?: LegacyRef<HTMLDivElement>;
   size?: false;
   small?: false;
 }
@@ -92,13 +97,13 @@ export interface LeadProps extends HTMLAttributes<HTMLParagraphElement> {
   heading?: false;
   large?: false;
   lead: true;
-
   link?: false;
   list?: false;
   listItem?: false;
   mono?: boolean;
   muted?: false;
   paragraph?: false;
+  ref?: LegacyRef<HTMLParagraphElement>;
   size?: false;
   small?: false;
 }
@@ -116,6 +121,7 @@ export interface LinkProps extends HTMLAttributes<HTMLSpanElement> {
   mono?: boolean;
   muted?: false;
   paragraph?: false;
+  ref?: LegacyRef<HTMLSpanElement>;
   size?: false;
   small?: false;
 }
@@ -133,6 +139,7 @@ export interface ListItemProps extends HTMLAttributes<HTMLLIElement> {
   mono?: boolean;
   muted?: false;
   paragraph?: false;
+  ref?: LegacyRef<HTMLLIElement>;
   size?: false;
   small?: false;
 }
@@ -150,6 +157,7 @@ export interface ListProps extends HTMLAttributes<HTMLUListElement> {
   mono?: boolean;
   muted?: false;
   paragraph?: false;
+  ref?: LegacyRef<HTMLUListElement>;
   size?: false;
   small?: false;
 }
@@ -167,6 +175,7 @@ export interface MutedProps extends HTMLAttributes<HTMLDivElement> {
   mono?: boolean;
   muted: true;
   paragraph?: false;
+  ref?: LegacyRef<HTMLDivElement>;
   size?: false;
   small?: false;
 }
@@ -184,6 +193,7 @@ export interface ParagraphProps extends HTMLAttributes<HTMLParagraphElement> {
   mono?: boolean;
   muted?: false;
   paragraph: true;
+  ref?: LegacyRef<HTMLParagraphElement>;
   size?: false;
   small?: false;
 }
@@ -201,6 +211,7 @@ export interface SmallProps extends HTMLAttributes<HTMLElement> {
   mono?: boolean;
   muted?: false;
   paragraph?: false;
+  ref?: LegacyRef<HTMLElement>;
   size?: false;
   small: true;
 }
@@ -218,6 +229,8 @@ export type TypoProps =
   | MutedProps
   | ParagraphProps
   | SmallProps;
+
+export type TypoComponent = ComponentType<TypoProps>;
 
 export interface TableProps extends HTMLAttributes<HTMLTableElement> {
   container?: HTMLAttributes<HTMLDivElement>;

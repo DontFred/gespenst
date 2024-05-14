@@ -1,0 +1,48 @@
+import { Card } from "@gespenst/ui/card";
+import { cn } from "@gespenst/ui/lib";
+
+# Utils
+
+In this section, you will find a collection of utility functions that can be
+used in your application.
+
+## ClassMerger
+
+The `cn()` function is used to merge multiple class names into a single one. It
+overwrites the class names if they are the same.
+
+### Import
+
+```tsx
+import { cn } from "gespenst/lib";
+```
+
+### Usage
+
+```tsx
+import { cn } from "gespenst/lib";
+
+export default function App() {
+  return (
+    <div className={cn("font-semibold text-red-700", "text-blue-700")}>
+      {/*
+        The output will be:
+        font-semibold text-blue-500
+      */}
+      This is a text!
+    </div>
+  );
+}
+```
+
+<Card className="grid">
+  <div className={cn("font-semibold text-red-700", "text-blue-700")}>
+    This is a text!
+  </div>
+</Card>
+
+### API
+
+```ts
+cn(...classNames: string[]): string
+```

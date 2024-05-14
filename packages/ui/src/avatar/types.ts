@@ -1,7 +1,7 @@
 import type { ComponentType, HTMLAttributes } from "react";
 
 export interface AvatarProps extends HTMLAttributes<HTMLSpanElement> {
-  children?: never;
+  children?: undefined;
   fallback?: string;
   fallbackClassName?: string;
   imageClassName?: string;
@@ -13,7 +13,7 @@ export interface AvatarProps extends HTMLAttributes<HTMLSpanElement> {
 
 export interface AvatarPlaceholderProps
   extends HTMLAttributes<HTMLSpanElement> {
-  children?: never;
+  children?: undefined;
   fallback?: undefined;
   fallbackClassName?: undefined;
   imageClassName?: undefined;
@@ -24,7 +24,7 @@ export interface AvatarPlaceholderProps
 }
 
 export interface AvatarGroupProps extends HTMLAttributes<HTMLDivElement> {
-  children?: never;
+  children?: undefined;
   className?: string;
   fallbackClassName?: string;
   groupClassName?: string;

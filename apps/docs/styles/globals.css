@@ -13,6 +13,22 @@
   }
 }
 
+@font-face {
+  font-family: "GeistSans";
+  src: url(/GeistVF.woff2) format("woff2");
+  src: url(/GeistVF.woff) format("woff");
+  font-display: swap;
+  font-weight: 100 900;
+}
+@font-face {
+  font-family: "GeistMono";
+  src: url(/GeistMonoVF.woff2) format("woff2");
+  src: url(/GeistMonoVF.woff) format("woff");
+  font-display: swap;
+  font-weight: 100 900;
+}
 html {
-  font-family: Arial, sans-serif;
+  font-family: "GeistSans", Arial;
+  --font-geist-sans: "GeistSans", Arial;
+  --font-geist-mono: "GeistMono", monospace;
 }

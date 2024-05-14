@@ -4,7 +4,7 @@ import { Card } from "@gespenst/ui/card";
 import { Popover, PopoverTrigger } from "@gespenst/ui/popover";
 import { Table, TBody, TD, Text, TH, THead, TR } from "@gespenst/ui/text";
 
-# Loading Spinner
+# Popover
 
 The Popover components are used to render fully accessible popover. It is
 wrapper around the react-aria-component
@@ -13,7 +13,7 @@ wrapper around the react-aria-component
 ## Import
 
 ```tsx
-import { Popover, PopoverTrigger } from "gespenst/loading-spinner";
+import { Popover, PopoverTrigger } from "gespenst/popover";
 ```
 
 ## Usage
@@ -31,11 +31,16 @@ import { Popover, PopoverTrigger } from "gespenst/loading-spinner";
   </Tabs.Tab>
   <Tabs.Tab>
 ```tsx
-import { Spinner } from "gespenst/loading-spinner";
+import { Popover, PopoverTrigger } from "gespenst/popover";
 
 export default function App() {
   return (
-    <Spinner className="place-self-center"/>
+    <PopoverTrigger>
+      <Button>Click me!</Button>
+      <Popover className="p-4">
+        <div>This is a popover!</div>
+      </Popover>
+    </PopoverTrigger>
   );
 }
  ```

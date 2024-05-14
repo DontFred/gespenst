@@ -8,11 +8,33 @@ import { cn } from "../lib";
 
 import type { PopoverProps } from "./types";
 
+/**
+ * PopoverTrigger component
+ * @param PopoverTriggerProps - All react-aria-components DialogTrigger props and some additional props.
+ * @returns JSX.Element
+ * @example
+ *  <PopoverTrigger>
+ *    <Button>Open Popover</Button>
+ *    <Popover>
+ *      <Text>Popover Content</Text>
+ *    </Popover>
+ *  </PopoverTrigger>
+ */
 const PopoverTrigger = AriaDialogTrigger;
+
 /**
  * Popover component
- * @param PopoverProps - props of Popover
+ * @param PopoverProps - All react-aria-components Popover props and some additional props.
+ * @param PopoverProps.className - To style the Popover. (additional class will get merged by cn())
+ * @param PopoverProps.offset - The offset of the Popover. (default: 7)
  * @returns JSX.Element
+ * @example
+ *  <PopoverTrigger>
+ *    <Button>Open Popover</Button>
+ *    <Popover>
+ *      <Text>Popover Content</Text>
+ *    </Popover>
+ *  </PopoverTrigger>
  */
 const Popover = forwardRef<HTMLDivElement, PopoverProps>(
   ({ className, offset = 7, ...rest }, ref) => {

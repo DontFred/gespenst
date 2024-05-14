@@ -1,0 +1,424 @@
+import { Tabs } from "nextra/components";
+import { Button } from "@gespenst/ui/button";
+import { Card } from "@gespenst/ui/card";
+import {
+  Modal,
+  ModalActions,
+  ModalBody,
+  ModalHeader,
+  ModalInset,
+  ModalSubtitle,
+  ModalTitle,
+  ModalTrigger,
+} from "@gespenst/ui/modal";
+import { Table, TBody, TD, Text, TH, THead, TR } from "@gespenst/ui/text";
+import { CloseExample } from "../../../components/examples/modal";
+
+# Modal
+
+The Popover components are used to render fully accessible modal. The main
+components are wrapper around the react-aria-component
+[Modal](https://react-spectrum.adobe.com/react-aria/Modal.html). The other
+components are wrapper around the `HTMLDivElement`.
+
+## Import
+
+```tsx
+import {
+  Modal,
+  ModalActions,
+  ModalBody,
+  ModalHeader,
+  ModalInset,
+  ModalSubtitle,
+  ModalTitle,
+  ModalTrigger,
+} from "gespenst/modal";
+```
+
+## Usage
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Card className="grid">
+      <ModalTrigger>
+        <Button className="place-self-center">Open Modal</Button>
+        <Modal>
+          <ModalBody>
+            <ModalHeader>
+              <ModalTitle>Modal Title</ModalTitle>
+              <ModalSubtitle>Modal Subtitle</ModalSubtitle>
+            </ModalHeader>
+            <Text paragraph>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </Text>
+          </ModalBody>
+          <ModalActions>
+            <Button>Okay</Button>
+          </ModalActions>
+        </Modal>
+      </ModalTrigger>
+    </Card>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import {
+  Modal,
+  ModalActions,
+  ModalBody,
+  ModalHeader,
+  ModalSubtitle,
+  ModalTitle,
+  ModalTrigger,
+} from "gespenst/modal";
+
+export default function App() {
+  return (
+    <ModalTrigger>
+      <Button>Open Modal</Button>
+      <Modal>
+        <ModalBody>
+          <ModalHeader>
+            <ModalTitle>Modal Title</ModalTitle>
+            <ModalSubtitle>Modal Subtitle</ModalSubtitle>
+          </ModalHeader>
+          <Text paragraph>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+        </ModalBody>
+        <ModalActions>
+          <Button>Okay</Button>
+        </ModalActions>
+      </Modal>
+    </ModalTrigger>
+  );
+}
+ ```
+  </Tabs.Tab>
+</Tabs>
+
+## Use Close Button
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Card className="grid">
+      <CloseExample/>
+    </Card>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import {
+  Modal,
+  ModalActions,
+  ModalBody,
+  ModalHeader,
+  ModalSubtitle,
+  ModalTitle,
+  ModalTrigger,
+} from "gespenst/modal";
+import { Fragment } from "react";
+
+export default function App() {
+  return (
+    <ModalTrigger>
+      <Button>Open Modal</Button>
+      <Modal>
+        {({ close }) => (
+          <Fragment>
+            <ModalBody>
+              <ModalHeader>
+                <ModalTitle>Modal Title</ModalTitle>
+                <ModalSubtitle>Modal Subtitle</ModalSubtitle>
+              </ModalHeader>
+              <Text paragraph>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </Text>
+            </ModalBody>
+            <ModalActions>
+              <Button
+                onPress={() => {
+                  close();
+                }}
+                variant={"secondary"}
+              >
+                Close
+              </Button>
+            </ModalActions>
+          </Fragment>
+        )}
+      </Modal>
+    </ModalTrigger>
+  );
+}
+ ```
+  </Tabs.Tab>
+</Tabs>
+
+## Use Inset
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Card className="grid">
+      <ModalTrigger>
+        <Button className="place-self-center">Open Modal</Button>
+        <Modal>
+          <ModalBody>
+            <ModalHeader>
+              <ModalTitle>Modal Title</ModalTitle>
+              <ModalSubtitle>Modal Subtitle</ModalSubtitle>
+            </ModalHeader>
+            <ModalInset>
+              <Text paragraph>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </Text>
+            </ModalInset>
+            <Text paragraph>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </Text>
+          </ModalBody>
+          <ModalActions>
+            <Button>Okay</Button>
+          </ModalActions>
+        </Modal>
+      </ModalTrigger>
+    </Card>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import {
+  Modal,
+  ModalActions,
+  ModalBody,
+  ModalHeader,
+  ModalSubtitle,
+  ModalTitle,
+  ModalTrigger,
+} from "gespenst/modal";
+
+export default function App() {
+  return (
+    <ModalTrigger>
+      <Button>Open Modal</Button>
+      <Modal>
+        <ModalBody>
+          <ModalHeader>
+            <ModalTitle>Modal Title</ModalTitle>
+            <ModalSubtitle>Modal Subtitle</ModalSubtitle>
+          </ModalHeader>
+          <Text paragraph>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+        </ModalBody>
+        <ModalActions>
+          <Button>Okay</Button>
+        </ModalActions>
+      </Modal>
+    </ModalTrigger>
+  );
+}
+ ```
+  </Tabs.Tab>
+</Tabs>
+
+## API
+
+**Special:** The Modal components are just a styled form of the
+react-aria-components Modals. So most of the props are the same as in the
+[Modal](https://react-spectrum.adobe.com/react-aria/Modal.html#props). But the
+Content components are wrapper around `HTMLDivElement`.
+
+- Modal is a styled react-aria-components `Modal`
+- ModalActions is a styled `HTMLDivElement`
+- ModalBody is a styled `HTMLDivElement`
+- ModalHeader is a styled `HTMLDivElement`
+- ModalInset zis a styled `HTMLDivElement`
+- ModalSubtitle is a styled `HTMLDivElement`
+- ModalTitle is a styled react-aria-components `Heading`
+- ModalTrigger is a re-export of `DialogTrigger`
+
+### ModalProps
+
+<Text large className="mt-2">{`ModalProps.*`}</Text>
+
+<div className="mx-2">
+  <Table>
+    <THead>
+      <TR>
+        <TH className="border-transparent">{`Attribute`}</TH>
+        <TH className="border-transparent">{`Type`}</TH>
+        <TH className="border-transparent">{`Description`}</TH>
+        <TH className="border-transparent">{`Default`}</TH>
+      </TR>
+    </THead>
+    <TBody>
+      <TR>
+        <TD className="border-transparent">{`children`}</TD>
+        <TD className="border-transparent">`AriaDialogProps | undefined`</TD>
+        <TD className="border-transparent">{``}</TD>
+        <TD className="border-transparent">`normal`</TD>
+      </TR>
+      <TR>
+        <TD className="border-transparent">{`role`}</TD>
+        <TD className="border-transparent">
+          `"alertdialog" | "dialog" | undefined`
+        </TD>
+        <TD className="border-transparent">{`To set the aria label`}</TD>
+        <TD className="border-transparent">`normal`</TD>
+      </TR>
+    </TBody>
+  </Table>
+</div>
+
+### ModalActions
+
+<Text large className="mt-2">{`ModalActions.*`}</Text>
+
+<div className="mx-2">
+  <Table>
+    <THead>
+      <TR>
+        <TH className="border-transparent">{`Attribute`}</TH>
+        <TH className="border-transparent">{`Type`}</TH>
+        <TH className="border-transparent">{`Description`}</TH>
+        <TH className="border-transparent">{`Default`}</TH>
+      </TR>
+    </THead>
+    <TBody>
+      <TR>
+        <TD colSpan="4" className="border-transparent">{`No custom props`}</TD>
+      </TR>
+    </TBody>
+  </Table>
+</div>
+
+### ModalBody
+
+<Text large className="mt-2">{`ModalBody.*`}</Text>
+
+<div className="mx-2">
+  <Table>
+    <THead>
+      <TR>
+        <TH className="border-transparent">{`Attribute`}</TH>
+        <TH className="border-transparent">{`Type`}</TH>
+        <TH className="border-transparent">{`Description`}</TH>
+        <TH className="border-transparent">{`Default`}</TH>
+      </TR>
+    </THead>
+    <TBody>
+      <TR>
+        <TD colSpan="4" className="border-transparent">{`No custom props`}</TD>
+      </TR>
+    </TBody>
+  </Table>
+</div>
+
+### ModalHeader
+
+<Text large className="mt-2">{`ModalHeader.*`}</Text>
+
+<div className="mx-2">
+  <Table>
+    <THead>
+      <TR>
+        <TH className="border-transparent">{`Attribute`}</TH>
+        <TH className="border-transparent">{`Type`}</TH>
+        <TH className="border-transparent">{`Description`}</TH>
+        <TH className="border-transparent">{`Default`}</TH>
+      </TR>
+    </THead>
+    <TBody>
+      <TR>
+        <TD colSpan="4" className="border-transparent">{`No custom props`}</TD>
+      </TR>
+    </TBody>
+  </Table>
+</div>
+
+### ModalInset
+
+<Text large className="mt-2">{`ModalInset.*`}</Text>
+
+<div className="mx-2">
+  <Table>
+    <THead>
+      <TR>
+        <TH className="border-transparent">{`Attribute`}</TH>
+        <TH className="border-transparent">{`Type`}</TH>
+        <TH className="border-transparent">{`Description`}</TH>
+        <TH className="border-transparent">{`Default`}</TH>
+      </TR>
+    </THead>
+    <TBody>
+      <TR>
+        <TD colSpan="4" className="border-transparent">{`No custom props`}</TD>
+      </TR>
+    </TBody>
+  </Table>
+</div>
+
+### ModalSubtitle
+
+<Text large className="mt-2">{`ModalSubtitle.*`}</Text>
+
+<div className="mx-2">
+  <Table>
+    <THead>
+      <TR>
+        <TH className="border-transparent">{`Attribute`}</TH>
+        <TH className="border-transparent">{`Type`}</TH>
+        <TH className="border-transparent">{`Description`}</TH>
+        <TH className="border-transparent">{`Default`}</TH>
+      </TR>
+    </THead>
+    <TBody>
+      <TR>
+        <TD colSpan="4" className="border-transparent">{`No custom props`}</TD>
+      </TR>
+    </TBody>
+  </Table>
+</div>
+
+### ModalTitle
+
+<Text large className="mt-2">{`ModalTitle.*`}</Text>
+
+<div className="mx-2">
+  <Table>
+    <THead>
+      <TR>
+        <TH className="border-transparent">{`Attribute`}</TH>
+        <TH className="border-transparent">{`Type`}</TH>
+        <TH className="border-transparent">{`Description`}</TH>
+        <TH className="border-transparent">{`Default`}</TH>
+      </TR>
+    </THead>
+    <TBody>
+      <TR>
+        <TD colSpan="4" className="border-transparent">{`No custom props`}</TD>
+      </TR>
+    </TBody>
+  </Table>
+</div>
+
+### ModalTrigger
+
+<Text large className="mt-2">{`ModalTrigger.*`}</Text>
+
+<div className="mx-2">
+  <Table>
+    <THead>
+      <TR>
+        <TH className="border-transparent">{`Attribute`}</TH>
+        <TH className="border-transparent">{`Type`}</TH>
+        <TH className="border-transparent">{`Description`}</TH>
+        <TH className="border-transparent">{`Default`}</TH>
+      </TR>
+    </THead>
+    <TBody>
+      <TR>
+        <TD colSpan="4" className="border-transparent">{`No custom props`}</TD>
+      </TR>
+    </TBody>
+  </Table>
+</div>

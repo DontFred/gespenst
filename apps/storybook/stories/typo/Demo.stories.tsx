@@ -106,8 +106,8 @@ export const Demo = (): JSX.Element => (
       kingdom lived happily ever after.
     </Text>
     <Text paragraph>
-      The moral of the story is: never underestimate the power of a good laugh
-      and always be careful of bad ideas.
+      The moral of the story is: undefined underestimate the power of a good
+      laugh and always be careful of bad ideas.
     </Text>
   </div>
 );
