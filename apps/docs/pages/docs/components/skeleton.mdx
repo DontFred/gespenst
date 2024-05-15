@@ -1,0 +1,284 @@
+import { Tabs } from "nextra/components";
+import { Table, TBody, TD, Text, TH, THead, TR } from "@gespenst/ui/text";
+import { Card } from "@gespenst/ui/card";
+import { Skeleton } from "@gespenst/ui/skeleton";
+
+# Skeleton
+
+The Skeleton component is used to render a Skeleton that indicates a loading
+state. It is a wrapper around native `HTMLSpanElement`.
+
+## Import
+
+```tsx
+import { Skeleton } from "gespenst/skeleton";
+```
+
+## Usage
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Card className="grid">
+      <Skeleton className="place-self-center"/>
+    </Card>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import { Skeleton } from "gespenst/skeleton";
+
+export default function App() {
+  return (
+    <Skeleton/>
+  );
+}
+ ```
+  </Tabs.Tab>
+</Tabs>
+
+## SkeletonProps.children
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Card className="grid">
+      <Skeleton className="place-self-center">
+        This is a skeleton!
+      </Skeleton>
+    </Card>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import { Skeleton } from "gespenst/skeleton";
+
+export default function App() {
+  return (
+    <Spinner>
+      This is a skeleton!
+    </Spinner>
+  );
+}
+ ```
+  </Tabs.Tab>
+</Tabs>
+
+## SkeletonProps.show
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Card className="grid">
+      <Skeleton show={false} className="place-self-center">
+        This is a skeleton!
+      </Skeleton>
+    </Card>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import { Skeleton } from "gespenst/skeleton";
+
+export default function App() {
+  return (
+    <Spinner show={false}>
+      This is a skeleton!
+    </Spinner>
+  );
+}
+ ```
+  </Tabs.Tab>
+</Tabs>
+
+## SkeletonProps.width
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Card className="grid">
+      <Skeleton width={200} className="place-self-center"/>
+    </Card>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import { Skeleton } from "gespenst/skeleton";
+
+export default function App() {
+  return (
+    <Spinner width={200}/>
+  );
+}
+ ```
+  </Tabs.Tab>
+</Tabs>
+
+## SkeletonProps.height
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Card className="grid">
+      <Skeleton height={200} className="place-self-center"/>
+    </Card>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import { Skeleton } from "gespenst/skeleton";
+
+export default function App() {
+  return (
+    <Spinner height={200}/>
+  );
+}
+ ```
+  </Tabs.Tab>
+</Tabs>
+
+## SkeletonProps.boxHeight
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Card className="grid">
+      <Skeleton boxHeight={200} className="place-self-center"/>
+    </Card>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import { Skeleton } from "gespenst/skeleton";
+
+export default function App() {
+  return (
+    <Spinner boxHeight={200}/>
+  );
+}
+ ```
+  </Tabs.Tab>
+</Tabs>
+
+## SkeletonProps.rounded
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Card className="grid">
+      <Skeleton rounded className="place-self-center"/>
+    </Card>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import { Skeleton } from "gespenst/skeleton";
+
+export default function App() {
+  return (
+    <Spinner rounded/>
+  );
+}
+ ```
+  </Tabs.Tab>
+</Tabs>
+
+## SkeletonProps.angular
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Card className="grid">
+      <Skeleton angular className="place-self-center"/>
+    </Card>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import { Skeleton } from "gespenst/skeleton";
+
+export default function App() {
+  return (
+    <Spinner angular/>
+  );
+}
+ ```
+  </Tabs.Tab>
+</Tabs>
+
+## SkeletonProps.animated
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Card className="grid">
+      <Skeleton animated={false} className="place-self-center"/>
+    </Card>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import { Skeleton } from "gespenst/skeleton";
+
+export default function App() {
+  return (
+    <Spinner animated={false}/>
+  );
+}
+ ```
+  </Tabs.Tab>
+</Tabs>
+
+## API
+
+**Special:** The Skeleton component does not have any custom props. It only uses
+the default `HTMLSpanElement` props.
+
+### SkeletonProps
+
+<Text large className="mt-2">{`SkeletonProps.*`}</Text>
+
+<div className="mx-2">
+  <Table>
+    <THead>
+      <TR>
+        <TH className="border-transparent">{`Attribute`}</TH>
+        <TH className="border-transparent">{`Type`}</TH>
+        <TH className="border-transparent">{`Description`}</TH>
+        <TH className="border-transparent">{`Default`}</TH>
+      </TR>
+    </THead>
+    <TBody>
+      <TR>
+        <TD className="border-transparent">{`children`}</TD>
+        <TD className="border-transparent">`ReactNode | undefined`</TD>
+        <TD className="border-transparent">{`Skeleton adopts height and width of the children`}</TD>
+        <TD className="border-transparent">-</TD>
+      </TR>
+      <TR>
+        <TD className="border-transparent">{`show`}</TD>
+        <TD className="border-transparent">`boolean | undefined`</TD>
+        <TD className="border-transparent">{`Show or hide the Skeleton`}</TD>
+        <TD className="border-transparent">`true`</TD>
+      </TR>
+      <TR>
+        <TD className="border-transparent">{`width`}</TD>
+        <TD className="border-transparent">`number | undefined`</TD>
+        <TD className="border-transparent">{`Width of the Skeleton`}</TD>
+        <TD className="border-transparent">`160`</TD>
+      </TR>
+      <TR>
+        <TD className="border-transparent">{`height`}</TD>
+        <TD className="border-transparent">`number | undefined`</TD>
+        <TD className="border-transparent">{`Height of the Skeleton`}</TD>
+        <TD className="border-transparent">`24`</TD>
+      </TR>
+      <TR>
+        <TD className="border-transparent">{`boxHeight`}</TD>
+        <TD className="border-transparent">`number | undefined`</TD>
+        <TD className="border-transparent">{`Height of the Skeleton box`}</TD>
+        <TD className="border-transparent">{`-`}</TD>
+      </TR>
+      <TR>
+        <TD className="border-transparent">{`rounded`}</TD>
+        <TD className="border-transparent">`boolean | undefined`</TD>
+        <TD className="border-transparent">{`Rounded corners`}</TD>
+        <TD className="border-transparent">{`-`}</TD>
+      </TR>
+      <TR>
+        <TD className="border-transparent">{`angular`}</TD>
+        <TD className="border-transparent">`boolean | undefined`</TD>
+        <TD className="border-transparent">{`Angular corners`}</TD>
+        <TD className="border-transparent">{`-`}</TD>
+      </TR>
+      <TR>
+        <TD className="border-transparent">{`animated`}</TD>
+        <TD className="border-transparent">`boolean | undefined`</TD>
+        <TD className="border-transparent">{`Animated Skeleton`}</TD>
+        <TD className="border-transparent">`true`</TD>
+      </TR>
+    </TBody>
+  </Table>
+</div>

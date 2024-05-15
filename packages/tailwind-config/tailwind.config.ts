@@ -131,6 +131,7 @@ const config = {
     },
     extend: {
       animation: {
+        skeleton: "skeleton 8s ease-in-out infinite",
         "accordion-down": "accordion-down 0.1s ease-out",
         "accordion-up": "accordion-up 0.1s ease-out",
         loader: "loader 1.2s linear infinite",
@@ -202,6 +203,14 @@ const config = {
         sans: ["var(--font-geist-sans)"],
       },
       keyframes: {
+        skeleton: {
+          from: {
+            backgroundPosition: "200% 0",
+          },
+          to: {
+            backgroundPosition: "-200% 0",
+          },
+        },
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -221,6 +230,10 @@ const config = {
       },
       maxWidth: {
         "8xl": "1400px",
+      },
+      backgroundImage: {
+        skeleton:
+          "linear-gradient(270deg, var(--gespenst-accents-1), var(--gespenst-accents-2), var(--gespenst-accents-2), var(--gespenst-accents-1))",
       },
     },
   },
