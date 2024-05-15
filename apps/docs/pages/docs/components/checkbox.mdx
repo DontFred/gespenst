@@ -1,0 +1,155 @@
+import { Tabs } from "nextra/components";
+import { Table, TBody, TD, Text, TH, THead, TR } from "@gespenst/ui/text";
+import { Card } from "@gespenst/ui/card";
+import { Checkbox, CheckboxGroup } from "@gespenst/ui/checkbox";
+
+# Checkbox
+
+The Checkbox components are used to render fully accessible Checkbox and
+CheckboxGroup. They are wrapper around the react-aria-component
+[Checkbox](https://react-spectrum.adobe.com/react-aria/Checkbox.html).
+
+## Import
+
+```tsx
+import { Checkbox, CheckboxGroup } from "gespenst/loading-spinner";
+```
+
+## Usage
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Card className="grid">
+      <Checkbox className="place-self-center">Checkbox</Checkbox>
+    </Card>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import { Spinner } from "gespenst/checkbox";
+
+export default function App() {
+  return (
+    <Checkbox>Checkbox</Checkbox>
+  );
+}
+ ```
+  </Tabs.Tab>
+</Tabs>
+
+## CheckboxProps.isIndeterminate
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Card className="grid">
+      <Checkbox isIndeterminate>Checkbox</Checkbox>
+    </Card>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import { Spinner } from "gespenst/checkbox";
+
+export default function App() {
+  return (
+    <Checkbox isIndeterminate>Checkbox</Checkbox>
+  );
+}
+ ```
+  </Tabs.Tab>
+</Tabs>
+
+## CheckboxProps.isDisabled
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Card className="grid">
+      <Checkbox isDisabled>Checkbox</Checkbox>
+    </Card>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import { Spinner } from "gespenst/checkbox";
+
+export default function App() {
+  return (
+    <Checkbox isDisabled>Checkbox</Checkbox>
+  );
+}
+ ```
+  </Tabs.Tab>
+</Tabs>
+
+## CheckboxGroup
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Card className="grid">
+      <CheckboxGroup defaultValue={["checkbox-1", "checkbox-3"]}>
+        <Checkbox value="checkbox-1">Checkbox No.1</Checkbox>
+        <Checkbox value="checkbox-2">Checkbox No.2</Checkbox>
+        <Checkbox value="checkbox-3">Checkbox No.3</Checkbox>
+      </CheckboxGroup>
+    </Card>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import { Spinner } from "gespenst/checkbox";
+
+export default function App() {
+  return (
+    <Checkbox isDisabled>Checkbox</Checkbox>
+  );
+}
+ ```
+  </Tabs.Tab>
+</Tabs>
+
+## API
+
+**Special:** Checkbox components is just a styled form of the
+react-aria-components Checkboxs. So all props are the same as in the
+[Checkbox](https://react-spectrum.adobe.com/react-aria/Checkbox.html#props) and
+[CheckboxGroup](https://react-spectrum.adobe.com/react-aria/CheckboxGroup.html#props).
+
+### CheckboxProps
+
+<Text large className="mt-2">{`CheckboxProps.*`}</Text>
+
+<div className="mx-2">
+  <Table>
+    <THead>
+      <TR>
+        <TH className="border-transparent">{`Attribute`}</TH>
+        <TH className="border-transparent">{`Type`}</TH>
+        <TH className="border-transparent">{`Description`}</TH>
+        <TH className="border-transparent">{`Default`}</TH>
+      </TR>
+    </THead>
+    <TBody>
+      <TR>
+        <TD colSpan="4" className="border-transparent">{`No custom props`}</TD>
+      </TR>
+    </TBody>
+  </Table>
+</div>
+
+### CheckboxGroupProps
+
+<Text large className="mt-2">{`CheckboxGroupProps.*`}</Text>
+
+<div className="mx-2">
+  <Table>
+    <THead>
+      <TR>
+        <TH className="border-transparent">{`Attribute`}</TH>
+        <TH className="border-transparent">{`Type`}</TH>
+        <TH className="border-transparent">{`Description`}</TH>
+        <TH className="border-transparent">{`Default`}</TH>
+      </TR>
+    </THead>
+    <TBody>
+      <TR>
+        <TD colSpan="4" className="border-transparent">{`No custom props`}</TD>
+      </TR>
+    </TBody>
+  </Table>
+</div>

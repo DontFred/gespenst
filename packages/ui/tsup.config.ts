@@ -3,6 +3,7 @@ import { defineConfig } from "tsup";
 export default defineConfig((options) => ({
   dts: true,
   entryPoints: [
+    "src/checkbox/index.tsx",
     "src/modal/index.tsx",
     "src/popover/index.tsx",
     "src/badge/index.tsx",

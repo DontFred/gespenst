@@ -3,6 +3,11 @@
   "version": "0.0.0",
   "private": true,
   "exports": {
+    "./checkbox": {
+      "types": "./src/checkbox/index.tsx",
+      "import": "./dist/checkbox/index.mjs",
+      "require": "./dist/checkbox/index.js"
+    },
     "./modal": {
       "types": "./src/modal/index.tsx",
       "import": "./dist/modal/index.mjs",
