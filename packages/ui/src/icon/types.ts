@@ -19,7 +19,7 @@ export interface IconChildren {
   tag: string;
 }
 
-interface IconGenealProps extends HTMLAttributes<HTMLSpanElement> {
+export interface IconGenealProps extends HTMLAttributes<HTMLSpanElement> {
   containerClassName?: string;
   name: Icons;
 }

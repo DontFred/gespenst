@@ -4,10 +4,10 @@ import { cn } from "../lib";
 
 import { icons } from "./icons";
 
-import type { IconChildren, IconProps } from "./types";
+import type { IconChildren, IconGenealProps, IconProps } from "./types";
 
 export type { Icons as IconName } from "./icons/types";
-export type { IconProps };
+export type { IconGenealProps, IconProps };
 /**
  * renderChildren - Turns IconChildren into a html string
  * @param children IconChildren[]

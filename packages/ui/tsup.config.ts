@@ -3,6 +3,7 @@ import { defineConfig } from "tsup";
 export default defineConfig((options) => ({
   dts: true,
   entryPoints: [
+    "src/error/index.tsx",
     "src/toggle/index.tsx",
     "src/skeleton/index.tsx",
     "src/checkbox/index.tsx",

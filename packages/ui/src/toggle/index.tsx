@@ -23,8 +23,16 @@ export const toggleVariants = cva(
 
 /**
  * Toggle component
- * @param ToggleProps - props of Toggle
+ * @param ToggleProps - All react-aria-components Switch props and some additional props.
+ * @param ToggleProps.children - The children of the Toggle. (can be a function)
+ * @param ToggleProps.className - To style the Toggle. (additional class will get merged by cn())
+ * @param ToggleProps.indicatorClassName - To style the Toggle indicator. (additional class will get merged by cn())
+ * @param ToggleProps.isDisabled - If true, the Toggle will be disabled. (default: false)
+ * @param ToggleProps.size - The size of the Toggle. (default: "normal")
+ * @param ToggleProps.toggleClassName - To style the Toggle. (additional class will get merged by cn())
  * @returns JSX.Element
+ * @example
+ *   <Toggle/>
  */
 const Toggle = forwardRef<HTMLLabelElement, ToggleProps>(
   (

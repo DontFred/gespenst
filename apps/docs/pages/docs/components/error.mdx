@@ -1,0 +1,138 @@
+import { Tabs } from "nextra/components";
+import { Table, TBody, TD, Text, TH, THead, TR } from "@gespenst/ui/text";
+import { Card } from "@gespenst/ui/card";
+import { Error } from "@gespenst/ui/error";
+
+# Error
+
+The Error component is used to render an error message. It is a wrapper around
+`Icon` component.
+
+## Import
+
+```tsx
+import { Error } from "gespenst/error";
+```
+
+## Usage
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Card className="grid">
+      <Error containerClassName="place-self-center">
+        {`Something went wrong!`}
+      </Error>
+    </Card>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import { Error } from "gespenst/error";
+
+export default function App() {
+  return (
+    <Error>
+      Something went wrong!
+    </Error>
+  );
+}
+ ```
+  </Tabs.Tab>
+</Tabs>
+
+## ErrorProps.label
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Card className="grid">
+      <Error label="Server side" containerClassName="place-self-center">
+        {`Something went wrong!`}
+      </Error>
+    </Card>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import { Error } from "gespenst/error";
+
+export default function App() {
+  return (
+    <Error label="Server side">
+      Something went wrong!
+    </Error>
+  );
+}
+ ```
+  </Tabs.Tab>
+</Tabs>
+
+## ErrorProps.error
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Card className="grid">
+      <Error 
+        containerClassName="place-self-center"
+        error={{
+          message: "Something went wrong!",
+          label: "Server side",
+          action: "Retry",
+          link: "#retry"
+        }}
+      /> 
+    </Card>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import { Error } from "gespenst/error";
+
+export default function App() {
+  return (
+    <Error 
+      containerClassName="place-self-center"
+      error={{
+        message: "Something went wrong!",
+        label: "Server side",
+        action: "Retry",
+        link: "#retry"
+      }}
+    /> 
+  );
+}
+ ```
+  </Tabs.Tab>
+</Tabs>
+
+## API
+
+**Special:** Error component is a wrapper around `Icon` component. It uses the
+default `IconProps` and the following custom props.
+
+### ErrorProps
+
+<Text large className="mt-2">{`ErrorProps.*`}</Text>
+
+<div className="mx-2">
+  <Table>
+    <THead>
+      <TR>
+        <TH className="border-transparent">{`Attribute`}</TH>
+        <TH className="border-transparent">{`Type`}</TH>
+        <TH className="border-transparent">{`Description`}</TH>
+        <TH className="border-transparent">{`Default`}</TH>
+      </TR>
+    </THead>
+    <TBody>
+      <TR>
+        <TD className="border-transparent">{`label`}</TD>
+        <TD className="border-transparent">`string | undefined`</TD>
+        <TD className="border-transparent">{`To set the label`}</TD>
+        <TD className="border-transparent">{`-`}</TD>
+      </TR>
+      <TR>
+        <TD className="border-transparent">{`error`}</TD>
+        <TD className="border-transparent">`{ label: string, message: string, action: string, link: URL } | undefined`</TD>
+        <TD className="border-transparent">{`Set the error message as an object with a link`}</TD>
+        <TD className="border-transparent">{`-`}</TD>
+      </TR>
+    </TBody>
+  </Table>
+</div>
