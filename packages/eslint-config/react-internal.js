@@ -22,7 +22,13 @@ module.exports = {
     "plugin:perfectionist/recommended-alphabetical",
     "eslint-config-turbo",
   ],
-  plugins: ["prettier", "jsdoc", "sort-destructure-keys", "perfectionist"],
+  plugins: [
+    "prettier",
+    "jsdoc",
+    "sort-destructure-keys",
+    "perfectionist",
+    "react",
+  ],
   globals: {
     React: true,
     JSX: true,
@@ -40,7 +46,9 @@ module.exports = {
   ignorePatterns: [
     // Ignore dotfiles
     "**/build-icons.mts",
-    ".*.js",
+    "*.config.js",
+    "*.config.ts",
+    ".eslintrc.js",
     "node_modules/",
     "dist/",
   ],
@@ -135,6 +143,7 @@ module.exports = {
     ],
     "prefer-template": "error",
     "react/react-in-jsx-scope": "off",
+    "react/display-name": "error",
     "sort-destructure-keys/sort-destructure-keys": [
       "error",
       { caseSensitive: false },

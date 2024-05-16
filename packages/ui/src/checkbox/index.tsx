@@ -22,6 +22,8 @@ const CheckboxGroup = forwardRef<HTMLDivElement, AriaCheckboxGroupProps>(
   }
 );
 
+CheckboxGroup.displayName = "CheckboxGroup";
+
 /**
  * Checkbox component
  * @param CheckboxProps - props of Checkbox
@@ -93,6 +95,7 @@ const Checkbox = forwardRef<HTMLLabelElement, CheckboxProps>(
     );
   }
 );
+
 Checkbox.displayName = "Checkbox";
 
 export { Checkbox, CheckboxGroup };

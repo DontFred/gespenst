@@ -83,6 +83,8 @@ export const TypographyH1 = forwardRef<HTMLHeadingElement, HeadingProps>(
   }
 );
 
+TypographyH1.displayName = "TypographyH1";
+
 /**
  * Heading 2
  * @param HeadingProps - Has all HTML heading attributes.
@@ -133,6 +135,8 @@ export const TypographyH2 = forwardRef<HTMLHeadingElement, HeadingProps>(
   }
 );
 
+TypographyH2.displayName = "TypographyH2";
+
 /**
  * Heading 3
  * @param HeadingProps - Has all HTML heading attributes.
@@ -178,6 +182,8 @@ export const TypographyH3 = forwardRef<HTMLHeadingElement, HeadingProps>(
     );
   }
 );
+
+TypographyH3.displayName = "TypographyH3";
 
 /**
  * Heading 4
@@ -229,6 +235,8 @@ export const TypographyH4 = forwardRef<HTMLHeadingElement, HeadingProps>(
   }
 );
 
+TypographyH4.displayName = "TypographyH4";
+
 /**
  * Paragraph
  * @param ParagraphProps - Has all HTML Paragraph attributes.
@@ -266,6 +274,8 @@ export const TypographyP = forwardRef<HTMLParagraphElement, ParagraphProps>(
     );
   }
 );
+
+TypographyP.displayName = "TypographyP";
 
 /**
  * Blockquote
@@ -314,6 +324,8 @@ export const TypographyBlockquote = forwardRef<
   }
 );
 
+TypographyBlockquote.displayName = "TypographyBlockquote";
+
 /**
  * Table
  * @param TableProps - Has all HTML Table attributes.
@@ -346,6 +358,8 @@ export const Table = forwardRef<HTMLTableElement, TableProps>(
   }
 );
 
+Table.displayName = "Table";
+
 /**
  * Table Head
  * @param TableHeadProps - Has all HTML Table Head attributes.
@@ -371,6 +385,8 @@ export const THead = forwardRef<HTMLTableSectionElement, TableHeadProps>(
   }
 );
 
+THead.displayName = "THead";
+
 /**
  * Table Row
  * @param TableRowProps - Has all HTML Table Row attributes.
@@ -395,6 +411,8 @@ export const TR = forwardRef<HTMLTableRowElement, TableRowProps>(
     );
   }
 );
+
+TR.displayName = "TR";
 
 /**
  * Table Header
@@ -424,6 +442,8 @@ export const TH = forwardRef<HTMLTableCellElement, TableHeaderProps>(
   }
 );
 
+TH.displayName = "TH";
+
 /**
  * Table Body
  * @param TableBodyProps - Has all HTML Table Body attributes.
@@ -444,6 +464,8 @@ export const TBody = forwardRef<HTMLTableSectionElement, TableBodyProps>(
     );
   }
 );
+
+TBody.displayName = "TBody";
 
 /**
  * Table Cell
@@ -472,6 +494,8 @@ export const TD = forwardRef<HTMLTableCellElement, TableCellProps>(
     );
   }
 );
+
+TD.displayName = "TD";
 
 /**
  * List
@@ -508,6 +532,8 @@ export const TypographyList = forwardRef<HTMLUListElement, ListProps>(
   }
 );
 
+TypographyList.displayName = "TypographyList";
+
 /**
  * List Item
  * @param ListItemProps - Has all HTML List Item attributes.
@@ -533,6 +559,8 @@ export const TypographyListItem = forwardRef<HTMLLIElement, ListItemProps>(
     );
   }
 );
+
+TypographyListItem.displayName = "TypographyListItem";
 
 /**
  * Inline Code
@@ -572,6 +600,8 @@ export const TypographyInlineCode = forwardRef<HTMLElement, InlineCodeProps>(
   }
 );
 
+TypographyInlineCode.displayName = "TypographyInlineCode";
+
 /**
  * Link
  * @param LinkProps - Has all HTML Span attributes.
@@ -606,6 +636,8 @@ export const TypographyLink = forwardRef<HTMLSpanElement, LinkProps>(
     );
   }
 );
+
+TypographyLink.displayName = "TypographyLink";
 
 /**
  * Lead
@@ -642,6 +674,8 @@ export const TypographyLead = forwardRef<HTMLParagraphElement, LeadProps>(
   }
 );
 
+TypographyLead.displayName = "TypographyLead";
+
 /**
  * Large
  * @param LargeProps - Has all HTML Large attributes.
@@ -675,6 +709,8 @@ export const TypographyLarge = forwardRef<HTMLDivElement, LargeProps>(
     );
   }
 );
+
+TypographyLarge.displayName = "TypographyLarge";
 
 /**
  * Small
@@ -714,6 +750,8 @@ export const TypographySmall = forwardRef<HTMLElement, SmallProps>(
   }
 );
 
+TypographySmall.displayName = "TypographySmall";
+
 /**
  * Muted
  * @param MutedProps - Has all HTML Muted attributes.
@@ -751,6 +789,8 @@ export const TypographyMuted = forwardRef<HTMLParagraphElement, MutedProps>(
     );
   }
 );
+
+TypographyMuted.displayName = "TypographyMuted";
 
 /**
  * Description
@@ -801,6 +841,8 @@ export const TypographyDescription = forwardRef<
     </div>
   );
 });
+
+TypographyDescription.displayName = "TypographyDescription";
 
 // TODO: Fix the issue with the ref type for the Text component. If Text is rendered it gets an error that ref doesn't exist on the element.
 /**
@@ -902,9 +944,13 @@ export const Text: TypoComponent = forwardRef<
   }
 }) as TypoComponent;
 
+Text.displayName = "Text";
+
 export const AriaHeading = forwardRef(
   (props: AriaHeadingProps, ref: ForwardedRef<HTMLHeadingElement>) => {
     [props, ref] = useContextProps(props, ref, HeadingContext);
     return <TypographyH3 heading size="h3" {...props} ref={ref} />;
   }
 );
+
+AriaHeading.displayName = "AriaHeading";

@@ -219,4 +219,6 @@ const AvatarGroup = forwardRef<HTMLDivElement, AvatarGroupProps>(
   }
 );
 
+AvatarGroup.displayName = "AvatarGroup";
+
 export { Avatar, AvatarGroup };

@@ -1,0 +1,133 @@
+import { Tabs } from "nextra/components";
+import { Table, TBody, TD, Text, TH, THead, TR } from "@gespenst/ui/text";
+import { Card } from "@gespenst/ui/card";
+import { Toggle } from "@gespenst/ui/toggle";
+
+# Toggle
+
+The Toggle component is used to render fully accessible Toggle. It is wrapper
+around the react-aria-component
+[Switch](https://react-spectrum.adobe.com/react-aria/Switch.html).
+
+## Import
+
+```tsx
+import { Toggle } from "gespenst/toggle";
+```
+
+## Usage
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Card className="grid">
+      <Toggle className="place-self-center"/>
+    </Card>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import { Toggle } from "gespenst/toggle";
+
+export default function App() {
+  return (
+    <Toggle/>
+  );
+}
+ ```
+  </Tabs.Tab>
+</Tabs>
+
+## ToggleProps.isDisabled
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Card className="grid gap-1">
+      <Toggle isDisabled className="place-self-center"/>
+      <Toggle isDisabled isSelected={true} className="place-self-center"/>
+    </Card>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import { Toggle } from "gespenst/toggle";
+
+export default function App() {
+  return (
+    <div className="grid gap-1">
+      <Toggle isDisabled/>
+      <Toggle isDisabled isSelected={true}/>
+    </div>
+  );
+}
+ ```
+  </Tabs.Tab>
+</Tabs>
+
+## ToggleProps.size
+
+<Tabs items={["Preview", "Code"]}>
+  <Tabs.Tab>
+    <Card className="grid">
+      <Toggle size={"large"} className="place-self-center"/>
+    </Card>
+  </Tabs.Tab>
+  <Tabs.Tab>
+```tsx
+import { Toggle } from "gespenst/toggle";
+
+export default function App() {
+  return (
+    <Toggle size={"large"}/>
+  );
+}
+ ```
+  </Tabs.Tab>
+</Tabs>
+
+## API
+
+**Special:** Toggle is just a styled form of the react-aria-components toggle.
+So all props are the same as in the
+[Switch](https://react-spectrum.adobe.com/react-aria/Switch.html#props) without
+considering the additional props.
+
+### ToggleProps
+
+<Text large className="mt-2">{`ToggleProps.*`}</Text>
+
+<div className="mx-2">
+  <Table>
+    <THead>
+      <TR>
+        <TH className="border-transparent">{`Attribute`}</TH>
+        <TH className="border-transparent">{`Type`}</TH>
+        <TH className="border-transparent">{`Description`}</TH>
+        <TH className="border-transparent">{`Default`}</TH>
+      </TR>
+    </THead>
+    <TBody>
+      <TR>
+        <TD className="border-transparent">{`isDisabled`}</TD>
+        <TD className="border-transparent">`boolean | undefined`</TD>
+        <TD className="border-transparent">{``}</TD>
+        <TD className="border-transparent">{`-`}</TD>
+      </TR>
+      <TR>
+        <TD className="border-transparent">{`size`}</TD>
+        <TD className="border-transparent">`normal | large | undefined`</TD>
+        <TD className="border-transparent">{`To set the size of the toggle`}</TD>
+        <TD className="border-transparent">`normal`</TD>
+      </TR>
+      <TR>
+        <TD className="border-transparent">{`toggleClassName`}</TD>
+        <TD className="border-transparent">`string | undefined`</TD>
+        <TD className="border-transparent">{`To style the toggle it self`}</TD>
+        <TD className="border-transparent">{`-`}</TD>
+      </TR>
+      <TR>
+        <TD className="border-transparent">{`indicatorClassName`}</TD>
+        <TD className="border-transparent">`string | undefined`</TD>
+        <TD className="border-transparent">{`To style the indicator it self`}</TD>
+        <TD className="border-transparent">{`-`}</TD>
+      </TR>
+    </TBody>
+  </Table>
+</div>

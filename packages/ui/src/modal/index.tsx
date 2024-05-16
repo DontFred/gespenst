@@ -83,6 +83,8 @@ const Modal = forwardRef<HTMLDivElement, ModalProps>(
   }
 );
 
+Modal.displayName = "Modal";
+
 /**
  * ModalBody component
  * @param ModalBodyProps - All HTMLDivElement attributes.
@@ -97,6 +99,8 @@ const ModalBody = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
     />
   )
 );
+
+ModalBody.displayName = "ModalBody";
 
 /**
  * ModalActions component
@@ -116,6 +120,8 @@ const ModalActions = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   )
 );
 
+ModalActions.displayName = "ModalActions";
+
 /**
  * ModalHeader component
  * @param ModalHeaderProps - All HTMLDivElement attributes.
@@ -126,6 +132,8 @@ const ModalHeader = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
     <div className={cn("text-gray-1000 mb-6", className)} ref={ref} {...rest} />
   )
 );
+
+ModalHeader.displayName = "ModalHeader";
 
 /**
  * ModalTitle component
@@ -142,6 +150,8 @@ const ModalTitle = forwardRef<HTMLHeadingElement, AriaHeadingProps>(
     />
   )
 );
+
+ModalTitle.displayName = "ModalTitle";
 
 /**
  * ModalSubtitle component
@@ -160,6 +170,8 @@ const ModalSubtitle = forwardRef<
   />
 ));
 
+ModalSubtitle.displayName = "ModalSubtitle";
+
 const ModalInset = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   ({ className, ...rest }, ref) => (
     <div
@@ -169,6 +181,8 @@ const ModalInset = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
     />
   )
 );
+
+ModalInset.displayName = "ModalInset";
 
 export {
   Modal,
